@@ -1,4 +1,4 @@
-export default function AboutSection() {
+export default function AboutSection({ ref }) {
   const dataAbout = [
     {
       id: 0,
@@ -20,11 +20,14 @@ export default function AboutSection() {
     },
   ];
   return (
-    <section className="bg-dark-green about-section">
+    <section className="bg-dark-green about-section" ref={ref}>
       <div className="container text-center">
         <div className="row justify-content-center">
           <div className="col-lg-12 col-12 position-relative">
-            <img src="/energi-asset-vector/masjid.svg" className="asset-mesjid"/>
+            <img
+              src="/energi-asset-vector/masjid.svg"
+              className="asset-mesjid"
+            />
             <div className="card text-center rounded-4 card-about">
               <div className="card-body">
                 <div className="row justify-content-center align-items-center g-1 mb-4">
@@ -42,7 +45,7 @@ export default function AboutSection() {
                     </span>
                   </div>
                   <div className="col-12">
-                    <span className="ssection-description">
+                    <span className="section-description">
                       Listrik yang kita gunakan saat ini sebagian besar berasal
                       dari sumber yang tidak terbarukan seperti batu bara, yang
                       berdampak negatif terhadap lingkungan. Dengan beralih ke
@@ -62,14 +65,14 @@ export default function AboutSection() {
                     );
                   })}
                 </div>
-                <div className="row justify-content-center">
+                {/* <div className="row justify-content-center">
                   <div className="col-12 col-lg-3">
                     <button className="btn btn-outline-secondary rounded-5 w-100 d-flex justify-content-between">
                       Pelajari selengkapnya
                       <i class="bi bi-arrow-right-short icon-btn"></i>
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

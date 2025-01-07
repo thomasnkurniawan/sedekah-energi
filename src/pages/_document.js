@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Link from "next/link";
 
 export default function Document() {
   return (
@@ -7,6 +8,10 @@ export default function Document() {
         <link rel="shortcut icon" href="/favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet"
+        />
+        <Link
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
           rel="stylesheet"
         />
       </Head>

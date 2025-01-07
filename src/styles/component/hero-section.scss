@@ -3,14 +3,14 @@
   padding-top: 64px !important;
 
   @media screen and (max-width: 600px) {
-    padding-top: 1rem ;
+    padding-top: 1rem;
   }
 
   .hero-title {
     font-size: 52px;
     font-style: normal;
     font-weight: 600;
-    line-height: 68px; 
+    line-height: 68px;
     position: relative;
 
     .vector-line {
@@ -18,8 +18,6 @@
       bottom: 0;
       left: 44%;
       top: 98%;
-
-      
     }
 
     @media only screen and (max-width: 600px) {
@@ -31,8 +29,6 @@
       font-size: 28px;
       font-weight: 500;
       line-height: 38px;
-
-      
     }
   }
 
@@ -67,5 +63,38 @@
     position: absolute;
     right: 2%;
     top: 0;
+  }
+
+  .asset-msite {
+    position: absolute;
+    right: 5%;
+    bottom: -32%;
+    z-index: 99;
+  }
+
+  .btn-scroll {
+    gap: 8px;
+    background-color: #191f38;
+    color: white;
+
+    position: absolute;
+    left: 15%;
+    top: 88%;
+    z-index: 99;
+
+    i {
+      display: flex;
+      padding: 4px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      background-color: white;
+      color: black;
+    }
+
+    @media screen and (min-width: 600px) {
+      left: 38%;
+      top: 70%;
+    }
   }
 }

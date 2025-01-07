@@ -2,7 +2,7 @@ import DonationInfo from "./DonationInfo";
 
 export default function DonateSection({ onClickDonate }) {
   return (
-    <section className="donate-section">
+    <section className="donate-section position-relative">
       <div className="container">
         <div className="card bg-dark-green">
           <div className="card-body parrent">
@@ -19,6 +19,7 @@ export default function DonateSection({ onClickDonate }) {
               </div>
             </div>
           </div>
+      {/* <img src="/energi-asset-vector/energi.svg" className="asset-energi" /> */}
         </div>
       </div>
     </section>

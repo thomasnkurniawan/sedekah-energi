@@ -11,7 +11,7 @@ export default function Quiz() {
     <section className="quiz-section">
       <div className="container">
         <div className="card">
-          <div className="card-body p-4 p-sm-0">
+          <div className="card-body">
             <div className="row p-0 align-items-center position-relative">
               {!isMobileLocal && (
                 <div className="col-lg-4 col-12 ml-4">
@@ -23,7 +23,7 @@ export default function Quiz() {
                   <span>Ikuti kuisnya dan kumpulkan semua karakter unik!</span>
                 </div>
               </div>
-              <div className="col-lg-3 col-12 pt-4 p-sm-4">
+              <div className="col-lg-3 col-12 pt-4 p-sm-4 pb-4">
                 <a
                   href="https://tally.so/templates/quiz-sedekah-energi/w42orm"
                   target="_blank"
@@ -41,8 +41,9 @@ export default function Quiz() {
               {isMobileLocal && (
                 <div className="col-12">
                   <img
-                    src="/energi-asset-vector/card-quiz.svg"
+                    src="/energi-asset-vector/quiz-msite.svg"
                     width={"100%"}
+                    style={{marginBottom: '-16px'}}
                   />
                 </div>
               )}

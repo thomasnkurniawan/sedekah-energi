@@ -2,7 +2,7 @@ import { isMobile } from "react-device-detect";
 import DonationInfo from "./DonationInfo";
 import { useEffect, useState } from "react";
 
-export default function HeroSection({ onClickDonate }) {
+export default function HeroSection({ onClickDonate, executeScroll }) {
   const [isMobileLocal, setIsMobileLocal] = useState(false);
   useEffect(() => {
     setIsMobileLocal(isMobile);
@@ -53,7 +53,7 @@ export default function HeroSection({ onClickDonate }) {
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-10 col-12">
-                  <DonationInfo onClickDonate={onClickDonate} />
+                  <DonationInfo onClickDonate={(param) => onClickDonate(param)} />
                 </div>
               </div>
             </div>
@@ -66,9 +66,20 @@ export default function HeroSection({ onClickDonate }) {
               />
             </div>
           )}
+          {isMobileLocal && (
+            <div className="col-12">
+              <img
+                src="/energi-asset-vector/msite-hero.svg"
+                className="asset-msite"
+              />
+            </div>
+          )}
         </div>
       </div>
       <div className="separator-dark-green"></div>
+      <button className="btn btn-scroll rounded-5 d-flex align-items-center" onClick={executeScroll}>
+        Selengkapnya? Scroll ke bawah <i class="bi bi-arrow-down"></i>
+      </button>
     </section>
   );
 }

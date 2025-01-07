@@ -20,7 +20,9 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^19.0.0",
     "react-slick": "^0.30.3",
+    "react-tooltip": "^5.28.0",
     "sass": "^1.83.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.0"
   }
 }

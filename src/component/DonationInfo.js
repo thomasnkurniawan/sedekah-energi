@@ -9,10 +9,12 @@ export default function DonationInfo({ onClickDonate }) {
     {
       id: 0,
       name: "Jawa Barat",
+      link: "http://kitabisa.com/listrikuntukjabar",
     },
     {
       id: 1,
       name: "Sumatera Barat",
+      link: "https://kitabisa.com/campaign/listrikuntuksumbar",
     },
   ];
 
@@ -75,7 +77,9 @@ export default function DonationInfo({ onClickDonate }) {
               <div className="col-lg-10 col-12 text-start">
                 <h5 className="donation-description">
                   Jadilah bagian dari{" "}
-                  <strong>{dataKitaBisa[tabActive]?.donation_count}</strong>{" "}
+                  <strong style={{ fontWeight: 800 }}>
+                    {dataKitaBisa[tabActive]?.donation_count}
+                  </strong>{" "}
                   pendukung program perubahan lainya
                 </h5>
                 <div className="progress mt-3" style={{ height: "25px" }}>
@@ -103,8 +107,8 @@ export default function DonationInfo({ onClickDonate }) {
             )}
             <div className="col-12 col-lg-2 p-sm-0 pt-4">
               <button
-                onClick={onClickDonate}
-                className="btn btn-success rounded-5 w-100"
+                onClick={() => onClickDonate(tabDonation[tabActive].link)}
+                className="btn btn-success rounded-5"
               >
                 Donasi
               </button>

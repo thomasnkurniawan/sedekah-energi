@@ -1,4 +1,14 @@
-export default function MapSection() {
+import { useState } from "react";
+import { Tooltip } from "react-tooltip";
+
+export default function MapSection({ onClickDonate }) {
+  const [isOpenJabar, setIsOpenJabar] = useState(true);
+  const [isOpenSumbar, setIsOpenSumbar] = useState(true);
+
+  const handleGetNow = () => {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdNPtP_nQVqu9egHGvANiVDQc1Os7Ggt3-RVk33C5eMtJolQw/viewform", "_blank")
+  }
+
   return (
     <section className="map-section">
       <div className="container text-center">
@@ -18,7 +28,7 @@ export default function MapSection() {
                     </span>
                   </div>
                   <div className="col-12">
-                    <span className="ssection-description">
+                    <span className="section-description">
                       Alhamdulillah, Sedekah Energi sudah hadir di Bantul dan
                       Sembalun. InsyaAllah, tahun depan terang ini akan menyebar
                       ke Sumatera Barat dan Jawa Barat dengan membawa lebih
@@ -26,8 +36,106 @@ export default function MapSection() {
                     </span>
                   </div>
                 </div>
-                <div className="row justify-content-center mb-2">
+                <div className="row button-wrapper">
+                  <div className="col-lg-6 col-12 d-flex justify-content-end redd">
+                    <div className="red-dot-legend">
+                      <span class="dot red"></span>
+                      Akan Dilaksanakan | 2025
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-12 greenn">
+                    <div className="green-dot-legend">
+                      <span class="dot"></span>
+                      Telah Terlaksana | 2023
+                    </div>
+                  </div>
+                </div>
+                <div className="row justify-content-center mb-2 position-relative map-wrapper">
                   <img src="/energi-asset-vector/map.png" />
+                  <span
+                    data-tooltip-id="clickable"
+                    onMouseEnter={() => setIsOpenSumbar(true)}
+                    id="sumatera"
+                    class="dot red position-absolute sumatera"
+                  ></span>
+                  {/* <Tooltip
+                    id="sumatera"
+                    className="tooltip-custom"
+                    clickable
+                    isOpen={isOpenSumbar}
+                  >
+                    <div className="text-start">
+                      <p className="title">Sumatera Barat</p>
+                      <button
+                        className="btn btn-success  rounded-5"
+                        onClick={() => {
+                          onClickDonate(
+                            "https://kitabisa.com/campaign/listrikuntuksumbar"
+                          );
+                          setIsOpenJabar(false);
+                        }}
+                      >
+                        Donasi Untuk Sumatera Barat
+                      </button>
+                    </div>
+                  </Tooltip> */}
+                  <span
+                    data-tooltip-id="clickable"
+                    onMouseEnter={() => setIsOpenSumbar(false)}
+                    id="jabar"
+                    class="dot red jabar position-absolute"
+                  ></span>
+                  <Tooltip
+                    id="clickable"
+                    className="tooltip-custom"
+                    clickable
+                  >
+                    <div className="text-start">
+                      <p className="title">
+                        {isOpenSumbar ? "Sumatera Barat" : "Jawa Barat"}
+                      </p>
+                      <button
+                        className="btn btn-success  rounded-5"
+                        onClick={() => {
+                          onClickDonate(
+                            isOpenSumbar
+                              ? "https://kitabisa.com/campaign/listrikuntuksumbar"
+                              : "http://kitabisa.com/listrikuntukjabar"
+                          );
+                        }}
+                      >
+                        Donasi Untuk {isOpenSumbar ? "Sumatera Barat" : "Jawa Barat"}
+                      </button>
+                    </div>
+                  </Tooltip>
+                  <span
+                    data-tooltip-id="bantul"
+                    id="bantul"
+                    class="dot green position-absolute bantul"
+                  ></span>
+                  <Tooltip id="bantul" className="tooltip-custom">
+                    <div className="text-start">
+                      <p className="m-0 title">Masjid Al Muharram Bantul</p>
+                      <p className="subtitle">
+                        Kampung Brajan, Kabupaten Bantul, DIY
+                      </p>
+                    </div>
+                  </Tooltip>
+                  <span
+                    data-tooltip-id="ntb"
+                    id="ntb"
+                    class="dot green ntb position-absolute"
+                  ></span>
+                  <Tooltip id="ntb" className="tooltip-custom">
+                    <div className="text-start">
+                      <p className="m-0 title">
+                        Masjid Al-Ummah Al-Islamiyah Lombok
+                      </p>
+                      <p className="subtitle">
+                        Desa Sembalun, Lombok Timur, NTB
+                      </p>
+                    </div>
+                  </Tooltip>
                 </div>
                 <div className="card-benefit">
                   <svg
@@ -45,7 +153,10 @@ export default function MapSection() {
                   </svg>
                   <div className="row align-items-center">
                     <div className="col-lg-2 col-12 lamp-container">
-                      <img src="/energi-asset-vector/think-lamp.svg" className="lamp" />
+                      <img
+                        src="/energi-asset-vector/think-lamp.svg"
+                        className="lamp"
+                      />
                     </div>
                     <div className="col-lg-7 col-12 text-start">
                       <h2>Berikan Manfaat untuk Daerah Sekitarmu</h2>
@@ -55,7 +166,9 @@ export default function MapSection() {
                       </p>
                     </div>
                     <div className="col-12 col-lg-3 position-relative btn-container">
-                      <button className="btn btn-success rounded-5 text-center w-100 position-absolute btn-cta">Dapatkan sekarang</button>
+                      <button className="btn btn-success rounded-5 text-center w-100 position-absolute btn-cta" onClick={handleGetNow}>
+                        Dapatkan sekarang
+                      </button>
                     </div>
                   </div>
                 </div>
