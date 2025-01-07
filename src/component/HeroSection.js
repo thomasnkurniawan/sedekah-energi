@@ -1,9 +1,6 @@
-
 import DonationInfo from "./DonationInfo";
 
 export default function HeroSection() {
-
-
   return (
     <section className="hero-section text-center pt-5">
       <div className="container position-relative">
@@ -44,7 +41,13 @@ export default function HeroSection() {
             />
           </div>
           <div className="col-8">
-            <DonationInfo />
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-10">
+                  <DonationInfo />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="col-2">
             <img

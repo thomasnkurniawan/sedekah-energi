@@ -2,8 +2,7 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 
 export default function DonationInfo() {
-  const [jabar, setJabar] = useState(null);
-  const [sumbar, setSumbar] = useState(null);
+  const [dataKitaBisa, setDataKitabisa] = useState(null);
 
   const [tabActive, setTabActive] = useState(0);
   const tabDonation = [
@@ -21,68 +20,84 @@ export default function DonationInfo() {
     setTabActive(id);
   };
 
+  const fetchProgress = async () => {
+    const response = await fetch("/api/kitabisa");
+
+    const { data } = await response.json();
+
+    setDataKitabisa(data);
+  };
+
   useEffect(() => {
-    async function fetchProgress() {
-      const resSumbar = await fetch("/api/scrape-sumbar");
-      const resJabar = await fetch("/api/scrape-jabar");
-
-      const dataSumbar = await resSumbar.json();
-      const dataJabar = await resJabar.json();
-
-      setJabar(dataJabar);
-      setSumbar(dataSumbar);
-    }
     fetchProgress();
   }, []);
 
+  const formatCurrency = (value) => {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(value);
+  };
+
+  function formatPercentage(value) {
+    return new Intl.NumberFormat("en-US", {
+      style: "percent",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(value);
+  }
+
   return (
-    <section className="donation-info">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-10">
-            <div className="card rounded-3">
-              <div className="card-body">
-                <div className="row justify-content-center align-items-center">
-                  <div className="col-12">
-                    <div className="tab-custom">
-                      {tabDonation.map((item) => {
-                        return (
-                          <div
-                            className={clsx({
-                              "tab-custom-item": true,
-                              active: tabActive === item.id,
-                            })}
-                            onClick={() => handleClickTab(item.id)}
-                          >
-                            <span>{item.name}</span>
-                          </div>
-                        );
+    <section className="donation-info rounded-4">
+      <div className="card rounded-4">
+        <div className="card-body rounded-4">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-12">
+              <div className="tab-custom">
+                {tabDonation.map((item) => {
+                  return (
+                    <div
+                      className={clsx({
+                        "tab-custom-item": true,
+                        active: tabActive === item.id,
                       })}
+                      onClick={() => handleClickTab(item.id)}
+                    >
+                      <span>{item.name}</span>
                     </div>
-                  </div>
-                  <div className="col-10 text-start">
-                    <h5 className="donation-description">
-                      Jadilah orang <strong>pertama</strong> pendukung program
-                      perubahan
-                    </h5>
-                    <div className="progress mt-3" style={{ height: "25px" }}>
-                      <div
-                        className="progress-bar bg-success"
-                        style={{ width: "10%" }}
-                      ></div>
-                    </div>
-                    <div className="donation-nominal d-flex justify-content-between">
-                      <span>Rp{ tabActive === 0 ? jabar?.donation_received : sumbar?.donation_received }</span>
-                      <span>Rp{ tabActive === 0 ? jabar?.donation_received : sumbar?.donation_received }</span>
-                    </div>
-                  </div>
-                  <div className="col-2">
-                    <button className="btn btn-success rounded-5">
-                      Donasi
-                    </button>
-                  </div>
+                  );
+                })}
+              </div>
+            </div>
+            {dataKitaBisa && (
+              <div className="col-10 text-start">
+                <h5 className="donation-description">
+                  Jadilah bagian dari <strong>{dataKitaBisa[tabActive]?.donation_count}</strong> pendukung program
+                  perubahan lainya
+                </h5>
+                <div className="progress mt-3" style={{ height: "25px" }}>
+                  <div
+                    className="progress-bar bg-success"
+                    style={{ width: formatPercentage(dataKitaBisa[tabActive]?.donation_percentage) }}
+                  ></div>
+                </div>
+                <div className="donation-nominal d-flex justify-content-between">
+                  <span>
+                    {formatCurrency(
+                      dataKitaBisa[tabActive]?.donation_received
+                    ) || `Rp-`}
+                  </span>
+                  <span>
+                    {formatCurrency(dataKitaBisa[tabActive]?.donation_target) ||
+                      `Rp-`}
+                  </span>
                 </div>
               </div>
+            )}
+            <div className="col-2">
+              <button className="btn btn-success rounded-5">Donasi</button>
             </div>
           </div>
         </div>
