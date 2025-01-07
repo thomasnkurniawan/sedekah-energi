@@ -23,9 +23,9 @@ export default function AboutSection() {
     <section className="bg-dark-green about-section">
       <div className="container text-center">
         <div className="row justify-content-center">
-          <div className="col-12" style={{ position: 'relative' }}>
+          <div className="col-lg-12 col-12 position-relative">
             <img src="/energi-asset-vector/masjid.svg" className="asset-mesjid"/>
-            <div className="card text-center rounded-4" style={{marginTop: '384px'}}>
+            <div className="card text-center rounded-4 card-about">
               <div className="card-body">
                 <div className="row justify-content-center align-items-center g-1 mb-4">
                   <div className="col-12">
@@ -51,10 +51,10 @@ export default function AboutSection() {
                     </span>
                   </div>
                 </div>
-                <div className="row justify-content-center">
+                <div className="row justify-content-center card-carousel">
                   {dataAbout.map((item) => {
                     return (
-                      <div className="col-4 card-mini d-flex flex-column gap-3 align-items-center">
+                      <div className="col-12 col-lg-4 card-mini d-flex flex-column gap-3 align-items-center">
                         <img src={item.image} loading="lazy" />
                         <p>{item.title}</p>
                         <span>{item.description}</span>
@@ -63,8 +63,8 @@ export default function AboutSection() {
                   })}
                 </div>
                 <div className="row justify-content-center">
-                  <div className="col-3">
-                    <button className="btn btn-outline-secondary rounded-5">
+                  <div className="col-12 col-lg-3">
+                    <button className="btn btn-outline-secondary rounded-5 w-100 d-flex justify-content-between">
                       Pelajari selengkapnya
                       <i class="bi bi-arrow-right-short icon-btn"></i>
                     </button>

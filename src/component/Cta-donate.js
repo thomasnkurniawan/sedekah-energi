@@ -9,7 +9,7 @@ export default function DonateSection() {
             <div className="row align-items-center justify-content-between position-relative  text-center">
               <div className="col-lg-5 col-12 me-2">
                 <p className="title">Siap untuk mendukung perubahan?</p>
-                <img src="/energi-asset-vector/line.svg" />
+                <img width="100%" src="/energi-asset-vector/line.svg" />
                 <p className="subtitle">
                   Jadilah orang <span>pertama</span> pendukung program perubahan
                 </p>

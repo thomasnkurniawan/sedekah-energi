@@ -1,15 +1,22 @@
+import { isMobile } from "react-device-detect";
 import DonationInfo from "./DonationInfo";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
+  const [isMobileLocal, setIsMobileLocal] = useState(false);
+  useEffect(() => {
+    setIsMobileLocal(isMobile);
+  }, [isMobile]);
   return (
-    <section className="hero-section text-center pt-5">
+    <section className="hero-section text-center pt-5 p-sm-0">
       <div className="container position-relative">
-        <img src="/energi-asset-vector/sun.svg" className="asset-sun" />
+        {!isMobileLocal && (
+          <img src="/energi-asset-vector/sun.svg" className="asset-sun" />
+        )}
         <div className="row justify-content-center">
-          <div className="col-8">
+          <div className="col-lg-8 col-12">
             <h1 className="fw-bold hero-title mb-3">
-              Berbuat Baik untuk Bumi dan
-              <br /> Sesama Melalui Sedekah Energi
+              Berbuat Baik untuk Bumi dan Sesama Melalui Sedekah Energi
               <svg
                 className="vector-line"
                 xmlns="http://www.w3.org/2000/svg"
@@ -34,27 +41,31 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-2">
-            <img
-              src="/energi-asset-vector/solar-left.svg"
-              className="asset-left"
-            />
-          </div>
-          <div className="col-8">
+          {!isMobileLocal && (
+            <div className="col-lg-2">
+              <img
+                src="/energi-asset-vector/solar-left.svg"
+                className="asset-left"
+              />
+            </div>
+          )}
+          <div className="col-12 col-lg-8">
             <div className="container">
               <div className="row justify-content-center">
-                <div className="col-10">
+                <div className="col-lg-10 col-12">
                   <DonationInfo />
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-2">
-            <img
-              src="/energi-asset-vector/solar-right.svg"
-              className="asset-right"
-            />
-          </div>
+          {!isMobileLocal && (
+            <div className="col-lg-2">
+              <img
+                src="/energi-asset-vector/solar-right.svg"
+                className="asset-right"
+              />
+            </div>
+          )}
         </div>
       </div>
       <div className="separator-dark-green"></div>

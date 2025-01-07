@@ -44,18 +44,18 @@ export default function MapSection() {
                     />
                   </svg>
                   <div className="row align-items-center">
-                    <div className="col-2">
-                      <img src="/energi-asset-vector/think-lamp.svg" />
+                    <div className="col-lg-2 col-12 lamp-container">
+                      <img src="/energi-asset-vector/think-lamp.svg" className="lamp" />
                     </div>
-                    <div className="col-7 text-start">
+                    <div className="col-lg-7 col-12 text-start">
                       <h2>Berikan Manfaat untuk Daerah Sekitarmu</h2>
                       <p>
                         Kamu juga bisa membantu daerah di sekitarmu untuk
                         mendapatkan manfaat program Sedekah Energi.
                       </p>
                     </div>
-                    <div className="col-3">
-                      <button className="btn btn-success rounded-5 text-center w-100">Dapatkan sekarang</button>
+                    <div className="col-12 col-lg-3 position-relative btn-container">
+                      <button className="btn btn-success rounded-5 text-center w-100 position-absolute btn-cta">Dapatkan sekarang</button>
                     </div>
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 import AboutSection from "@/component/AboutSection";
 import ArticleSection from "@/component/ArticleSection";
 import DonateSection from "@/component/Cta-donate";
+import Footer from "@/component/Footer";
 import Header from "@/component/Header";
 import HeroSection from "@/component/HeroSection";
 import ImpactSection from "@/component/ImpactSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <SocialSection />
       <DonateSection />
       <KnowledgeSection />
+      <Footer />
     </>
   );
 }

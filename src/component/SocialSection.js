@@ -1,4 +1,11 @@
+import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
+
 export default function SocialSection() {
+   const [isMobileLocal, setIsMobileLocal] = useState(false);
+    useEffect(() => {
+      setIsMobileLocal(isMobile)
+    }, [])
   return (
     <div className="bg-dark-green social-section">
       <div className="container text-center">
@@ -10,14 +17,14 @@ export default function SocialSection() {
                   <div className="col-lg-6 col-12 text-center">
                     <img
                       src="/energi-asset-vector/logo-umat.png"
-                      width={"300px"}
+                      width={!isMobileLocal ? "300px" : "200px"}
                     />
                   </div>
                   <div className="col-lg-6 col-12">
                     <div className="col-lg-12 col-12">
-                      <div className="row">
+                      <div className="row justify-content-center">
                         <div className="col-lg-12 col-12 text-start">
-                          <p className="pl-3">
+                          <p className="pl-3 text-center pt-4 p-sm-0">
                             Kunjungi juga media <span>sosial</span> kami
                           </p>
                         </div>

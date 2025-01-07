@@ -1,22 +1,51 @@
+import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
+
 export default function Quiz() {
+  const [isMobileLocal, setIsMobileLocal] = useState(false);
+  useEffect(() => {
+    setIsMobileLocal(isMobile);
+  }, [isMobile]);
+
   return (
     <section className="quiz-section">
       <div className="container">
         <div className="card">
-          <div className="card-body p-0">
+          <div className="card-body p-4 p-sm-0">
             <div className="row p-0 align-items-center position-relative">
-              <div className="col-4 ml-4">
-                <img src="/energi-asset-vector/card-quiz.svg" />
-              </div>
-              <div className="col-4">
+              {!isMobileLocal && (
+                <div className="col-lg-4 col-12 ml-4">
+                  <img src="/energi-asset-vector/card-quiz.svg" />
+                </div>
+              )}
+              <div className="col-lg-4 col-12">
                 <div>
                   <span>Ikuti kuisnya dan kumpulkan semua karakter unik!</span>
                 </div>
               </div>
-              <div className="col-4 justify-content-end d-flex">
-                <img src="/energi-asset-vector/quiz-right.svg" className="asset-quiz-right" />
-                <a href="https://tally.so/templates/quiz-sedekah-energi/w42orm" target="_blank" className="btn btn-success rounded-5 d-flex align-items-center text-end btn-quiz">Ikuti Quiz</a>
+              <div className="col-lg-3 col-12 pt-4 p-sm-4">
+                <a
+                  href="https://tally.so/templates/quiz-sedekah-energi/w42orm"
+                  target="_blank"
+                  className="btn btn-success rounded-5 d-flex align-items-center justify-content-center btn-quiz"
+                >
+                  Ikuti Quiz
+                </a>
+                {!isMobileLocal && (
+                  <img
+                    src="/energi-asset-vector/quiz-right.svg"
+                    className="asset-quiz-right"
+                  />
+                )}
               </div>
+              {isMobileLocal && (
+                <div className="col-12">
+                  <img
+                    src="/energi-asset-vector/card-quiz.svg"
+                    width={"100%"}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>

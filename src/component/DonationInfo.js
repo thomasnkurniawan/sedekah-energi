@@ -54,7 +54,7 @@ export default function DonationInfo() {
       <div className="card rounded-4">
         <div className="card-body rounded-4">
           <div className="row justify-content-center align-items-center">
-            <div className="col-12">
+            <div className="col-lg-12">
               <div className="tab-custom">
                 {tabDonation.map((item) => {
                   return (
@@ -72,7 +72,7 @@ export default function DonationInfo() {
               </div>
             </div>
             {dataKitaBisa && (
-              <div className="col-10 text-start">
+              <div className="col-lg-10 col-12 text-start">
                 <h5 className="donation-description">
                   Jadilah bagian dari <strong>{dataKitaBisa[tabActive]?.donation_count}</strong> pendukung program
                   perubahan lainya
@@ -96,8 +96,8 @@ export default function DonationInfo() {
                 </div>
               </div>
             )}
-            <div className="col-2">
-              <button className="btn btn-success rounded-5">Donasi</button>
+            <div className="col-12 col-lg-2 p-sm-0 pt-4">
+              <button className="btn btn-success rounded-5 w-100">Donasi</button>
             </div>
           </div>
         </div>

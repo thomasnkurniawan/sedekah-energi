@@ -1,8 +1,21 @@
 .header-section {
   background-color: var(--light-green-background);
-  border-bottom: 1px solid var(--Primary---Emerald-2, #C3DBDD);
+  border-bottom: 1px solid var(--Primary---Emerald-2, #c3dbdd);
   height: 72px;
 
+  .navbar {
+    background-color: var(--light-green-background);
+    z-index: 99;
+
+    @media screen and (max-width: 600px) {
+      text-align: start !important;
+
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 0.60219px 0.60219px -1.25px,
+        rgba(0, 0, 0, 0.063) 0px 2.28853px 2.28853px -2.5px,
+        rgba(0, 0, 0, 0.024) 0px 10px 10px -3.75px;
+    }
+  }
 
   a {
     color: var(--dark-menu);
@@ -13,5 +26,24 @@
   .logo {
     width: 133px;
     height: 48px;
+  }
+
+  .navbar-collapse {
+
+    @media screen and (max-width: 600px) {
+      justify-content: start!important;
+
+      ul {
+        display: flex;
+        gap: 12px !important;
+        padding: 1rem;
+
+        li {
+          width: 100%;
+          text-align: start;
+        }
+      }
+      
+    }
   }
 }

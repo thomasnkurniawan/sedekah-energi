@@ -17,7 +17,7 @@ export default function AreasSection() {
                   </div>
                 </div>
                 <div className="row justify-content-center">
-                  <div className="col-lg-5 col-12">
+                  <div className="col-lg-5 col-12 col-12">
                     <div className="d-flex flex-column card-mini video-areas">
                       <div className="date-badge">Juni, 2023</div>
                       <Video

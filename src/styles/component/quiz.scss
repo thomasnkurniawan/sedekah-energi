@@ -20,9 +20,19 @@
     }
 
     .btn-quiz {
-      z-index: 99;
       padding: 0px 32px;
       margin-right: 40px;
+      width: 100%;
+
+      @media screen and (min-width: 600px) {
+        width: unset;
+        z-index: 99;
+        position: absolute;
+        padding: 0px 32px;
+        margin-right: 40px;
+        top: 38%;
+        right: 5%;
+      }
     }
 
     .asset-quiz-right {

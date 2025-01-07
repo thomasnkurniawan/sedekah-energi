@@ -1,30 +1,79 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 export default function Header() {
+  // State to track whether the navbar is collapsed or not
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  // Function to toggle the collapsed state
+  const toggleNavbar = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const [isMobileLocal, setIsMobileLocal] = useState(false);
+  useEffect(() => {
+    setIsMobileLocal(isMobile);
+  }, [isMobile]);
+
   return (
-    <header className="header-section py-2">
-      <div className="container d-flex justify-content-between align-items-center">
-        <div className="d-flex align-items-center">
+    <div className="header-section">
+      <nav className="container navbar navbar-expand-lg justify-content-between align-items-center px-2">
+        <a className="navbar-brand" href="#">
           <img src="/energi-logo.png" className="logo" />
-        </div>
-        <nav>
-          <Link href="/" className="text-decoration-none">
-            Home
-          </Link>
-          <Link href="/about" className="text-decoration-none">
-            About Us
-          </Link>
-          <Link href="/knowledge-hub" className="text-decoration-none">
-            Knowledge Hub
-          </Link>
-          <Link href="/faq" className="text-decoration-none">
-            FAQ
-          </Link>
-          <button href="#donate" className="btn btn-success rounded-5">
-            Donate Now
+        </a>
+        {isMobileLocal && (
+          <button className="btn btn-success rounded-5 btn-donate-mobile">
+            Donasi Sekarang
           </button>
-        </nav>
-      </div>
-    </header>
+        )}
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleNavbar} // Handle the click event to toggle
+          aria-controls="navbarNav"
+          aria-expanded={!isCollapsed} // Inverse of isCollapsed
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className={`justify-content-end collapse navbar-collapse ${
+            isCollapsed ? "" : "show"
+          }`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav ml-auto align-items-center gap-4">
+            <li className="nav-item">
+              <Link href="/about" className="text-decoration-none">
+                Tentang Program
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/knowledge-hub" className="text-decoration-none">
+                Knowledge Hub
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/faq" className="text-decoration-none">
+                Quiz
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/faq" className="text-decoration-none">
+                Pertanyaan Umum
+              </Link>
+            </li>
+            {!isMobileLocal && (
+              <li className="nav-item">
+                <button href="#donate" className="btn btn-success rounded-5">
+                  Donasi Sekarang
+                </button>
+              </li>
+            )}
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }

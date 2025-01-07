@@ -1,5 +1,10 @@
 .hero-section {
   background-color: var(--light-green-background);
+  padding-top: 64px !important;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 1rem ;
+  }
 
   .hero-title {
     font-size: 52px;
@@ -19,7 +24,8 @@
 
     @media only screen and (max-width: 600px) {
       .vector-line {
-        left: -80px;
+        left: 0;
+        width: 100%;
       }
 
       font-size: 28px;

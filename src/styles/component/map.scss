@@ -4,6 +4,10 @@
 
   .card-body {
     padding: 56px 60px;
+
+    @media screen and (max-width: 600px) {
+      padding: 32px 1rem;
+    }
   }
 
   .card-benefit {
@@ -34,6 +38,34 @@
 
     button {
       z-index: 9;
+      left: 10px;
+      position: absolute;
+      top: -25px;
+
+      @media screen and (max-width: 600px) {
+        margin-top: 1rem;
+      }
+    }
+
+    .btn-container {
+      @media screen and (max-width: 600px) {
+        height: 60px;
+      }
+    }
+
+    .lamp {
+      @media screen and (max-width: 600px) {
+        position: absolute;
+        z-index: 99;
+        right: 23%;
+      }
+    }
+
+    .lamp-container {
+      @media screen and (max-width: 600px) {
+        position: relative;
+        height: 150px;
+      }
     }
   }
 }

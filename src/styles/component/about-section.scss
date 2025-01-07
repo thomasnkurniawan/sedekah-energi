@@ -1,8 +1,28 @@
 .about-section {
   padding: 60px 0;
 
+  .card-carousel {
+    @media screen and (max-width: 600px) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      width: 100%;
+    }
+  }
+
+  .card-about {
+    margin-top: 384px;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 106px;
+    }
+  }
+
   .card-body {
     padding: 56px 64px !important;
+
+    @media screen and (max-width: 600px) {
+      padding: 32px 16px !important;
+    }
   }
 
   .card-mini {
@@ -50,7 +70,7 @@
 
   .card-knowledge {
     border-radius: 16px;
-    border: 1px solid #E2E6ED;
+    border: 1px solid #e2e6ed;
     background: white;
 
     img {
@@ -78,5 +98,10 @@
   .asset-mesjid {
     position: absolute;
     left: -5%;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      left: 0;
+    }
   }
 }
