@@ -1,0 +1,66 @@
+.donation-info {
+  background-color: var(--light-green-background);
+
+  .donation-description {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+  }
+
+  .donation-nominal {
+    color: var(--dark-green-background);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 8px;
+  }
+
+  .tab-custom {
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 100px;
+    background: var(--gray-inactive);
+    height: 40px;
+
+    color: var(--green-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.28px;
+    text-transform: capitalize;
+
+    margin-bottom: 20px;
+
+    .tab-custom-item {
+      border-radius: 100px;
+      
+      display: flex;
+      height: 32px;
+      padding: 0px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex: 1 0 0;
+      cursor: pointer;
+
+      &.active {
+        background: #fff;
+      }
+    }
+  }
+
+  .progress {
+    height: 10px !important;
+    background-color: var(--green-light) !important;
+  }
+
+  .bg-success {
+    background-color: var(--green) !important;
+  }
+}

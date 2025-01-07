@@ -1,0 +1,39 @@
+.map-section {
+  background-color: var(--light-green-background);
+  padding-top: 80px;
+
+  .card-body {
+    padding: 56px 60px;
+  }
+
+  .card-benefit {
+    padding: 40px;
+    border-radius: 24px;
+    background: #e6f0f1;
+    position: relative;
+
+    h2 {
+      color: var(--title-section);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+    }
+
+    p {
+      color: var(--dark-menu);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    button {
+      z-index: 9;
+    }
+  }
+}

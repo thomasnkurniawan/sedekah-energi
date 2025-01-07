@@ -1,0 +1,22 @@
+.quiz-section {
+  padding: 80px 0;
+  background-color: var(--light-green-background);
+
+
+  .card {
+    border-radius: 24px;
+    
+    .card-body {
+      border-radius: 24px;
+      background-color: var(--dark-green-background);
+      color: white;
+
+      span {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 38px;
+      }
+    }
+  }
+}

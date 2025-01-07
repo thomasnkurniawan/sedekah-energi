@@ -1,0 +1,165 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./component/hero-section.scss";
+@import "./component/donation-info.scss";
+@import "./component/quiz.scss";
+@import "./component/header.scss";
+@import "./component/about-section.scss";
+@import "./component/impact-section.scss";
+@import "./component/map.scss";
+@import "./component/article-section.scss";
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --dark-green-background: #024b50;
+  --light-green-background: #eaf7e5;
+  --dark-menu: #3d4460;
+  --cta-green: #9fe970;
+  --gray-inactive: #eceef3;
+  --green-secondary: #036a71;
+  --green-light: #dcead8;
+  --green: #5ea04b;
+  --title-section: #191f38;
+}
+.btn {
+  height: 48px;
+}
+
+.btn-success {
+  background-color: var(--cta-green);
+  color: var(--dark-green-background);
+  border: unset;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+  text-transform: capitalize;
+  box-shadow: 0px 0.602px 0.602px -1.25px rgba(159, 233, 112, 0.72),
+    0px 2.289px 2.289px -2.5px rgba(159, 233, 112, 0.63),
+    0px 10px 10px -3.75px rgba(159, 233, 112, 0.25);
+}
+
+.btn-outline-secondary {
+  color: var(--green-secondary);
+  border-color: var(--green-secondary);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: var(--green-secondary);
+    color: white;
+  }
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green-background);
+}
+
+.bg-gradient-custom {
+  background: linear-gradient(180deg, rgba(234, 247, 229, 0.00) 0%, #024B50 100%);
+}
+
+body {
+  background-color: #f5f4ee;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(40, 41, 61, 0.04),
+    0px 8px 16px 0px rgba(96, 97, 112, 0.16);
+  border: unset;
+
+  .card-body {
+    border-radius: 16px;
+    background-color: #ffffff;
+  }
+}
+
+.section-badge-title {
+  border-radius: 8px;
+  opacity: 0.8;
+  background: var(--green);
+  padding: 4px 12px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: white;
+}
+
+.section {
+
+  &-title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 52px;
+    color: var(--title-section);
+
+  }
+
+  &-subtitle {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    color: var(--title-section);
+
+  }
+
+  &-description {
+    color: var(--title-section);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px; /* 155.556% */
+  }
+}
+
+.card-mini {
+  border-radius: 20px;
+  border: 1px solid var(--Neutral-4, #e2e6ed);
+  background: var(--neutral-1-white, #fff);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+  &:hover {
+    transform: rotate(5deg) scale(1.05);
+  }
+
+}
+
+.social-section {
+  padding: 80px;
+
+  .card-body {
+    padding: 40px 64px;
+
+    p {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 28px; 
+
+      span {
+        color: #3d4460;
+      }
+    }
+  }
+
+}
