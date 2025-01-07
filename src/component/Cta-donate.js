@@ -1,6 +1,6 @@
 import DonationInfo from "./DonationInfo";
 
-export default function DonateSection() {
+export default function DonateSection({ onClickDonate }) {
   return (
     <section className="donate-section">
       <div className="container">
@@ -15,7 +15,7 @@ export default function DonateSection() {
                 </p>
               </div>
               <div className="col-lg-6 col-12">
-                <DonationInfo />
+                <DonationInfo onClickDonate={onClickDonate} />
               </div>
             </div>
           </div>

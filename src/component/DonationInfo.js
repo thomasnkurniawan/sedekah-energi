@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 
-export default function DonationInfo() {
+export default function DonationInfo({ onClickDonate }) {
   const [dataKitaBisa, setDataKitabisa] = useState(null);
 
   const [tabActive, setTabActive] = useState(0);
@@ -74,13 +74,18 @@ export default function DonationInfo() {
             {dataKitaBisa && (
               <div className="col-lg-10 col-12 text-start">
                 <h5 className="donation-description">
-                  Jadilah bagian dari <strong>{dataKitaBisa[tabActive]?.donation_count}</strong> pendukung program
-                  perubahan lainya
+                  Jadilah bagian dari{" "}
+                  <strong>{dataKitaBisa[tabActive]?.donation_count}</strong>{" "}
+                  pendukung program perubahan lainya
                 </h5>
                 <div className="progress mt-3" style={{ height: "25px" }}>
                   <div
                     className="progress-bar bg-success"
-                    style={{ width: formatPercentage(dataKitaBisa[tabActive]?.donation_percentage) }}
+                    style={{
+                      width: formatPercentage(
+                        dataKitaBisa[tabActive]?.donation_percentage
+                      ),
+                    }}
                   ></div>
                 </div>
                 <div className="donation-nominal d-flex justify-content-between">
@@ -97,7 +102,12 @@ export default function DonationInfo() {
               </div>
             )}
             <div className="col-12 col-lg-2 p-sm-0 pt-4">
-              <button className="btn btn-success rounded-5 w-100">Donasi</button>
+              <button
+                onClick={onClickDonate}
+                className="btn btn-success rounded-5 w-100"
+              >
+                Donasi
+              </button>
             </div>
           </div>
         </div>

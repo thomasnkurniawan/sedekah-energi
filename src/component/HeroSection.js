@@ -2,7 +2,7 @@ import { isMobile } from "react-device-detect";
 import DonationInfo from "./DonationInfo";
 import { useEffect, useState } from "react";
 
-export default function HeroSection() {
+export default function HeroSection({ onClickDonate }) {
   const [isMobileLocal, setIsMobileLocal] = useState(false);
   useEffect(() => {
     setIsMobileLocal(isMobile);
@@ -53,7 +53,7 @@ export default function HeroSection() {
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-lg-10 col-12">
-                  <DonationInfo />
+                  <DonationInfo onClickDonate={onClickDonate} />
                 </div>
               </div>
             </div>
