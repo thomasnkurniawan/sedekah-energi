@@ -1,7 +1,10 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function DonationInfo() {
+  const [jabar, setJabar] = useState(null);
+  const [sumbar, setSumbar] = useState(null);
+
   const [tabActive, setTabActive] = useState(0);
   const tabDonation = [
     {
@@ -18,12 +21,26 @@ export default function DonationInfo() {
     setTabActive(id);
   };
 
+  useEffect(() => {
+    async function fetchProgress() {
+      const resSumbar = await fetch("/api/scrape-sumbar");
+      const resJabar = await fetch("/api/scrape-jabar");
+
+      const dataSumbar = await resSumbar.json();
+      const dataJabar = await resJabar.json();
+
+      setJabar(dataJabar);
+      setSumbar(dataSumbar);
+    }
+    fetchProgress();
+  }, []);
+
   return (
     <section className="donation-info">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-10">
-            <div className="card">
+            <div className="card rounded-3">
               <div className="card-body">
                 <div className="row justify-content-center align-items-center">
                   <div className="col-12">
@@ -33,7 +50,7 @@ export default function DonationInfo() {
                           <div
                             className={clsx({
                               "tab-custom-item": true,
-                              "active": tabActive === item.id
+                              active: tabActive === item.id,
                             })}
                             onClick={() => handleClickTab(item.id)}
                           >
@@ -55,8 +72,8 @@ export default function DonationInfo() {
                       ></div>
                     </div>
                     <div className="donation-nominal d-flex justify-content-between">
-                      <span>Rp0</span>
-                      <span>Rp200.000.000</span>
+                      <span>Rp{ tabActive === 0 ? jabar?.donation_received : sumbar?.donation_received }</span>
+                      <span>Rp{ tabActive === 0 ? jabar?.donation_received : sumbar?.donation_received }</span>
                     </div>
                   </div>
                   <div className="col-2">

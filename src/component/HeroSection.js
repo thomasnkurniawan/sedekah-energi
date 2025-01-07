@@ -1,14 +1,18 @@
+
 import DonationInfo from "./DonationInfo";
 
 export default function HeroSection() {
+
+
   return (
     <section className="hero-section text-center pt-5">
-      <div className="container" style={{position: 'relative'}}>
+      <div className="container position-relative">
         <img src="/energi-asset-vector/sun.svg" className="asset-sun" />
         <div className="row justify-content-center">
           <div className="col-8">
             <h1 className="fw-bold hero-title mb-3">
-              Berbuat Baik untuk Bumi dan<br /> Sesama Melalui Sedekah Energi
+              Berbuat Baik untuk Bumi dan
+              <br /> Sesama Melalui Sedekah Energi
               <svg
                 className="vector-line"
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,20 +30,27 @@ export default function HeroSection() {
               </svg>
             </h1>
             <p className="pt-3 hero-description">
-            Kontribusi untuk penyediaan energi terbarukan di masjid, solusi nyata <br />
-            menjaga ciptaan-Nya.
+              Kontribusi untuk penyediaan energi terbarukan di masjid, solusi
+              nyata <br />
+              menjaga ciptaan-Nya.
             </p>
           </div>
         </div>
         <div className="row justify-content-center">
           <div className="col-2">
-            <img src="/energi-asset-vector/solar-left.svg" className="asset-left" />
+            <img
+              src="/energi-asset-vector/solar-left.svg"
+              className="asset-left"
+            />
           </div>
           <div className="col-8">
             <DonationInfo />
           </div>
           <div className="col-2">
-            <img src="/energi-asset-vector/solar-right.svg" className="asset-right"/>
+            <img
+              src="/energi-asset-vector/solar-right.svg"
+              className="asset-right"
+            />
           </div>
         </div>
       </div>
