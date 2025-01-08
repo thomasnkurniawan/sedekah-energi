@@ -11,7 +11,7 @@ export default function Quiz() {
     <section className="quiz-section">
       <div className="container">
         <div className="card">
-          <div className="card-body">
+          <div className="card-body quiz-card">
             <div className="row p-0 align-items-center position-relative">
               {!isMobileLocal && (
                 <div className="col-lg-4 col-12 ml-4">
@@ -25,7 +25,7 @@ export default function Quiz() {
               </div>
               <div className="col-lg-3 col-12 pt-4 p-sm-4 pb-4">
                 <a
-                  href="https://tally.so/templates/quiz-sedekah-energi/w42orm"
+                  href="https://tally.so/r/m6rB7Y"
                   target="_blank"
                   className="btn btn-success rounded-5 d-flex align-items-center justify-content-center btn-quiz"
                 >

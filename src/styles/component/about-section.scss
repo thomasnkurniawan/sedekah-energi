@@ -76,6 +76,8 @@
     img {
       width: 240px;
       border-radius: 16px 0 0 16px;
+      object-fit: cover;
+      aspect-ratio: 1/1;
     }
 
     .title {
@@ -102,7 +104,7 @@
     @media screen and (max-width: 600px) {
       width: 100%;
       left: 0;
-      top: -0.5%;
+      top: 3px;
     }
   }
 }

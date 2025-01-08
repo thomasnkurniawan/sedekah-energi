@@ -67,7 +67,7 @@ export default function DonationInfo({ onClickDonate }) {
                       })}
                       onClick={() => handleClickTab(item.id)}
                     >
-                      <span>{item.name}</span>
+                      <span className="text-nowrap">{item.name}</span>
                     </div>
                   );
                 })}

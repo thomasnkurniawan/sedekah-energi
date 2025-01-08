@@ -16,6 +16,10 @@
     background: #e6f0f1;
     position: relative;
 
+    @media screen and (max-width: 600px) {
+      padding: 20px 24px;
+    }
+
     h2 {
       color: var(--title-section);
       font-size: 24px;
@@ -43,7 +47,10 @@
       top: -25px;
 
       @media screen and (max-width: 600px) {
-        margin-top: 1rem;
+        z-index: 9;
+        left: 0px;
+        top: 0px;
+        bottom: 0;
       }
     }
 
@@ -76,13 +83,11 @@
     align-items: center;
     gap: 8px;
     background-color: #f35b3d;
-    opacity: 0.7;
     border-radius: 100px;
     width: fit-content;
     .dot {
       background-color: #f35b3d;
       border: 1px solid white;
-      opacity: 1 !important;
     }
   }
 
@@ -108,6 +113,11 @@
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   .green {
@@ -119,23 +129,34 @@
   }
 
   .sumatera {
-    top: 45%;
-    left: 20%;
+    top: 47%;
+    left: 12%;
   }
 
   .jabar {
-    top: 61%;
-    left: 31%;
+    top: 73%;
+    left: 27%;
+
+    @media screen and (max-width: 600px) {
+      top: 66%;
+    }
   }
 
   .bantul {
-    top: 64%;
-    left: 38%;
+    top: 78%;
+    left: 34%;
+
+    @media screen and (max-width: 600px) {
+      top: 70%;
+    }
   }
 
   .ntb {
-    top: 69%;
+    top: 80%;
     left: 49%;
+    @media screen and (max-width: 600px) {
+      top: 70%;
+    }
   }
 
   .map-wrapper .tooltip-custom {
@@ -144,6 +165,13 @@
     text-wrap: wrap;
     opacity: 1;
     width: fit-content;
+  }
+
+  .map-wrapper {
+    .maps-image {
+      width: 100%;
+      padding: 32px 0;
+    }
   }
 
   .title {

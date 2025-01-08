@@ -16,7 +16,7 @@
     .vector-line {
       position: absolute;
       bottom: 0;
-      left: 44%;
+      left: 50%;
       top: 98%;
     }
 
@@ -38,6 +38,13 @@
     font-weight: 300;
     line-height: 32px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 28px; 
+    }
   }
 
   .separator-dark-green {
@@ -67,7 +74,7 @@
 
   .asset-msite {
     position: absolute;
-    right: 5%;
+    right: 0%;
     bottom: -32%;
     z-index: 99;
   }
@@ -78,8 +85,8 @@
     color: white;
 
     position: absolute;
-    left: 15%;
-    top: 88%;
+    left: 10%;
+    bottom: -30%;
     z-index: 99;
 
     i {
@@ -94,7 +101,7 @@
 
     @media screen and (min-width: 600px) {
       left: 38%;
-      top: 70%;
+      top: 130%;
     }
   }
 }

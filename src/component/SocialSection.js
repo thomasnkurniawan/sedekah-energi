@@ -24,6 +24,22 @@ export default function SocialSection() {
           />
         </svg>
       )}
+      {isMobileLocal && (
+        <svg
+          className="top-asset"
+          xmlns="http://www.w3.org/2000/svg"
+          width="310"
+          height="108"
+          viewBox="0 0 310 108"
+          fill="none"
+        >
+          <path
+            d="M4.15728 -41.627C12.0688 -20.5767 42.9654 26.1887 103.26 44.848C178.629 68.1721 87.7257 -8.4632 119.686 -3.89223C151.646 0.678739 168.02 88.7786 353.608 103.461"
+            stroke="#FDCF56"
+            stroke-width="8"
+          />
+        </svg>
+      )}
       <div className="container text-center">
         <div className="row">
           <div className="col-12">
@@ -39,12 +55,13 @@ export default function SocialSection() {
                   <div className="col-lg-6 col-12">
                     <div className="col-lg-12 col-12">
                       <div className="row justify-content-center">
-                        <div className="col-lg-12 col-12 text-start">
-                          <p className="pl-3 text-center pt-4 p-sm-0">
+                        <div className="col-lg-12 col-12 text-start p-0">
+                          <p className="pl-3 pt-4 p-sm-0">
                             Kunjungi juga media <span>sosial</span> kami
                           </p>
                         </div>
-                        <div className="col-lg-2 col-4 p-4 p-sm-0">
+                        <div className="col-lg-12 col-12 p-1 p-sm-0 col-socmed">
+                          <div className="d-flex gap-4 flex-wrap social-med-wrapper">
                           <a
                             href="https://www.facebook.com/umatdansemesta/"
                             target="_blank"
@@ -54,9 +71,6 @@ export default function SocialSection() {
                               className="cursor-pointer"
                             />
                           </a>
-                        </div>
-
-                        <div className="col-lg-2 col-4 p-4 p-sm-0">
                           <a
                             href="https://www.tiktok.com/@umatuntuksemesta"
                             target="_blank"
@@ -66,9 +80,6 @@ export default function SocialSection() {
                               className="cursor-pointer"
                             />
                           </a>
-                        </div>
-
-                        <div className="col-lg-2 col-4 p-4 p-sm-0">
                           <a
                             href="https://www.instagram.com/umatuntuksemesta/"
                             target="_blank"
@@ -78,9 +89,6 @@ export default function SocialSection() {
                               className="cursor-pointer"
                             />
                           </a>
-                        </div>
-
-                        <div className="col-lg-2 col-4 p-4 p-sm-0">
                           <a
                             href="https://x.com/umatutksemesta/status/1867902591935430736"
                             target="_blank"
@@ -90,9 +98,6 @@ export default function SocialSection() {
                               className="cursor-pointer"
                             />
                           </a>
-                        </div>
-
-                        <div className="col-lg-2 col-4 p-4 p-sm-0">
                           <a
                             href="https://www.youtube.com/@UmatUntukSemesta"
                             target="_blank"
@@ -102,6 +107,7 @@ export default function SocialSection() {
                               className="cursor-pointer"
                             />
                           </a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -125,6 +131,22 @@ export default function SocialSection() {
             d="M574.035 270.749C524.877 191.823 385.152 30.6504 219.515 17.3613C12.4675 0.749887 333.697 222.032 253.74 237.06C173.784 252.088 6.39158 -96.0323 -440.417 40.4414"
             stroke="#F35B3D"
             stroke-width="17"
+          />
+        </svg>
+      )}
+      {isMobileLocal && (
+        <svg
+          className="bottom-asset"
+          xmlns="http://www.w3.org/2000/svg"
+          width="375"
+          height="121"
+          viewBox="0 0 375 121"
+          fill="none"
+        >
+          <path
+            d="M573.441 266.479C524.284 187.553 384.559 26.3804 218.921 13.0913C11.8738 -3.52013 333.103 217.762 253.147 232.79C173.19 247.818 5.79783 -100.302 -441.01 36.1714"
+            stroke="#F35B3D"
+            stroke-width="8"
           />
         </svg>
       )}

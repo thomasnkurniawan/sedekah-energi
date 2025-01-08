@@ -6,8 +6,11 @@ export default function MapSection({ onClickDonate }) {
   const [isOpenSumbar, setIsOpenSumbar] = useState(true);
 
   const handleGetNow = () => {
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdNPtP_nQVqu9egHGvANiVDQc1Os7Ggt3-RVk33C5eMtJolQw/viewform", "_blank")
-  }
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSdNPtP_nQVqu9egHGvANiVDQc1Os7Ggt3-RVk33C5eMtJolQw/viewform",
+      "_blank"
+    );
+  };
 
   return (
     <section className="map-section">
@@ -51,14 +54,15 @@ export default function MapSection({ onClickDonate }) {
                   </div>
                 </div>
                 <div className="row justify-content-center mb-2 position-relative map-wrapper">
-                  <img src="/energi-asset-vector/map.png" />
-                  <span
-                    data-tooltip-id="clickable"
-                    onMouseEnter={() => setIsOpenSumbar(true)}
-                    id="sumatera"
-                    class="dot red position-absolute sumatera"
-                  ></span>
-                  {/* <Tooltip
+                  <div className="col-12 col-lg-12">
+                    <img src="/energi-asset-vector/map.png" className="maps-image" />
+                    <span
+                      data-tooltip-id="clickable"
+                      onMouseEnter={() => setIsOpenSumbar(true)}
+                      id="sumatera"
+                      class="dot red position-absolute sumatera"
+                    ></span>
+                    {/* <Tooltip
                     id="sumatera"
                     className="tooltip-custom"
                     clickable
@@ -79,63 +83,65 @@ export default function MapSection({ onClickDonate }) {
                       </button>
                     </div>
                   </Tooltip> */}
-                  <span
-                    data-tooltip-id="clickable"
-                    onMouseEnter={() => setIsOpenSumbar(false)}
-                    id="jabar"
-                    class="dot red jabar position-absolute"
-                  ></span>
-                  <Tooltip
-                    id="clickable"
-                    className="tooltip-custom"
-                    clickable
-                  >
-                    <div className="text-start">
-                      <p className="title">
-                        {isOpenSumbar ? "Sumatera Barat" : "Jawa Barat"}
-                      </p>
-                      <button
-                        className="btn btn-success  rounded-5"
-                        onClick={() => {
-                          onClickDonate(
-                            isOpenSumbar
-                              ? "https://kitabisa.com/campaign/listrikuntuksumbar"
-                              : "http://kitabisa.com/listrikuntukjabar"
-                          );
-                        }}
-                      >
-                        Donasi Untuk {isOpenSumbar ? "Sumatera Barat" : "Jawa Barat"}
-                      </button>
-                    </div>
-                  </Tooltip>
-                  <span
-                    data-tooltip-id="bantul"
-                    id="bantul"
-                    class="dot green position-absolute bantul"
-                  ></span>
-                  <Tooltip id="bantul" className="tooltip-custom">
-                    <div className="text-start">
-                      <p className="m-0 title">Masjid Al Muharram Bantul</p>
-                      <p className="subtitle">
-                        Kampung Brajan, Kabupaten Bantul, DIY
-                      </p>
-                    </div>
-                  </Tooltip>
-                  <span
-                    data-tooltip-id="ntb"
-                    id="ntb"
-                    class="dot green ntb position-absolute"
-                  ></span>
-                  <Tooltip id="ntb" className="tooltip-custom">
-                    <div className="text-start">
-                      <p className="m-0 title">
-                        Masjid Al-Ummah Al-Islamiyah Lombok
-                      </p>
-                      <p className="subtitle">
-                        Desa Sembalun, Lombok Timur, NTB
-                      </p>
-                    </div>
-                  </Tooltip>
+                    <span
+                      data-tooltip-id="clickable"
+                      onMouseEnter={() => setIsOpenSumbar(false)}
+                      id="jabar"
+                      class="dot red jabar position-absolute"
+                    ></span>
+                    <Tooltip
+                      id="clickable"
+                      className="tooltip-custom"
+                      clickable
+                    >
+                      <div className="text-start">
+                        <p className="title">
+                          {isOpenSumbar ? "Sumatera Barat" : "Jawa Barat"}
+                        </p>
+                        <button
+                          className="btn btn-success  rounded-5"
+                          onClick={() => {
+                            onClickDonate(
+                              isOpenSumbar
+                                ? "https://kitabisa.com/campaign/listrikuntuksumbar"
+                                : "http://kitabisa.com/listrikuntukjabar"
+                            );
+                          }}
+                        >
+                          Donasi Untuk{" "}
+                          {isOpenSumbar ? "Sumatera Barat" : "Jawa Barat"}
+                        </button>
+                      </div>
+                    </Tooltip>
+                    <span
+                      data-tooltip-id="bantul"
+                      id="bantul"
+                      class="dot green position-absolute bantul"
+                    ></span>
+                    <Tooltip id="bantul" className="tooltip-custom">
+                      <div className="text-start">
+                        <p className="m-0 title">Masjid Al Muharram Bantul</p>
+                        <p className="subtitle">
+                          Kampung Brajan, Kabupaten Bantul, DIY
+                        </p>
+                      </div>
+                    </Tooltip>
+                    <span
+                      data-tooltip-id="ntb"
+                      id="ntb"
+                      class="dot green ntb position-absolute"
+                    ></span>
+                    <Tooltip id="ntb" className="tooltip-custom">
+                      <div className="text-start">
+                        <p className="m-0 title">
+                          Masjid Al-Ummah Al-Islamiyah Lombok
+                        </p>
+                        <p className="subtitle">
+                          Desa Sembalun, Lombok Timur, NTB
+                        </p>
+                      </div>
+                    </Tooltip>
+                  </div>
                 </div>
                 <div className="card-benefit">
                   <svg
@@ -166,7 +172,10 @@ export default function MapSection({ onClickDonate }) {
                       </p>
                     </div>
                     <div className="col-12 col-lg-3 position-relative btn-container">
-                      <button className="btn btn-success rounded-5 text-center w-100 position-absolute btn-cta" onClick={handleGetNow}>
+                      <button
+                        className="btn btn-success rounded-5 text-center w-100 position-absolute"
+                        onClick={handleGetNow}
+                      >
                         Dapatkan sekarang
                       </button>
                     </div>

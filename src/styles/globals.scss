@@ -147,9 +147,30 @@ body {
 .social-section {
   padding: 80px;
 
+  .col-socmed {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-med-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
   @media screen and (max-width: 600px) {
     padding: 40px 0;
+
+    .social-med-wrapper {
+      width: 90%;
+      justify-content: center;
+    }
+
+    .col-socmed {
+      display: flex;
+      justify-content: center;
+    }
   }
+ 
 
   .card-body {
     padding: 40px 64px;
@@ -163,6 +184,7 @@ body {
 
       p {
         margin-bottom: 24px;
+        text-align: start;
       }
     }
 
@@ -171,6 +193,7 @@ body {
       font-style: normal;
       font-weight: 300;
       line-height: 28px;
+      text-align: center;
 
       span {
         color: #3d4460;
@@ -210,7 +233,7 @@ body {
       z-index: 99;
       border-radius: 24px;
       // background-color: #023c40;
-      background: url('../../public/energi-asset-vector/bg-donate.png');
+      background: url("../../public/energi-asset-vector/bg-donate.png");
       background-size: cover;
       color: white;
       padding: 48px 64px;
@@ -473,7 +496,7 @@ body {
 
   .card-testimoni {
     background-color: white;
-    border: 1px solid gray;
+    border: 1px solid #e2e6ed;
 
     .card-body {
       background-color: white;
@@ -498,5 +521,4 @@ body {
   height: 40px;
   padding: 4px;
   right: 0;
-
 }

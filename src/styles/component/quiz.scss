@@ -19,6 +19,12 @@
       }
     }
 
+    .quiz-card {
+      @media screen and (min-width: 600px) {
+        padding: unset;
+      }
+    }
+
     .btn-quiz {
       padding: 0px 32px;
       margin-right: 40px;

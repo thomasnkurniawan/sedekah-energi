@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
-export default function Header({onClickDonate}) {
+export default function Header({ onClickDonate }) {
   // State to track whether the navbar is collapsed or not
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -18,12 +18,15 @@ export default function Header({onClickDonate}) {
 
   return (
     <div className="header-section">
-      <nav className="container navbar navbar-expand-lg justify-content-between align-items-center px-2">
+      <nav className="container navbar navbar-expand-lg bg-white justify-content-between align-items-center px-2">
         <a className="navbar-brand" href="#">
           <img src="/energi-logo.png" className="logo" />
         </a>
         {isMobileLocal && (
-          <button className="btn btn-success rounded-5 btn-donate-mobile" onClick={onClickDonate}>
+          <button
+            className="btn btn-success rounded-5 btn-donate-mobile"
+            onClick={onClickDonate}
+          >
             Donasi Sekarang
           </button>
         )}
@@ -43,8 +46,9 @@ export default function Header({onClickDonate}) {
           }`}
           id="navbarNav"
         >
-          <ul className="navbar-nav ml-auto align-items-center gap-4">
-            {/* <li className="nav-item">
+          {isCollapsed && (
+            <ul className="navbar-nav ml-auto align-items-center gap-4">
+              {/* <li className="nav-item">
               <Link href="/about" className="text-decoration-none">
                 Tentang Program
               </Link>
@@ -64,14 +68,32 @@ export default function Header({onClickDonate}) {
                 Pertanyaan Umum
               </Link>
             </li> */}
-            {!isMobileLocal && (
+              {!isMobileLocal && (
+                <li className="nav-item">
+                  <button
+                    href="#donate"
+                    className="btn btn-success rounded-5"
+                    onClick={onClickDonate}
+                  >
+                    Donasi Sekarang
+                  </button>
+                </li>
+              )}
+            </ul>
+          )}
+          {!isMobileLocal && (
+            <ul className="navbar-nav ml-auto align-items-center gap-4">
               <li className="nav-item">
-                <button href="#donate" className="btn btn-success rounded-5" onClick={onClickDonate}>
+                <button
+                  href="#donate"
+                  className="btn btn-success rounded-5"
+                  onClick={onClickDonate}
+                >
                   Donasi Sekarang
                 </button>
               </li>
-            )}
-          </ul>
+            </ul>
+          )}
         </div>
       </nav>
     </div>
