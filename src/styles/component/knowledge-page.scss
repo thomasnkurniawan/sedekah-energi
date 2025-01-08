@@ -1,0 +1,224 @@
+.faq-page {
+  background: var(--light-green-background);
+  padding-bottom: 80px;
+
+  .faq-section {
+    background: var(--dark-green-background);
+    padding: 80px 0;
+
+    .faq-card {
+      border-radius: 24px;
+      text-align: center;
+      padding: 32px 64px;
+
+      .card-body {
+        border-radius: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-bottom: 40px;
+    .faq-section {
+      padding: 40px 0;
+
+      .faq-card {
+        padding: 32px 1rem;
+      }
+    }
+  }
+}
+
+.knowledge-base-page {
+  position: relative;
+
+  @media screen and (max-width: 600px) {
+    .wrapper-mview {
+      position: sticky;
+      top: 74px;
+      z-index: 99;
+      padding: 0;
+
+      .accordion-container {
+        background-color: white;
+        z-index: 999;
+        padding: 12px;
+        overflow: hidden;
+        border-bottom: 1px solid #E2E6ED;
+
+      }
+
+      .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .accordion-header h3 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .accordion-body {
+        padding: 0 12px;
+        background-color: #ffffff;
+      }
+
+      .accordion-arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .accordion-arrow.expanded {
+        transform: rotate(180deg);
+      }
+
+      .accordion-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 28px;
+        }
+      }
+
+      .point-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        padding-left: 12px;
+        cursor: pointer;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #1f2644;
+
+        &.active {
+          font-weight: 600;
+          border-left: 4px solid #30858b;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          color: #30858b;
+        }
+      }
+    }
+  }
+
+  .knowledge-base-section {
+    padding: 80px 0;
+
+    @media screen and (max-width: 600px) {
+      padding: 1rem 0;
+    }
+
+    .card-overview {
+      position: sticky;
+      top: 80px;
+
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid #d1d7e2;
+      background: white;
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 28px;
+        }
+      }
+
+      .point-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+        padding-left: 12px;
+        cursor: pointer;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #1f2644;
+
+        &.active {
+          font-weight: 600;
+          border-left: 4px solid #30858b;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          color: #30858b;
+        }
+      }
+    }
+
+    .wrapper-content-section {
+      @media screen and (max-width: 600px) {
+        padding: 24px 12px;
+      }
+    }
+
+    .content-section {
+      .section-wrapper {
+        .id {
+          display: flex;
+          height: 48px;
+          width: 48px;
+          padding: 8px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px;
+          background: #e6f0f1;
+          color: var(--green-secondary);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px;
+
+          @media screen and (max-width: 600px) {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+          }
+        }
+
+        .section-title {
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 38px;
+          color: var(--title-section);
+
+          @media screen and (max-width: 600px) {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+}

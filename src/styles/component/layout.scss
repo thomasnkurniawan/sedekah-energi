@@ -1,0 +1,96 @@
+.layout-section {
+  position: relative;
+  background-color: white;
+
+  .donate-container {
+    background-color: var(--light-green-background);
+    padding-bottom: 80px;
+
+    @media screen and (max-width: 600px) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .quiz-section {
+    background-color: white;
+  }
+
+  .bg-jumbotron-faq {
+    background-color: var(--light-green-background);
+  }
+
+  .bg-jumbotron-orange {
+    background-color: #f35b3d;
+  }
+
+  .bg-jumbotron-green {
+    background-color: #6ea85e;
+  }
+
+  .bg-jumbotron-dark-green {
+    background-color: #035a60;
+  }
+
+  .bg-jumbotron-yellow {
+    background-color: #fcc431;
+  }
+
+  .title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    color: var(--title-section);
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    color: var(--title-section);
+  }
+
+  .jumbotron-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    max-width: 640px;
+    max-height: 480px;
+  }
+
+  .jumbotron {
+    margin-top: 74px;
+    align-items: center;
+    height: 480px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 32px 0;
+    .jumbotron-image {
+      position: absolute;
+      width: 100%;
+    }
+
+    .jumbotron {
+      height: 560px;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 38px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .text-wrapper {
+      padding-top: 45px;
+    }
+  }
+}

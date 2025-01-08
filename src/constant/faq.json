@@ -1,0 +1,72 @@
+{
+  "section": "Panel Surya",
+  "content": [
+    {
+      "title": "Panel surya itu apa sih?",
+      "body": [
+        "Panel surya adalah alat yang bisa mengubah sinar matahari jadi sumber listrik. Intinya, alat ini bikin rumah kita bisa memanfaatkan energi matahari buat menyalakan lampu, TV, dan alat elektronik lainnya."
+      ]
+    },
+    {
+      "title": "Apa aja sih yang dibutuhkan buat pasang panel surya?",
+      "body": [
+        "Panel surya: Menangkap sinar matahari.",
+        "Inverter: Mengubah listrik dari panel biar bisa dipakai alat rumah tangga.",
+        "Mounting system: Rangka buat pasang panelnya.",
+        "Kabel dan pengaman: Buat menyambungkan dan menjaga keamanan sistem.",
+        "Charge controller: Buat mengatur pengisian baterai.",
+        "Baterai (opsional): Buat menyimpan energi kalau lagi nggak ada matahari."
+      ]
+    },
+    {
+      "title": "Berapa kapasitas yang dibutuhkan?",
+      "body": [
+        "Tergantung listrik yang dipakai di rumah kita. Contohnya, kalau pakai listrik 5 kWh sehari, dan lokasinya disinari matahari hingga 5 jam, kira-kira butuh panel dengan daya total 1 kWp. Kalau butuh lebih rinci, bisa tanya teknisi biar lebih pasti."
+      ]
+    },
+    {
+      "title": "Semua lokasi bisa pakai panel surya?",
+      "body": [
+        "Insha Allah bisa! Tapi efektivitas dan efisiensinya berbeda-beda, tergantung kondisi lokasinya. Tempat yang dapat sinar matahari cukup (sekitar 4-6 jam sehari) cocok banget. Kalau sering mendung atau tertutup bangunan, hasilnya nggak maksimal."
+      ]
+    },
+    {
+      "title": "Panel surya bisa tahan berapa lama?",
+      "body": [
+        "Biasanya sampai 20-25 tahun. Tapi, performanya pelan-pelan menurun, sekitar 0,5% per tahun. Jadi, masih tetap awet kok."
+      ]
+    },
+    {
+      "title": "Perawatannya ribet nggak?",
+      "body": [
+        "Bersihin panelnya dari debu atau daun.",
+        "Cek kabel dan inverter secara rutin.",
+        "Pastikan nggak ada bayangan nutupin panel."
+      ]
+    },
+    {
+      "title": "Biaya pasangnya mahal nggak?",
+      "body": [
+        "Tergantung kebutuhan listrik yang dipakai di rumah. Biasanya kamu perlu biaya mulai dari Rp 20 juta sampai Rp 50 juta di awal pemasangan. Tapi ini investasi jangka panjang yang nggak cuma bikin hemat listrik tapi juga ramah lingkungan."
+      ]
+    },
+    {
+      "title": "Pasangnya lama nggak?",
+      "body": [
+        "Proses pemasangan biasanya selesai dalam 1-3 hari, tergantung ukuran dan kondisi lokasi."
+      ]
+    },
+    {
+      "title": "Kalau rusak gimana?",
+      "body": [
+        "Panel surya biasanya bergaransi 10-25 tahun. Kalau komponen lainnya yang bermasalah (seperti inverter, baterai, dsb), bisa hubungi teknisi untuk perbaikan atau ganti baru."
+      ]
+    },
+    {
+      "title": "Kalau ada petir, gimana?",
+      "body": [
+        "Nggak usah khawatir, sistem panel surya biasanya dilengkapi dengan grounding (pembumian) dan sistem keamanan yang Insha Allah melindungi dari sambaran petir. Tapi, pastikan sistemnya memang terpasang dengan benar ya!"
+      ]
+    }
+  ]
+}

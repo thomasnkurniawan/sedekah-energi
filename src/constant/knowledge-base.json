@@ -1,0 +1,316 @@
+[
+  {
+    "title": "Basic Knowledge Renewable Energy",
+    "subtitle": "Kenali dasar-dasar energi terbarukan untuk masa depan yang lebih berkelanjutan.",
+    "slug": "basic-knowledge-renewable-energy",
+    "content": [
+      {
+        "id": "01",
+        "section": "Mengenal Energi",
+        "type": "free-text",
+        "content": [
+          {
+            "title": "Apa Itu Energi?",
+            "body": [
+              "Energi adalah kemampuan untuk melakukan kerja atau menyebabkan perubahan. Kalau dalam kehidupan sehari-hari, energi ibarat bahan bakar untuk segala aktivitas kita.",
+              "Sesuai dengan hukum kekekalan energi, energi nggak bisa diciptakan atau dimusnahkan, tapi bisa diubah bentuknya, seperti dari listrik menjadi cahaya atau panas.",
+              "Energi punya peran yang penting banget buat kehidupan modern, baik dalam skala kecil maupun besar."
+            ]
+          },
+          {
+            "title": "Energi Skala Kecil",
+            "body": [
+              "Sinar matahari digunakan untuk menjemur pakaian.",
+              "Energi listrik yang bikin lampu nyala.",
+              "Energi listrik yang digunakan untuk mengisi daya ponsel."
+            ]
+          },
+          {
+            "title": "Energi Skala Besar",
+            "body": [
+              "Energi digunakan untuk menjalankan mesin-mesin pabrik.",
+              "Energi digunakan untuk membangun infrastruktur.",
+              "Energi digunakan untuk mengangkut barang menggunakan kendaraan bermotor yang mengubah energi kimia dari bahan bakar menjadi energi mekanik."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "02",
+
+        "section": "Mengenal Energi Terbarukan",
+        "type": "free-text",
+
+        "content": [
+          {
+            "title": "Apa Itu Energi Terbarukan?",
+            "body": [
+              "Energi terbarukan adalah energi ramah lingkungan yang 'nggak ada habisnya' karena bisa diperbarui terus-menerus. Sumbernya? Dari alam seperti matahari, angin, dan air.",
+              "Energi terbarukan itu berkelanjutan dan ramah lingkungan. Sifat ini sejalan dengan prinsip kita sebagai khalifah di bumi untuk menjaga dan melestarikan ciptaan Allah tanpa menimbulkan kerusakan atau polusi yang signifikan."
+            ]
+          },
+          {
+            "title": "Ciri-ciri Energi Terbarukan",
+            "body": [
+              "Berkelanjutan: Terbarui secara alami dalam waktu singkat.",
+              "Energi Bersih: Menghasilkan emisi gas rumah kaca atau residu yang sangat rendah atau nol.",
+              "Sumber Beragam: Termasuk energi surya, angin, air, panas bumi, dan biomassa."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "03",
+        "section": "Energi Konvensional",
+        "type": "free-text",
+
+        "content": [
+          {
+            "title": "Apa Itu Energi Konvensional?",
+            "body": [
+              "Energi konvensional adalah jenis energi yang berasal dari sumber daya alam yang jumlahnya terbatas dan tidak dapat diperbaharui dalam waktu singkat.",
+              "Energi ini juga nggak ramah lingkungan karena menghasilkan polusi besar. Sebagai umat yang diajarkan untuk memelihara bumi, ini jadi pengingat buat kita mulai beralih ke energi yang lebih bersih."
+            ]
+          },
+          {
+            "title": "Ciri-ciri Energi Konvensional",
+            "body": [
+              "Terbatas: Jumlahnya di alam sangat terbatas dan akan habis jika digunakan terus-menerus.",
+              "Proses Pembentukan Lama: Membutuhkan waktu jutaan tahun untuk terbentuk secara alami.",
+              "Memerlukan Ekstraksi: Harus diambil melalui penambangan atau pengeboran, yang sering kali merusak lingkungan."
+            ]
+          }
+        ]
+      },
+
+      {
+        "id": "04",
+
+        "section": "Jenis-Jenis Energi Terbarukan",
+        "type": "heading",
+
+        "content": [
+          {
+            "title": "Apa Saja Jenis Energi Terbarukan?",
+            "body": [
+              {
+                "heading": "Energi Surya",
+                "description": "Energi dari matahari yang ditangkap menggunakan panel surya."
+              },
+              {
+                "heading": "Energi Angin",
+                "description": "Memanfaatkan kekuatan angin melalui turbin."
+              },
+              {
+                "heading": "Energi Air (Hidro)",
+                "description": "Menghasilkan listrik menggunakan aliran atau jatuhan air."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "05",
+
+        "section": "Cara Kerja Energi Terbarukan",
+        "type": "heading",
+
+        "content": [
+          {
+            "title": "Bagaimana Energi Terbarukan Bekerja?",
+            "body": [
+              {
+                "heading": "Panel Surya",
+                "description": "Menangkap cahaya matahari dan mengonversinya menjadi listrik. Ketika sinar matahari mengenai panel, cahaya tersebut memicu gerakan elektron di dalam bahan panel. Gerakan ini menghasilkan listrik dalam bentuk arus searah DC."
+              },
+              {
+                "heading": "Turbin Angin",
+                "description": "Menggunakan angin untuk memutar baling-baling diteruskan ke poros utama (shaft) di dalam turbin. Poros ini terhubung ke generator, alat yang mengubah energi mekanik (putaran) menjadi energi listrik."
+              },
+              {
+                "heading": "Pembangkit Hidro",
+                "description": "Memanfaatkan aliran air pada bendungan untuk menggerakkan baling-baling pada turbin. Putaran turbin menggerakkan generator, alat yang mengubah energi mekanik (putaran) menjadi energi listrik. Semakin tinggi air jatuh, semakin besar energi yang dihasilkan."
+              },
+              {
+                "heading": "Konversi Biomassa",
+                "description": "Memanfaatkan bahan organik seperti sisa tanaman, kayu, atau limbah menjadi energi yang bisa digunakan. Ada beberapa cara pengolahan biomassa menjadi energi seperti Pembakaran, pembusukan (Fermentasi), Pemanasan tanpa oksigen (Gasifikasi), Penguraian Mikroorganisme (Digestasi Anaerobik)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "06",
+
+        "section": "Manfaat Beralih ke Energi Terbarukan",
+        "type": "heading",
+        "content": [
+          {
+            "title": "Apa Saja Manfaat Jika Beralih ke Energi Terbarukan?",
+            "body": [
+              {
+                "heading": "Melindungi Lingkungan",
+                "description": "Mengurangi kerusakan lingkungan seperti pemanasan global dan perubahan iklim. Energi terbarukan seperti matahari, angin, dan air tidak menghasilkan polusi udara atau emisi gas rumah kaca."
+              },
+              {
+                "heading": "Hemat Biaya dalam Jangka Panjang",
+                "description": "Setelah dipasang, teknologi energi terbarukan seperti panel surya atau turbin angin membutuhkan biaya operasional yang rendah. Tagihan listrik bisa berkurang atau bahkan gratis jika menggunakan energi dari matahari atau angin."
+              },
+              {
+                "heading": "Meningkatkan Kemandirian Energi",
+                "description": "Dapat memproduksi energi sendiri, misalnya dengan panel surya di rumah."
+              },
+              {
+                "heading": "Energi yang Lebih Aman",
+                "description": "Energi terbarukan tidak melibatkan risiko seperti tumpahan minyak, ledakan tambang batu bara, atau pencemaran radiasi nuklir."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "07",
+
+        "section": "Tantangan Energi Terbarukan",
+        "type": "heading",
+        "content": [
+          {
+            "title": "Apa Saja Tantangan Jika Ingin Berpindah ke Energi Terbarukan?",
+            "body": [
+              {
+                "heading": "Biaya Awal yang Tinggi",
+                "description": "Instalasi panel surya, turbin angin, atau pembangkit lainnya memerlukan investasi besar di awal, meskipun biaya operasionalnya rendah."
+              },
+              {
+                "heading": "Ketergantungan Kondisi Cuaca",
+                "description": "Beberapa sumber, seperti surya dan angin, tergantung pada kondisi cuaca."
+              },
+              {
+                "heading": "Penyimpanan Energi",
+                "description": "Energi dari hasil pengolahan matahari atau angin perlu disimpan untuk digunakan saat sumbernya tidak tersedia. Teknologi yang paling sering digunakan adalah baterai, tetapi biayanya masih mahal dan memiliki keterbatasan kapasitas."
+              },
+              {
+                "heading": "Lokasi yang Tepat",
+                "description": "Energi terbarukan memerlukan lokasi tertentu agar efisien."
+              },
+              {
+                "heading": "Infrastruktur yang Belum Siap",
+                "description": "Jaringan listrik di beberapa tempat belum dirancang untuk menangani energi terbarukan, terutama jika energi tersebut dihasilkan di lokasi terpencil."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "08",
+
+        "section": "Langkah-Langkah Memulai Penggunaan Energi Terbarukan",
+        "type": "free-text",
+
+        "content": [
+          {
+            "title": "Pahami Kebutuhan Energi Anda",
+            "body": [
+              "Evaluasi penggunaan energi di rumahmu.",
+              "Dengan memahami kebutuhan, kita bisa lebih bijak mengelolanya sesuai prinsip hidup hemat dan efisien."
+            ]
+          },
+          {
+            "title": "Cari Tahu Sumber Energi yang Baik",
+            "body": [
+              "Pelajari opsi energi terbarukan yang sesuai dengan kondisi wilayahmu, seperti tenaga surya atau angin.",
+              "Sesuai ajaran Islam, pilihlah yang membawa manfaat tanpa merusak lingkungan."
+            ]
+          },
+          {
+            "title": "Konsultasikan dengan Ahlinya",
+            "body": [
+              "Jangan ragu bertanya pada penyedia energi terbarukan atau tenaga ahli.",
+              "Hikmah dari musyawarah adalah keputusan yang lebih baik."
+            ]
+          },
+          {
+            "title": "Pertimbangkan Pilihan Keuangan",
+            "body": [
+              "Periksa kemudahan seperti subsidi, pinjaman syariah, atau program sewa untuk membantu memulai langkah ini tanpa memberatkan."
+            ]
+          },
+          {
+            "title": "Mulai dari Langkah Sederhana",
+            "body": [
+              "Instalasi kecil seperti pemanas air tenaga surya atau panel surya sederhana bisa jadi awal yang berkah menuju keberlanjutan."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "09",
+
+        "section": "Mitos tentang Energi Terbarukan",
+        "type": "heading",
+
+        "content": [
+          {
+            "title": "Pernyataan Ini Mitos atau Fakta?",
+            "body": [
+              {
+                "heading": "Mahal Banget",
+                "description": "Memang, biaya awal energi terbarukan lumayan tinggi. Tapi kalau dihitung-hitung, penghematannya dalam jangka panjang itu luar biasa. Hemat dunia, hemat akhirat!"
+              },
+              {
+                "heading": "Nggak Andal",
+                "description": "Teknologi baterai modern bikin energi terbarukan lebih stabil dan bisa diandalkan. Ini bukti kalau ikhtiar manusia selalu Allah mudahkan."
+              },
+              {
+                "heading": "Dayanya nggak cukup",
+                "description": "Siapa bilang? Dengan menggabungkan berbagai sumber energi terbarukan, Insya Allah cukup kok untuk rumah tangga sampai industri. Maksimalkan nikmat bumi yang Allah titipkan!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "10",
+
+        "section": "Masa Depan Energi Terbarukan",
+        "type": "heading",
+
+        "content": [
+          {
+            "title": "Gimana Sih Masa Depan Energi Terbarukan?",
+            "body": [
+              {
+                "heading": "Kemajuan Teknologi",
+                "description": "Kemajuan dalam penyimpanan energi, jaringan pintar, dan efisiensi yang menjadi ikhtiar untuk dunia lebih baik."
+              },
+              {
+                "heading": "Adopsi Global",
+                "description": "Fokus yang meningkat pada energi bersih untuk mencapai target iklim."
+              },
+              {
+                "heading": "Semakin Terjangkau, Semakin Ramah Umat",
+                "description": "Biaya yang terus menurun memudahkan semua kalangan untuk beralih ke energi terbarukan."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "section": "Poin Penting",
+        "type": "free-text",
+
+        "content": [
+          {
+            "title": "Poin-poin Penting Tentang Energi Terbarukan",
+            "body": [
+              "Energi terbarukan itu kunci buat masa depan yang lebih bersih dan berkelanjutan, sesuai dengan ajaran Islam yang mengajarkan kita untuk menjaga bumi ini.",
+              "Ada berbagai macam sumber energi terbarukan yang bisa disesuaikan dengan kebutuhan kita dan kondisi sekitar, jadi kita bisa pilih yang terbaik sesuai dengan potensi alam.",
+              "Beralih ke energi terbarukan nggak cuma bermanfaat buat lingkungan, tapi juga membawa keuntungan ekonomi dan meningkatkan keamanan energi, yang tentu saja sejalan dengan prinsip kebaikan dalam Islam."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

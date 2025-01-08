@@ -30,7 +30,7 @@ export default function Header({ onClickDonate }) {
             Donasi Sekarang
           </button>
         )}
-        {/* <button
+        <button
           className="navbar-toggler"
           type="button"
           onClick={toggleNavbar} // Handle the click event to toggle
@@ -39,16 +39,15 @@ export default function Header({ onClickDonate }) {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button> */}
+        </button>
         <div
           className={`justify-content-end collapse navbar-collapse ${
             isCollapsed ? "" : "show"
           }`}
           id="navbarNav"
         >
-          {isCollapsed && (
-            <ul className="navbar-nav ml-auto align-items-center gap-4">
-              {/* <li className="nav-item">
+          <ul className="navbar-nav ml-auto align-items-center gap-4">
+            {/* <li className="nav-item">
               <Link href="/about" className="text-decoration-none">
                 Tentang Program
               </Link>
@@ -63,26 +62,13 @@ export default function Header({ onClickDonate }) {
                 Quiz
               </Link>
             </li>
+          */}
             <li className="nav-item">
               <Link href="/faq" className="text-decoration-none">
                 Pertanyaan Umum
               </Link>
-            </li> */}
-              {!isMobileLocal && (
-                <li className="nav-item">
-                  <button
-                    href="#donate"
-                    className="btn btn-success rounded-5"
-                    onClick={onClickDonate}
-                  >
-                    Donasi Sekarang
-                  </button>
-                </li>
-              )}
-            </ul>
-          )}
-          {!isMobileLocal && (
-            <ul className="navbar-nav ml-auto align-items-center gap-4">
+            </li>
+            {!isMobileLocal && (
               <li className="nav-item">
                 <button
                   href="#donate"
@@ -92,8 +78,8 @@ export default function Header({ onClickDonate }) {
                   Donasi Sekarang
                 </button>
               </li>
-            </ul>
-          )}
+            )}
+          </ul>
         </div>
       </nav>
     </div>
