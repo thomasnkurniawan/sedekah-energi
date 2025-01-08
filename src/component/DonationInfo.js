@@ -1,7 +1,11 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 
-export default function DonationInfo({ onClickDonate }) {
+export default function DonationInfo({
+  onClickDonate,
+  isCtaSection,
+  setTabActiveParent,
+}) {
   const [dataKitaBisa, setDataKitabisa] = useState(null);
 
   const [tabActive, setTabActive] = useState(0);
@@ -20,6 +24,9 @@ export default function DonationInfo({ onClickDonate }) {
 
   const handleClickTab = (id) => {
     setTabActive(id);
+    if (setTabActiveParent) {
+      setTabActiveParent(id);
+    }
   };
 
   const fetchProgress = async () => {
@@ -75,13 +82,15 @@ export default function DonationInfo({ onClickDonate }) {
             </div>
             {dataKitaBisa && (
               <div className="col-lg-10 col-12 text-start">
-                <h5 className="donation-description">
-                  Jadilah bagian dari{" "}
-                  <strong style={{ fontWeight: 800 }}>
-                    {dataKitaBisa[tabActive]?.donation_count}
-                  </strong>{" "}
-                  pendukung program perubahan lainya
-                </h5>
+                {!isCtaSection && (
+                  <h5 className="donation-description">
+                    Jadilah bagian dari{" "}
+                    <strong style={{ fontWeight: 800 }}>
+                      {dataKitaBisa[tabActive]?.donation_count}
+                    </strong>{" "}
+                    pendukung program perubahan lainya
+                  </h5>
+                )}
                 <div className="progress mt-3" style={{ height: "25px" }}>
                   <div
                     className="progress-bar bg-success"

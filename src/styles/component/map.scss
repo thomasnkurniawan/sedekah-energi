@@ -2,6 +2,10 @@
   background-color: var(--light-green-background);
   padding-top: 80px;
 
+  @media screen and (max-width: 600px) {
+    padding: 40px 0;
+  }
+
   .card-body {
     padding: 56px 60px;
 
@@ -82,7 +86,7 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    background-color: #f35b3d;
+    background: rgba(243, 91, 61, 0.24);
     border-radius: 100px;
     width: fit-content;
     .dot {

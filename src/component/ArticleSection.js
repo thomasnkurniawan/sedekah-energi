@@ -6,6 +6,25 @@ export default function ArticleSection() {
   useEffect(() => {
     setIsMobileLocal(isMobile);
   }, [isMobile]);
+
+  const dataArticle = [
+    {
+      title: `What Can 'Green Islam' Achieve in the World's Largest Muslim Country?`,
+      logo: "/energi-asset-vector/nyt.png",
+      description:
+        "Para ulama di Indonesia mulai mengeluarkan fatwa yang menyerukan kepedulian terhadap lingkungan, memakmurkan masjid dengan teknologi ramah lingkungan, serta mengajak umat untuk turut menjaga bumi sebagai amanah dari Allah SWT.",
+      link: "https://www.nytimes.com/2024/04/17/world/asia/green-islam-indonesia.html",
+      date: "Apr 17, 2024",
+    },
+    {
+      title: ` 'Green Islam': How Indonesian Muslims are helping protect the Earth`,
+      logo: "/energi-asset-vector/blue.png",
+      description:
+        "Indonesia mungkin berada di garis depan krisis pemanasan global, namun banyak warganya masih skeptis terhadap isu perubahan iklim.",
+      link: "https://www.france24.com/en/tv-shows/focus/20241115-green-islam-how-indonesian-muslims-are-helping-protect-the-earth",
+      date: "Dec 11, 2024",
+    },
+  ];
   return (
     <section className="article-section position-relative">
       {!isMobileLocal && (
@@ -39,59 +58,28 @@ export default function ArticleSection() {
                   </div>
                 </div>
                 <div className="row justify-content-center">
-                  <div className="col-lg-5 col-12">
-                    <div className="d-flex flex-column card-mini video-areas">
-                      <a
-                        href="https://www.nytimes.com/2024/04/17/world/asia/green-islam-indonesia.html"
-                        className="text-decoration-none"
-                      >
-                        <div className="article-logo">
-                          <img src="/energi-asset-vector/nyt.png" />
+                  {dataArticle.map((item) => {
+                    return (
+                      <div className="col-lg-5 col-12">
+                        <div className="d-flex flex-column card-mini video-areas">
+                          <a href={item.link} className="text-decoration-none">
+                            <div className="article-logo">
+                              <img src={item.logo} />
+                            </div>
+                            <div className="text-start">
+                              <p className="mb-4 text-start art-title">
+                                {item.title}
+                              </p>
+                              <p className="mb-4 text-start art-desc">
+                                {item.description}
+                              </p>
+                              <p className="text-start art-desc">{item.date}</p>
+                            </div>
+                          </a>
                         </div>
-                        <div className="text-start">
-                          <p className="mb-4 text-start art-title">
-                            What Can ‘Green Islam’ Achieve in the World’s
-                            Largest Muslim Country?
-                          </p>
-                          <p className="mb-4 text-start art-desc">
-                            Para ulama di Indonesia mulai mengeluarkan fatwa
-                            yang menyerukan kepedulian terhadap lingkungan,
-                            memakmurkan masjid dengan teknologi ramah
-                            lingkungan, serta mengajak umat untuk turut menjaga
-                            bumi sebagai amanah dari Allah SWT.
-                          </p>
-                          <p className="text-start art-desc">Apr 17, 2024</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-lg-5 col-12">
-                    <div className="d-flex flex-column card-mini video-areas">
-                      <a
-                        href="https://www.france24.com/en/tv-shows/focus/20241115-green-islam-how-indonesian-muslims-are-helping-protect-the-earth"
-                        className="text-decoration-none"
-                      >
-                        <div className="article-logo">
-                          <img src="/energi-asset-vector/blue.png" />
-                        </div>
-
-                        <div className="text-start">
-                          <p className="mb-4 text-start art-title">
-                            'Green Islam': How Indonesian Muslims are helping
-                            protect the Earth
-                          </p>
-                          <p className="mb-4 text-start art-desc">
-                            Indonesia mungkin berada di garis depan krisis
-                            pemanasan global, namun banyak warganya masih
-                            skeptis terhadap isu perubahan iklim.
-                          </p>
-                          <p className="m-0 text-start art-desc">
-                            Dec 11, 2024
-                          </p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

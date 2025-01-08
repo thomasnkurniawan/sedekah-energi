@@ -53,11 +53,11 @@ export default function Home() {
           style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
         >
           <div className="modal-dialog modal-dialog-centered" role="document">
-            <div className="modal-content">
+            <div className="modal-content rounded-4">
               <div className="modal-body">
                 <button
                   type="button"
-                  className="close btn btn-icon btn-close-modal w-100 text-end"
+                  className="close btn btn-icon btn-close-modal w-100 text-end p-0"
                   onClick={handleClose}
                   aria-label="Close"
                 >
@@ -135,11 +135,11 @@ export default function Home() {
           style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
         >
           <div className="modal-dialog modal-dialog-centered" role="document">
-            <div className="modal-content">
+            <div className="modal-content rounded-5">
               <div className="modal-body">
                 <button
                   type="button"
-                  className="close btn btn-icon btn-close-modal w-100 text-end"
+                  className="close btn btn-icon btn-close-modal w-100 text-end p-0"
                   onClick={() => setShowModalVideo(false)}
                   aria-label="Close"
                 >
@@ -162,6 +162,7 @@ export default function Home() {
                     title="YouTube video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    className="rounded-4"
                   ></iframe>
                 </div>
               </div>

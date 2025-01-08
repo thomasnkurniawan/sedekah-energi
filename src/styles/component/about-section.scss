@@ -1,11 +1,18 @@
 .about-section {
   padding: 60px 0;
 
+  @media screen and (max-width: 600px) {
+    padding: 40px 0;
+  }
+
   .card-carousel {
+    justify-content: center;
+
     @media screen and (max-width: 600px) {
       flex-wrap: nowrap;
       overflow-x: scroll;
       width: 100%;
+      justify-content: start;
     }
   }
 
@@ -66,35 +73,6 @@
   .btn {
     display: flex;
     align-items: center;
-  }
-
-  .card-knowledge {
-    border-radius: 16px;
-    border: 1px solid #e2e6ed;
-    background: white;
-
-    img {
-      width: 240px;
-      border-radius: 16px 0 0 16px;
-      object-fit: cover;
-      aspect-ratio: 1/1;
-    }
-
-    .title {
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 28px;
-    }
-
-    .see-more {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
-      text-transform: capitalize;
-      color: var(--green-secondary);
-    }
   }
 
   .asset-mesjid {

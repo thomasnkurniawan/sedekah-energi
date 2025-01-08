@@ -7,6 +7,23 @@ export default function AreasSection({ setShowModalVideo }) {
   useEffect(() => {
     setIsMobileLocal(isMobile);
   }, [isMobile]);
+
+  const dataVideo = [
+    {
+      id: 1,
+      date: "Juni, 2023",
+      videoId: "tVwFVwysZ8A",
+      name: "Masjid Al Muharram Bantul",
+      location: "Kampung Brajan, Kabupaten Bantul, DIY",
+    },
+    {
+      id: 2,
+      date: "Maret, 2023",
+      videoId: "mxBtzM4CAuU",
+      name: "Masjid Al-Ummah Al-Islamiyah Lombok",
+      location: "Kampung Brajan, Kabupaten Bantul, DIY",
+    },
+  ];
   return (
     <section className="impact-section position-relative">
       {!isMobileLocal && (
@@ -38,48 +55,33 @@ export default function AreasSection({ setShowModalVideo }) {
                   </div>
                 </div>
                 <div className="row justify-content-center">
-                  <div className="col-lg-5 col-12 col-12">
-                    <div className="d-flex flex-column card-mini video-areas">
-                      <div className="date-badge">Juni, 2023</div>
-                      <Video
-                        setShowModalVideo={(param) => setShowModalVideo(param)}
-                        videoId="tVwFVwysZ8A" // Ganti dengan ID video YouTube Anda
-                        thumbnailUrl="https://img.youtube.com/vi/tVwFVwysZ8A/maxresdefault.jpg"
-                      />
-                      <div className="d-flex gap-4">
-                        <div className="badge-video">1</div>
-                        <div className="text-start">
-                          <p className="m-0 text-start title">
-                            Masjid Al Muharram Bantul
-                          </p>
-                          <p className="m-0 text-start desc">
-                            Kampung Brajan, Kabupaten Bantul, DIY
-                          </p>
+                  {dataVideo.map((item) => {
+                    return (
+                      <div className="col-lg-5 col-12 col-12">
+                        <div className="d-flex flex-column card-mini video-areas">
+                          <div className="date-badge">{item.date}</div>
+                          <Video
+                            setShowModalVideo={(param) =>
+                              setShowModalVideo(param)
+                            }
+                            videoId={item.videoId} // Ganti dengan ID video YouTube Anda
+                            thumbnailUrl={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
+                          />
+                          <div className="d-flex gap-3">
+                            <div className="badge-video">1</div>
+                            <div className="text-start">
+                              <p className="m-0 text-start title">
+                                {item.name}
+                              </p>
+                              <p className="m-0 text-start desc">
+                                {item.location}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-5 col-12">
-                    <div className="d-flex flex-column card-mini video-areas">
-                      <div className="date-badge">Maret, 2023</div>
-                      <Video
-                        setShowModalVideo={(param) => setShowModalVideo(param)}
-                        videoId="mxBtzM4CAuU" // Ganti dengan ID video YouTube Anda
-                        thumbnailUrl="https://img.youtube.com/vi/mxBtzM4CAuU/maxresdefault.jpg"
-                      />
-                      <div className="d-flex gap-4">
-                        <div className="badge-video">2</div>
-                        <div className="text-start">
-                          <p className="m-0 text-start title">
-                            Masjid Al-Ummah Al-Islamiyah Lombok
-                          </p>
-                          <p className="m-0 text-start desc">
-                            Kampung Brajan, Kabupaten Bantul, DIY
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

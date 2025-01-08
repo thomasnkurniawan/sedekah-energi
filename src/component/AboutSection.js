@@ -54,10 +54,10 @@ export default function AboutSection({ ref }) {
                     </span>
                   </div>
                 </div>
-                <div className="row justify-content-center card-carousel">
+                <div className="d-flex card-carousel w-100">
                   {dataAbout.map((item) => {
                     return (
-                      <div className="col-12 col-lg-4 card-mini d-flex flex-column gap-3 align-items-center">
+                      <div className="card-mini d-flex flex-column gap-3 align-items-center">
                         <img src={item.image} loading="lazy" />
                         <p>{item.title}</p>
                         <span>{item.description}</span>

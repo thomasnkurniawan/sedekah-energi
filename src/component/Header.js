@@ -17,7 +17,7 @@ export default function Header({ onClickDonate }) {
   }, [isMobile]);
 
   return (
-    <div className="header-section">
+    <div className="header-section fixed-top">
       <nav className="container navbar navbar-expand-lg bg-white justify-content-between align-items-center px-2">
         <a className="navbar-brand" href="#">
           <img src="/energi-logo.png" className="logo" />

@@ -13,7 +13,7 @@ export default function HeroSection({ onClickDonate, executeScroll }) {
         {!isMobileLocal && (
           <img src="/energi-asset-vector/sun.svg" className="asset-sun" />
         )}
-        <div className="row justify-content-center">
+        <div className="row justify-content-center pt-5 p-sm-5">
           <div className="col-lg-8 col-12">
             <h1 className="fw-bold hero-title mb-3">
               Berbuat Baik untuk Bumi dan Sesama Melalui Sedekah Energi

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Tooltip } from "react-tooltip";
 
 export default function MapSection({ onClickDonate }) {
-  const [isOpenJabar, setIsOpenJabar] = useState(true);
   const [isOpenSumbar, setIsOpenSumbar] = useState(true);
 
   const handleGetNow = () => {
