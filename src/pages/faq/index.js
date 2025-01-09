@@ -41,7 +41,10 @@ const Faq = ({ faqList }) => {
                           {faqList.content.map((faq, index) => {
                             return (
                               <div
-                                className="accordion-item"
+                                className={clsx({
+                                  "accordion-item": true,
+                                  expanded: activeIndex === index,
+                                })}
                                 id={faq.title.replace(/\s+/g, "")}
                               >
                                 <h2 className="accordion-header">
