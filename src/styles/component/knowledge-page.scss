@@ -15,6 +15,21 @@
         border-radius: 24px;
       }
     }
+
+    .accordion-button {
+      &::after {
+        background-image: url("../../../public/energi-asset-vector/arrow-down-one.svg");
+      }
+    }
+    .accordion-item {
+      &.expanded {
+        .accordion-button {
+          &::after {
+            transform: rotate(-360deg) !important;
+          }
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -44,8 +59,7 @@
         z-index: 999;
         padding: 12px;
         overflow: hidden;
-        border-bottom: 1px solid #E2E6ED;
-
+        border-bottom: 1px solid #e2e6ed;
       }
 
       .accordion-header {
