@@ -37,14 +37,14 @@ const Faq = ({ faqList }) => {
                     </div>
                     <div className="row">
                       <div className="col-lg-12 col-12">
-                        <div class="accordion">
+                        <div className="accordion">
                           {faqList.content.map((faq, index) => {
                             return (
                               <div
-                                class="accordion-item"
+                                className="accordion-item"
                                 id={faq.title.replace(/\s+/g, "")}
                               >
-                                <h2 class="accordion-header">
+                                <h2 className="accordion-header">
                                   <button
                                     className={`accordion-button ${
                                       activeIndex !== index ? "" : "collapsed"
@@ -70,7 +70,7 @@ const Faq = ({ faqList }) => {
                                   )}
                                 >
                                   {faq.body.length > 1 ? (
-                                    <div class="accordion-body">
+                                    <div className="accordion-body">
                                       <ul>
                                         {faq.body.map((body) => {
                                           return <li>{body}</li>;
@@ -81,7 +81,7 @@ const Faq = ({ faqList }) => {
                                     <>
                                       {faq.body.map((body) => {
                                         return (
-                                          <div class="accordion-body">
+                                          <div className="accordion-body">
                                             {body}
                                           </div>
                                         );

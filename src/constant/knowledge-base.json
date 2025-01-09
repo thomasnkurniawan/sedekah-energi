@@ -1,5 +1,6 @@
 [
   {
+    "page": "kbOrange",
     "title": "Basic Knowledge Renewable Energy",
     "subtitle": "Kenali dasar-dasar energi terbarukan untuk masa depan yang lebih berkelanjutan.",
     "slug": "basic-knowledge-renewable-energy",
@@ -7,9 +8,9 @@
       {
         "id": "01",
         "section": "Mengenal Energi",
-        "type": "free-text",
         "content": [
           {
+            "type": "free-text",
             "title": "Apa Itu Energi?",
             "body": [
               "Energi adalah kemampuan untuk melakukan kerja atau menyebabkan perubahan. Kalau dalam kehidupan sehari-hari, energi ibarat bahan bakar untuk segala aktivitas kita.",
@@ -18,6 +19,7 @@
             ]
           },
           {
+            "type": "free-text",
             "title": "Energi Skala Kecil",
             "body": [
               "Sinar matahari digunakan untuk menjemur pakaian.",
@@ -26,6 +28,7 @@
             ]
           },
           {
+            "type": "free-text",
             "title": "Energi Skala Besar",
             "body": [
               "Energi digunakan untuk menjalankan mesin-mesin pabrik.",
@@ -37,12 +40,10 @@
       },
       {
         "id": "02",
-
         "section": "Mengenal Energi Terbarukan",
-        "type": "free-text",
-
         "content": [
           {
+            "type": "free-text",
             "title": "Apa Itu Energi Terbarukan?",
             "body": [
               "Energi terbarukan adalah energi ramah lingkungan yang 'nggak ada habisnya' karena bisa diperbarui terus-menerus. Sumbernya? Dari alam seperti matahari, angin, dan air.",
@@ -50,11 +51,21 @@
             ]
           },
           {
+            "type": "heading",
             "title": "Ciri-ciri Energi Terbarukan",
             "body": [
-              "Berkelanjutan: Terbarui secara alami dalam waktu singkat.",
-              "Energi Bersih: Menghasilkan emisi gas rumah kaca atau residu yang sangat rendah atau nol.",
-              "Sumber Beragam: Termasuk energi surya, angin, air, panas bumi, dan biomassa."
+              {
+                "heading": "Berkelanjutan",
+                "description": "Terbarui secara alami dalam waktu singkat."
+              },
+              {
+                "heading": "Energi Bersih",
+                "description": "Menghasilkan emisi gas rumah kaca atau residu yang sangat rendah atau nol."
+              },
+              {
+                "heading": "Sumber Beragam",
+                "description": "Termasuk energi surya, angin, air, panas bumi, dan biomassa."
+              }
             ]
           }
         ]
@@ -62,11 +73,10 @@
       {
         "id": "03",
         "section": "Energi Konvensional",
-        "type": "free-text",
-
         "content": [
           {
             "title": "Apa Itu Energi Konvensional?",
+            "type": "free-text",
             "body": [
               "Energi konvensional adalah jenis energi yang berasal dari sumber daya alam yang jumlahnya terbatas dan tidak dapat diperbaharui dalam waktu singkat.",
               "Energi ini juga nggak ramah lingkungan karena menghasilkan polusi besar. Sebagai umat yang diajarkan untuk memelihara bumi, ini jadi pengingat buat kita mulai beralih ke energi yang lebih bersih."
@@ -74,34 +84,44 @@
           },
           {
             "title": "Ciri-ciri Energi Konvensional",
+            "type": "heading",
             "body": [
-              "Terbatas: Jumlahnya di alam sangat terbatas dan akan habis jika digunakan terus-menerus.",
-              "Proses Pembentukan Lama: Membutuhkan waktu jutaan tahun untuk terbentuk secara alami.",
-              "Memerlukan Ekstraksi: Harus diambil melalui penambangan atau pengeboran, yang sering kali merusak lingkungan."
+              {
+                "heading": "Terbatas",
+                "description": "Jumlahnya di alam sangat terbatas dan akan habis jika digunakan terus-menerus."
+              },
+              {
+                "heading": "Proses Pembentukan Lama",
+                "description": "Membutuhkan waktu jutaan tahun untuk terbentuk secara alami."
+              },
+              {
+                "heading": "Memerlukan Ekstraksi",
+                "description": "Harus diambil melalui penambangan atau pengeboran, yang sering kali merusak lingkungan."
+              }
             ]
           }
         ]
       },
-
       {
         "id": "04",
-
         "section": "Jenis-Jenis Energi Terbarukan",
-        "type": "heading",
-
         "content": [
           {
+            "type": "heading-image",
             "title": "Apa Saja Jenis Energi Terbarukan?",
             "body": [
               {
+                "image": "/energi-asset-vector/knowledge/4-1.png",
                 "heading": "Energi Surya",
                 "description": "Energi dari matahari yang ditangkap menggunakan panel surya."
               },
               {
+                "image": "/energi-asset-vector/knowledge/4-2.png",
                 "heading": "Energi Angin",
                 "description": "Memanfaatkan kekuatan angin melalui turbin."
               },
               {
+                "image": "/energi-asset-vector/knowledge/4-3.png",
                 "heading": "Energi Air (Hidro)",
                 "description": "Menghasilkan listrik menggunakan aliran atau jatuhan air."
               }
@@ -111,27 +131,29 @@
       },
       {
         "id": "05",
-
         "section": "Cara Kerja Energi Terbarukan",
-        "type": "heading",
-
         "content": [
           {
+            "type": "heading-image",
             "title": "Bagaimana Energi Terbarukan Bekerja?",
             "body": [
               {
+                "image": "/energi-asset-vector/knowledge/5-1.png",
                 "heading": "Panel Surya",
                 "description": "Menangkap cahaya matahari dan mengonversinya menjadi listrik. Ketika sinar matahari mengenai panel, cahaya tersebut memicu gerakan elektron di dalam bahan panel. Gerakan ini menghasilkan listrik dalam bentuk arus searah DC."
               },
               {
+                "image": "/energi-asset-vector/knowledge/5-2.png",
                 "heading": "Turbin Angin",
                 "description": "Menggunakan angin untuk memutar baling-baling diteruskan ke poros utama (shaft) di dalam turbin. Poros ini terhubung ke generator, alat yang mengubah energi mekanik (putaran) menjadi energi listrik."
               },
               {
+                "image": "/energi-asset-vector/knowledge/5-3.png",
                 "heading": "Pembangkit Hidro",
                 "description": "Memanfaatkan aliran air pada bendungan untuk menggerakkan baling-baling pada turbin. Putaran turbin menggerakkan generator, alat yang mengubah energi mekanik (putaran) menjadi energi listrik. Semakin tinggi air jatuh, semakin besar energi yang dihasilkan."
               },
               {
+                "image": "/energi-asset-vector/knowledge/5-4.png",
                 "heading": "Konversi Biomassa",
                 "description": "Memanfaatkan bahan organik seperti sisa tanaman, kayu, atau limbah menjadi energi yang bisa digunakan. Ada beberapa cara pengolahan biomassa menjadi energi seperti Pembakaran, pembusukan (Fermentasi), Pemanasan tanpa oksigen (Gasifikasi), Penguraian Mikroorganisme (Digestasi Anaerobik)."
               }
@@ -141,11 +163,10 @@
       },
       {
         "id": "06",
-
         "section": "Manfaat Beralih ke Energi Terbarukan",
-        "type": "heading",
         "content": [
           {
+            "type": "heading",
             "title": "Apa Saja Manfaat Jika Beralih ke Energi Terbarukan?",
             "body": [
               {
@@ -170,11 +191,10 @@
       },
       {
         "id": "07",
-
         "section": "Tantangan Energi Terbarukan",
-        "type": "heading",
         "content": [
           {
+            "type": "heading",
             "title": "Apa Saja Tantangan Jika Ingin Berpindah ke Energi Terbarukan?",
             "body": [
               {
@@ -203,66 +223,54 @@
       },
       {
         "id": "08",
-
         "section": "Langkah-Langkah Memulai Penggunaan Energi Terbarukan",
-        "type": "free-text",
-
         "content": [
           {
-            "title": "Pahami Kebutuhan Energi Anda",
+            "type": "heading-number",
+            "title": "Pelajari Langkah-Langkah Memulai Penggunaan Energi Terbarukan",
             "body": [
-              "Evaluasi penggunaan energi di rumahmu.",
-              "Dengan memahami kebutuhan, kita bisa lebih bijak mengelolanya sesuai prinsip hidup hemat dan efisien."
-            ]
-          },
-          {
-            "title": "Cari Tahu Sumber Energi yang Baik",
-            "body": [
-              "Pelajari opsi energi terbarukan yang sesuai dengan kondisi wilayahmu, seperti tenaga surya atau angin.",
-              "Sesuai ajaran Islam, pilihlah yang membawa manfaat tanpa merusak lingkungan."
-            ]
-          },
-          {
-            "title": "Konsultasikan dengan Ahlinya",
-            "body": [
-              "Jangan ragu bertanya pada penyedia energi terbarukan atau tenaga ahli.",
-              "Hikmah dari musyawarah adalah keputusan yang lebih baik."
-            ]
-          },
-          {
-            "title": "Pertimbangkan Pilihan Keuangan",
-            "body": [
-              "Periksa kemudahan seperti subsidi, pinjaman syariah, atau program sewa untuk membantu memulai langkah ini tanpa memberatkan."
-            ]
-          },
-          {
-            "title": "Mulai dari Langkah Sederhana",
-            "body": [
-              "Instalasi kecil seperti pemanas air tenaga surya atau panel surya sederhana bisa jadi awal yang berkah menuju keberlanjutan."
+              {
+                "heading": "Pahami Kebutuhan Energi Anda",
+                "description": "Evaluasi penggunaan energi di rumahmu. Dengan memahami kebutuhan, kita bisa lebih bijak mengelolanya sesuai prinsip hidup hemat dan efisien."
+              },
+              {
+                "heading": "Cari Tahu Sumber Energi yang Baik",
+                "description": "Pelajari opsi energi terbarukan yang sesuai dengan kondisi wilayahmu, seperti tenaga surya atau angin. Sesuai ajaran Islam, pilihlah yang membawa manfaat tanpa merusak lingkungan."
+              },
+              {
+                "heading": "Konsultasikan dengan Ahlinya",
+                "description": "Jangan ragu bertanya pada penyedia energi terbarukan atau tenaga ahli. Hikmah dari musyawarah adalah keputusan yang lebih baik."
+              },
+              {
+                "heading": "Pertimbangkan Pilihan Keuangan",
+                "description": "Periksa kemudahan seperti subsidi, pinjaman syariah, atau program sewa untuk membantu memulai langkah ini tanpa memberatkan."
+              },
+              {
+                "heading": "Mulai dari Langkah Sederhana",
+                "description": "Instalasi kecil seperti pemanas air tenaga surya atau panel surya sederhana bisa jadi awal yang berkah menuju keberlanjutan."
+              }
             ]
           }
         ]
       },
       {
         "id": "09",
-
         "section": "Mitos tentang Energi Terbarukan",
-        "type": "heading",
-
         "content": [
           {
+            "type": "heading",
             "title": "Pernyataan Ini Mitos atau Fakta?",
             "body": [
               {
-                "heading": "Mahal Banget",
+                "heading": "'Mahal Banget'",
                 "description": "Memang, biaya awal energi terbarukan lumayan tinggi. Tapi kalau dihitung-hitung, penghematannya dalam jangka panjang itu luar biasa. Hemat dunia, hemat akhirat!"
               },
               {
-                "heading": "Nggak Andal",
+                "heading": "'Nggak Andal'",
                 "description": "Teknologi baterai modern bikin energi terbarukan lebih stabil dan bisa diandalkan. Ini bukti kalau ikhtiar manusia selalu Allah mudahkan."
               },
               {
-                "heading": "Dayanya nggak cukup",
+                "heading": "'Dayanya nggak cukup'",
                 "description": "Siapa bilang? Dengan menggabungkan berbagai sumber energi terbarukan, Insya Allah cukup kok untuk rumah tangga sampai industri. Maksimalkan nikmat bumi yang Allah titipkan!"
               }
             ]
@@ -271,12 +279,10 @@
       },
       {
         "id": "10",
-
         "section": "Masa Depan Energi Terbarukan",
-        "type": "heading",
-
         "content": [
           {
+            "type": "heading",
             "title": "Gimana Sih Masa Depan Energi Terbarukan?",
             "body": [
               {
@@ -298,15 +304,646 @@
       {
         "id": "11",
         "section": "Poin Penting",
-        "type": "free-text",
-
         "content": [
           {
+            "type": "heading-number",
             "title": "Poin-poin Penting Tentang Energi Terbarukan",
             "body": [
-              "Energi terbarukan itu kunci buat masa depan yang lebih bersih dan berkelanjutan, sesuai dengan ajaran Islam yang mengajarkan kita untuk menjaga bumi ini.",
-              "Ada berbagai macam sumber energi terbarukan yang bisa disesuaikan dengan kebutuhan kita dan kondisi sekitar, jadi kita bisa pilih yang terbaik sesuai dengan potensi alam.",
-              "Beralih ke energi terbarukan nggak cuma bermanfaat buat lingkungan, tapi juga membawa keuntungan ekonomi dan meningkatkan keamanan energi, yang tentu saja sejalan dengan prinsip kebaikan dalam Islam."
+              {
+                "heading": "Energi terbarukan itu kunci buat masa depan yang lebih bersih dan berkelanjutan, sesuai dengan ajaran Islam yang mengajarkan kita untuk menjaga bumi ini.",
+                "description": ""
+              },
+              {
+                "heading": "Ada berbagai macam sumber energi terbarukan yang bisa disesuaikan dengan kebutuhan kita dan kondisi sekitar, jadi kita bisa pilih yang terbaik sesuai dengan potensi alam.",
+                "description": ""
+              },
+              {
+                "heading": "Beralih ke energi terbarukan nggak cuma bermanfaat buat lingkungan, tapi juga membawa keuntungan ekonomi dan meningkatkan keamanan energi, yang tentu saja sejalan dengan prinsip kebaikan dalam Islam.",
+                "description": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "kbGreen",
+    "title": "Offline Campaign Guidelines Sedekah Energi",
+    "subtitle": "Strategi efektif menyebarkan gerakan Sedekah Energi secara offline.",
+    "slug": "offline-campaign-guidelines-sedekah-energi",
+    "content": [
+      {
+        "id": "01",
+        "section": "Objektif",
+        "content": [
+          {
+            "title": "Objektif Kampanye",
+            "type": "free-text",
+            "body": [
+              "Umat untuk Semesta berupaya meningkatkan kesadaran komunitas Muslim terhadap isu perubahan iklim dengan menyajikan informasi terkait krisis iklim dan solusinya secara relevan dalam kerangka nilai-nilai Islam.",
+              "Inisiatif ini juga bertujuan untuk menginspirasi aksi komunitas dengan memfasilitasi diskusi dan kampanye yang mendorong individu serta kelompok Muslim mengambil langkah konkret, seperti mendukung energi terbarukan dan pelestarian lingkungan.",
+              "Umat untuk Semesta ingin memobilisasi suara kolektif komunitas Muslim untuk bersatu dalam menyuarakan solusi dan mendorong kebijakan yang berpihak pada pelestarian lingkungan."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "section": "Membentuk Target Audiens",
+        "content": [
+          {
+            "type": "heading-number",
+            "title": "Pahami Karakteristik Audiens",
+            "body": [
+              {
+                "heading": "Segmen Umum",
+                "description": "Komunitas Muslim yang memiliki keterlibatan dalam nilai keislaman, terutama terkait filantropi seperti sedekah dan wakaf."
+              },
+              {
+                "heading": "Segmen Khusus",
+                "description": [
+                  {
+                    "head": "Wakaf Hutan",
+                    "desc": "Fokus pada individu yang peduli dengan keberlanjutan lingkungan dan memiliki kapasitas finansial untuk kontribusi jangka panjang."
+                  },
+                  {
+                    "head": "Sedekah Energi",
+                    "desc": "Menyasar generasi muda dengan akses ekonomi menengah yang ingin terlibat dalam aksi sederhana namun bermakna."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Segmentasi Demografis",
+            "type": "heading-number-nested",
+            "body": [
+              {
+                "heading": null,
+                "longDescription": "Segmentasi demografis adalah Segmentasi demografis adalah metode segmentasi pasar yang membagi audiens berdasarkan karakteristik demografis, seperti usia, jenis kelamin, pendapatan, pendidikan, dan pekerjaan. Ini adalah salah satu pendekatan paling umum dalam pemasaran karena mudah diukur dan relevan untuk berbagai kebutuhan bisnis atau organisasi. Contoh",
+                "description": [
+                  {
+                    "heads": "Usia",
+                    "descs": [
+                      {
+                        "head": "Sedekah Energi",
+                        "desc": "18-35 tahun, generasi muda yang tech-savvy."
+                      },
+                      {
+                        "head": "Wakaf Hutan",
+                        "desc": "30+ tahun, individu yang lebih mapan secara ekonomi."
+                      }
+                    ]
+                  },
+                  {
+                    "heads": "Lokasi",
+                    "descs": [
+                      {
+                        "head": "Daerah urban dengan akses mudah ke informasi digital."
+                      },
+                      {
+                        "head": "Komunitas Muslim di kawasan semi-urban dan rural untuk edukasi khusus."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Segmentasi Psikografis",
+            "type": "heading-number-nested",
+            "body": [
+              {
+                "longDescription": "Segmentasi psikografis adalah metode segmentasi pasar yang membagi audiens berdasarkan karakteristik psikologis dan gaya hidup mereka. Berbeda dengan segmentasi demografis yang fokus pada faktor seperti usia, jenis kelamin, atau pendapatan, segmentasi psikografis mengeksplorasi aspek yang lebih mendalam seperti nilai, kepribadian, minat, sikap, dan gaya hidup.",
+                "heading": null,
+                "description": [
+                  {
+                    "heads": "Motivasi",
+                    "descs": [
+                      {
+                        "head": "Menyentuh nilai spiritual seperti husnul khatimah, pahala sedekah, atau manfaat wakaf sebagai investasi akhirat."
+                      },
+                      {
+                        "head": "Menggarisbawahi dampak sosial dan lingkungan yang nyata."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "03",
+        "section": "Bentuk Kegiatan",
+        "content": [
+          {
+            "title": "Bentuk-bentuk Kegiatan Kampanye",
+            "type": "heading-number",
+            "body": [
+              {
+                "heading": "Workshop Interaktif",
+                "description": "Kampanye ini ditujukan bukan hanya pada orang yang berpendidikan tinggi. Mengundang peserta untuk belajar dan berpartisipasi dalam aktivitas langsung, seperti pembuatan produk ramah lingkungan, simulasi energi terbarukan, atau pelatihan daur ulang."
+              },
+              {
+                "heading": "Diskusi Panel",
+                "description": "Menghadirkan pembicara ahli untuk berbagi wawasan mengenai topik tertentu dan membuka sesi tanya jawab."
+              },
+              {
+                "heading": "Aksi Komunitas",
+                "description": "Mengajak masyarakat melakukan aksi nyata seperti bersih-bersih lingkungan, penanaman pohon, atau kampanye hemat energi."
+              },
+              {
+                "heading": "Festival Komunitas",
+                "description": "Menyelenggarakan acara yang melibatkan seni, musik, atau bazar lokal dengan pesan kampanye lingkungan."
+              },
+              {
+                "heading": "Tur Edukasi",
+                "description": "Mengajak peserta mengunjungi lokasi tertentu untuk belajar langsung dari praktik terbaik terkait keberlanjutan, atau kemasan melalui kegiatan outdoor seperti kemah."
+              },
+              {
+                "heading": "Community Challenge",
+                "description": "Mengundang masyarakat berpartisipasi dalam tantangan yang relevan; seperti kompetisi daur ulang atau lomba ide kreatif untuk lingkungan."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "04",
+        "section": "Contoh Implementasi",
+        "content": [
+          {
+            "type": "free-text",
+            "title": "Latar Belakang",
+            "body": [
+              "Sebuah organisasi berbasis Islam ingin mempromosikan penggunaan energi terbarukan dengan menjalankan kampanye 'Sedekah Energi'.",
+              "Kampanye ini bertujuan menggalang dana untuk pemasangan panel surya di masjid-masjid di wilayah perkotaan dan semi-perkotaan. Selain itu, kampanye ini juga ingin meningkatkan kesadaran komunitas Muslim tentang pentingnya energi bersih, sebagai bagian dari tanggung jawab lingkungan."
+            ]
+          },
+          {
+            "title": "Tentukan Target Audiens",
+            "type": "heading-number",
+            "body": [
+              {
+                "heading": "Demografis",
+                "description": [
+                  {
+                    "head": "Usia: 25-40 tahun (dewasa muda dan matang dengan kapasitas finansial)."
+                  },
+                  {
+                    "head": "Jenis Kelamin: Laki-laki dan perempuan."
+                  },
+                  {
+                    "head": "Pekerjaan: Profesional muda, wiraswasta, atau pegawai dengan penghasilan menengah ke atas."
+                  },
+                  {
+                    "head": "Pendidikan: Minimal lulusan sarjana (terpapar nilai keberlanjutan dan filantropi)."
+                  },
+                  {
+                    "head": "Lokasi: Perkotaan dengan masjid besar atau komunitas aktif."
+                  }
+                ]
+              },
+              {
+                "heading": "Psikografis",
+                "description": [
+                  {
+                    "head": "Nilai: Peduli terhadap isu keagamaan dan keberlanjutan lingkungan."
+                  },
+                  {
+                    "head": "Gaya: Aktif dalam kegiatan sosial, komunitas masjid, dan acara filantropi."
+                  },
+                  {
+                    "head": "Motivasi: Ingin beramal dengan cara inovatif sesuai ajaran agama."
+                  },
+                  {
+                    "head": "Perilaku Digital: Aktif di media sosial (Instagram, TikTok) dan tertarik pada konten inspiratif."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Bentuk Kegiatan yang Bisa Dilakukan",
+            "type": "heading",
+            "body": [
+              {
+                "heading": "Workshop Interaktif",
+                "subtitle": "Cara Membuat Rumah Ibadah Lebih Berkelanjutan",
+                "description": [
+                  "Kegiatan: Simulasi pemasangan mini panel surya. \n\n Penjelasan praktis tentang efisiensi energi di masjid.",
+                  "Output: Peserta memahami langkah praktis untuk mendukung transisi ke energi terbarukan."
+                ]
+              },
+              {
+                "heading": "Aksi Komunitas",
+                "subtitle": "Bersama Hijaukan Rumah Ibadah",
+                "description": [
+                  "Kegiatan: Penanaman pohon di sekitar masjid. \n\n Membersihkan area masjid dengan eco-enzyme buatan sendiri.",
+                  "Output: Lingkungan rumah ibadah menjadi lebih hijau dan bersih, serta peserta mendapat pengalaman langsung."
+                ]
+              },
+              {
+                "heading": "Kunjungan Lapangan",
+                "subtitle": "Melihat Dampak Wakaf Hutan secara Langsung",
+                "description": [
+                  "Kegiatan: Tur ke lokasi hutan yang dikelola melalui wakaf. \n\n Dokumentasi dan cerita dari masyarakat lokal penerima manfaat.",
+                  "Output: Peserta memahami dampak nyata dan terinspirasi untuk mendukung lebih lanjut."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "kbDarkGreen",
+    "title": "Digital Campaign Guidelines Sedekah Energi",
+    "subtitle": "Panduan praktis membuat kampanye digital Sedekah Energi lebih menarik dan berdampak.",
+    "slug": "digital-campaign-guidelines-sedekah-energi",
+    "content": [
+      {
+        "id": "01",
+        "section": "Pendahuluan",
+        "content": [
+          {
+            "title": "Prakata",
+            "type": "free-text",
+            "body": [
+              "Menyebarkan semangat berbagi energi bersih sebagai bagian dari sedekah yang berkelanjutan dan ramah lingkungan.",
+              " اِنَّ الْمُصَّدِّقِيْنَ وَالْمُصَّدِّقٰتِ وَاَقْرَضُوا اللّٰهَ قَرْضًا حَسَنًا يُّضٰعَفُ لَهُمْ وَلَهُمْ اَجْرٌ كَرِيْمٌ",
+              "'Sesungguhnya orang-orang yang bersedekah baik laki-laki maupun perempuan dan meminjamkan kepada Allah dengan pinjaman yang baik, akan dilipatgandakan (balasannya) bagi mereka; dan mereka akan mendapat pahala yang mulia.'",
+              "QS. Al-Hadid - 18"
+            ]
+          },
+          {
+            "title": "Tentang Kampanye Sedekah Energi",
+            "type": "free-text",
+            "body": [
+              "Sedekah Energi adalah gerakan yang diinisiasikan oleh Kolaborasi Umat Muslim untuk Dampak Perubahan Iklim (MOSAIC) sebagai salah satu solusi isu iklim dengan mengumpulkan partisipasi masyarakat melalui penyediaan energi terbarukan.",
+              "Untuk memperkenalkan spektrum baru dari sedekah yang berkontribusi pada lingkungan yang lebih berkelanjutan.",
+              "Bukan hanya donasinya merupakan sebuah bentuk ibadah, tetapi donasi turut menguntungkan planet, yang telah diserahkan Allah kepada manusia untuk dirawat.",
+              "Inisiatif ini juga ditujukan untuk mendemonstrasikan potensi dari komunitas Islam Indonesia dalam memberikan kontribusi kolektif secara konstruktif untuk menciptakan kebaikan yang lebih besar dalam usaha melawan perubahan iklim."
+            ]
+          },
+          {
+            "title": "Tujuan",
+            "type": "free-text",
+            "body": [
+              "Meningkatkan kesadaran tentang pentingnya energi terbarukan dalam perspektif Islami.",
+              "Menggalang donasi untuk pemasangan solar panel di area yang membutuhkan.",
+              "Mengedukasi masyarakat tentang keberkahan sedekah energi.",
+              "Mendorong partisipasi aktif dari jama'ah lokal.",
+              "Memperoleh paparan media lokal dan nasional."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "section": "Pesan Utama & Tipe Konten",
+        "content": [
+          {
+            "title": "Karakter Pesan",
+            "type": "free-text",
+            "body": [
+              "Pesan utama yang digunakan harus relevan, Islami, dan menggugah emosi."
+            ]
+          },
+          {
+            "title": "Tipe Konten",
+            "type": "heading",
+            "body": [
+              {
+                "heading": "Visual Storytelling",
+                "description": "Sebelum dan sesudah pemasangan solar panel, wajah kebahagiaan masyarakat penerima manfaat."
+              },
+              {
+                "heading": "Infografis",
+                "description": "Keuntungan energi terbarukan pada lingkungan serta kaitannya dengan kesejahteraan umat Islam, dampak donasi dalam angka (jumlah panel, penerima manfaat, dll.)."
+              },
+              {
+                "heading": "Video Testimonial",
+                "description": "Dari penerima manfaat, masyarakat sekitar dan tokoh agama."
+              },
+              {
+                "heading": "Caption Islami",
+                "description": "Kutipan ayat atau hadis yang dikaitkan dengan sedekah dan kesejahteraan umat."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "03",
+        "section": "Aktivitas Digital Campaign",
+        "content": [
+          {
+            "type": "heading",
+            "title": "Pra-Pemasangan",
+            "body": [
+              {
+                "heading": "Bagikan kisah inspiratif penerima manfaat sebelumnya."
+              },
+              {
+                "heading": "Mempromosikan website Sedekah Energi untuk donasi."
+              },
+              {
+                "heading": "Membuat konten problem explain atau Awareness Post permasalahan yang dialami daerah pemasangan (fakta, masalah energi di daerah tertentu)."
+              },
+              {
+                "heading": "Dokumentasi daerah pemasangan dan progress donasi."
+              },
+              {
+                "heading": "Live session dengan ulama atau pakar energi terbarukan."
+              },
+              {
+                "heading": "Footage suasana lingkungan yang terdapat di masjid tersebut."
+              },
+              {
+                "heading": "Video wawancara narasumber yang menjelaskan permasalahan-permasalahan yang dialami."
+              },
+              {
+                "heading": "Footage warga di sekitar wilayah masjid."
+              },
+              {
+                "heading": "Video drone lingkungan daerah pemasangan."
+              },
+              {
+                "heading": "Warga berkumpul di dalam masjid (bercengkrama, dsb)."
+              }
+            ]
+          },
+          {
+            "title": "Saat-Pemasangan",
+            "type": "heading",
+            "body": [
+              {
+                "heading": "Membagikan proses pemasangan solar panel oleh tim teknis."
+              },
+              {
+                "heading": "Membuat konten pengenalan alat-alat untuk pemasangan."
+              },
+              {
+                "heading": "Footage tahap perencanaan di lokasi."
+              },
+              {
+                "heading": "Footage kondisi masjid sebelum pemasangan."
+              },
+              {
+                "heading": "Footage pemasangan alat."
+              },
+              {
+                "heading": "Footage dokumentasi alat setelah sudah dipasang."
+              },
+              {
+                "heading": "Video drone."
+              }
+            ]
+          },
+          {
+            "title": "Pasca-Pemasangan",
+            "type": "heading",
+            "body": [
+              {
+                "heading": "Membuat konten testimoni warga dan penerima manfaat."
+              },
+              {
+                "heading": "Membuat konten video berwudhu dan salat berjamaah di masjid."
+              },
+              {
+                "heading": "Dokumentasi kegiatan di masjid seperti pengajian maupun kegiatan lainnya."
+              },
+              {
+                "heading": "Membuat konten ajakan untuk daerah lain agar terinspirasi dan ingin melakukan pemasangan juga."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "04",
+        "section": "Konsep Konten Pilar Yang Dapat Digunakan",
+        "content": [
+          {
+            "type": "heading",
+            "title": "Edukatif",
+            "subtitle": "Membahas pentingnya Transisi Energi dalam kesejahteraan umat",
+            "body": [
+              {
+                "heading": "Membahas pentingnya transisi energi dalam kesejahteraan umat."
+              },
+              {
+                "heading": "Jelaskan manfaat energi terbarukan untuk lingkungan."
+              },
+              {
+                "heading": "Infografis tentang cara kerja panel surya."
+              },
+              {
+                "heading": "Dampak penggunaan solar panel terhadap pengurangan biaya listrik masjid."
+              }
+            ]
+          },
+          {
+            "title": "Cerita Inspiratif",
+            "type": "heading",
+            "subtitle": "Membahas masjid sebagai pusat perubahan",
+            "body": [
+              {
+                "heading": "Membahas masjid sebagai pusat perubahan."
+              },
+              {
+                "heading": "Cerita inspiratif masjid yang sudah menggunakan solar panel."
+              },
+              {
+                "heading": "Ulasan tokoh agama tentang pentingnya menjaga bumi."
+              },
+              {
+                "heading": "Foto/video before-after masjid sebelum dan setelah pemasangan solar panel."
+              },
+              {
+                "heading": "Kutipan Al-Qur'an atau hadits tentang merawat lingkungan."
+              }
+            ]
+          },
+          {
+            "title": "Testimoni",
+            "type": "heading",
+            "subtitle": "Dampak serta perubahan Sedekah Energi",
+            "body": [
+              {
+                "heading": "Video singkat pengurus masjid atau jamaah berbicara tentang manfaat langsung Sedekah Energi."
+              },
+              {
+                "heading": "Konten perubahan biaya listrik masjid setelah menggunakan solar panel."
+              },
+              {
+                "heading": "Update rutin proyek pemasangan solar panel: proses, tim, dan cerita di balik layar."
+              },
+              {
+                "heading": "Foto progress harian atau mingguan."
+              },
+              {
+                "heading": "Rencana proyek berikutnya yang butuh dukungan: 'Masjid mana yang jadi target Sedekah Energi berikutnya?'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "05",
+        "section": "Persona Sedekah Energi",
+        "content": [
+          {
+            "type": "free-text",
+            "title": "Persona Kampanye Sedekah Energi",
+            "body": [
+              "Sosok yang merepresentasikan semangat kolaborasi, kepedulian, dan spiritualitas Islami dalam menjaga bumi.",
+              "Memiliki kesadaran tinggi terhadap pentingnya merawat lingkungan sebagai bentuk tanggung jawab agama dan sosial.",
+              "Percaya bahwa setiap tindakan baik, termasuk sedekah untuk mendukung energi terbarukan, merupakan investasi untuk kehidupan akhirat.",
+              "Tertarik pada gerakan yang melibatkan banyak orang untuk tujuan bersama.",
+              "Senang membagikan cerita inspiratif, infografis sederhana, dan kampanye yang menunjukkan dampak nyata.",
+              "Menggunakan gaya visual yang bersih, menenangkan, dan menginspirasi."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "kbYellow",
+    "title": "Do's and Dont's Campaigns Sedekah Energi",
+    "subtitle": "Ketahui apa yang boleh dan tidak boleh dilakukan untuk kampanye Sedekah Energi.",
+    "slug": "dos-and-donts-campaigns-sedekah-energi",
+    "content": [
+      {
+        "id": "01",
+        "section": "Objektif",
+        "content": [
+          {
+            "type": "free-text",
+            "title": "Objektif Kampanye",
+            "body": [
+              "Sedekah Energi adalah gerakan yang diinisiasi oleh MOSAIC, sebuah kolaborasi umat Muslim yang peduli terhadap dampak perubahan iklim. Gerakan ini mengajak masyarakat untuk berbuat kebaikan dengan cara yang berbeda, yakni bersedekah dalam bentuk energi terbarukan.",
+              "Sedekah ini tidak hanya menjadi amalan yang bernilai ibadah, tetapi juga wujud nyata rasa syukur atas amanah Allah berupa bumi yang indah ini. Dengan turut serta, kita membantu menghadirkan solusi bagi saudara-saudara kita di daerah yang membutuhkan akses energi bersih, sekaligus menjaga lingkungan agar tetap lestari.",
+              "Melalui kampanye Sedekah Energi, kami ingin menyebarluaskan kesadaran tentang pentingnya energi terbarukan sebagai bagian dari kehidupan yang sesuai dengan nilai-nilai Islam. Kampanye ini bertujuan mengedukasi masyarakat tentang keberkahan bersedekah untuk kebaikan lingkungan dan mendorong partisipasi aktif jamaah dalam mewujudkan perubahan. Selain itu, kami berupaya menggalang donasi untuk pemasangan panel surya di wilayah yang membutuhkan, sekaligus menjadikan gerakan ini sebagai inspirasi umat untuk berkontribusi dalam menjaga ciptaan Allah."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "section": "Do & Dont's Offline Campaign",
+        "content": [
+          {
+            "type": "heading",
+            "title": "Do",
+            "body": [
+              {
+                "heading": "Riset Mendalam",
+                "description": "Pahami konteks komunitas target dan sesuaikan pesan kampanye dengan kebutuhan, nilai-nilai, serta budaya mereka."
+              },
+              {
+                "heading": "Gunakan Pesan yang Relevan",
+                "description": "Jelaskan manfaat wakaf hutan atau sedekah energi dalam perspektif Islam dengan menekankan nilai amal jariyah atau pahala berkelanjutan."
+              },
+              {
+                "heading": "Fasilitasi Partisipasi Aktif",
+                "description": "Sediakan langkah mudah untuk berkontribusi, seperti QR code untuk donasi atau daftar kegiatan praktis."
+              },
+              {
+                "heading": "Libatkan Pemimpin Komunitas",
+                "description": "Kerjasama dengan tokoh agama, ulama, atau influencer Muslim untuk membangun kredibilitas kampanye."
+              },
+              {
+                "heading": "Evaluasi dan Dokumentasi",
+                "description": "Kumpulkan feedback peserta dan dokumentasikan kegiatan untuk publikasi dan perbaikan di masa depan."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "title": "Don't",
+            "body": [
+              {
+                "heading": "Menggunakan Bahasa Kompleks",
+                "description": "Hindari istilah teknis yang sulit dipahami tanpa penjelasan sederhana."
+              },
+              {
+                "heading": "Mengabaikan Nilai Lokal",
+                "description": "Jangan mengesampingkan nilai, adat, atau tradisi setempat dalam merancang pesan kampanye."
+              },
+              {
+                "heading": "Mengabaikan Aspek Lingkungan",
+                "description": "Jangan menggunakan material kampanye yang tidak ramah lingkungan, seperti plastik sekali pakai."
+              },
+              {
+                "heading": "Fokus Hanya pada Donasi Finansial",
+                "description": "Hindari memberikan kesan bahwa kontribusi hanya soal uang; tunjukkan berbagai cara lain untuk berpartisipasi."
+              },
+              {
+                "heading": "Terlalu Formal dan Kaku",
+                "description": "Hindari nada komunikasi yang terlalu formal atau menggurui, terutama untuk audiens muda."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "03",
+        "section": "Do & Dont's Digital Campaign",
+        "content": [
+          {
+            "type": "heading",
+            "title": "Do",
+            "body": [
+              {
+                "heading": "Berpedoman pada Nilai Rahmatan lil Alamin",
+                "description": "Sampaikan pesan-pesan yang selalu berhubungan dengan harmoni Allah, manusia, dan alam untuk memperkuat komunikasi kampanye."
+              },
+              {
+                "heading": "Tampilkan Cerita Humanis dan Inspiratif",
+                "description": "Ceritakan kisah-kisah warga atau manfaat yang terlibat dalam kampanye ini dengan mengedepankan aspek pengalaman personal dan perspektif yang humanis."
+              },
+              {
+                "heading": "Informasi yang Valid dengan Data",
+                "description": "Selain berpedoman pada nilai-nilai Islam, sampaikan informasi penting yang mengacu pada fakta dan data yang valid, sehingga pesan dapat dipertanggungjawabkan."
+              },
+              {
+                "heading": "Buat Ruang yang Interaktif dan Partisipatif",
+                "description": "Sediakan ruang diskusi yang terbuka bagi audiens, optimalkan tautan atau platform yang memudahkan mereka untuk berpartisipasi langsung (pendaftaran kegiatan, donasi, dsb)."
+              },
+              {
+                "heading": "Gunakan Tagar yang Relevan",
+                "description": "Pastikan menggunakan tagar yang konsisten."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "title": "Don't",
+            "body": [
+              {
+                "heading": "Hindari Bahasa yang Terlalu Teknis",
+                "description": "Banyak orang tidak paham tentang teknologi panel surya dan istilah-istilah teknis. Sebagai gantinya, gunakan bahasa yang sederhana dan mudah dimengerti."
+              },
+              {
+                "heading": "Hindari Penyampaian Menggurui/Berceramah",
+                "description": "Pastikan gaya penyampaian yang bersifat inklusif dan interaktif."
+              },
+              {
+                "heading": "Hindari Visual yang Sensitif/Ambigu",
+                "description": "Jangan menggunakan visual yang tidak relevan dengan konteks kampanye."
+              },
+              {
+                "heading": "Hindari Konten Negatif atau Kritik",
+                "description": "Hindari menyoroti kekurangan; lebih baik mengedepankan semangat membangun gotong royong dan manfaat jangka panjang yang bisa diraih."
+              }
             ]
           }
         ]

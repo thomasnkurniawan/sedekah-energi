@@ -41,13 +41,13 @@ export default function MapSection({ onClickDonate }) {
                 <div className="row button-wrapper">
                   <div className="col-lg-6 col-12 d-flex justify-content-end redd">
                     <div className="red-dot-legend">
-                      <span class="dot red"></span>
+                      <span className="dot red"></span>
                       Akan Dilaksanakan | 2025
                     </div>
                   </div>
                   <div className="col-lg-6 col-12 greenn">
                     <div className="green-dot-legend">
-                      <span class="dot"></span>
+                      <span className="dot"></span>
                       Telah Terlaksana | 2023
                     </div>
                   </div>
@@ -59,7 +59,7 @@ export default function MapSection({ onClickDonate }) {
                       data-tooltip-id="clickable"
                       onMouseEnter={() => setIsOpenSumbar(true)}
                       id="sumatera"
-                      class="dot red position-absolute sumatera"
+                      className="dot red position-absolute sumatera"
                     ></span>
                     {/* <Tooltip
                     id="sumatera"
@@ -86,7 +86,7 @@ export default function MapSection({ onClickDonate }) {
                       data-tooltip-id="clickable"
                       onMouseEnter={() => setIsOpenSumbar(false)}
                       id="jabar"
-                      class="dot red jabar position-absolute"
+                      className="dot red jabar position-absolute"
                     ></span>
                     <Tooltip
                       id="clickable"
@@ -115,7 +115,7 @@ export default function MapSection({ onClickDonate }) {
                     <span
                       data-tooltip-id="bantul"
                       id="bantul"
-                      class="dot green position-absolute bantul"
+                      className="dot green position-absolute bantul"
                     ></span>
                     <Tooltip id="bantul" className="tooltip-custom">
                       <div className="text-start">
@@ -128,7 +128,7 @@ export default function MapSection({ onClickDonate }) {
                     <span
                       data-tooltip-id="ntb"
                       id="ntb"
-                      class="dot green ntb position-absolute"
+                      className="dot green ntb position-absolute"
                     ></span>
                     <Tooltip id="ntb" className="tooltip-custom">
                       <div className="text-start">

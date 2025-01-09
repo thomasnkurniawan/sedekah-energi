@@ -10,17 +10,17 @@ export default function KnowledgeSection() {
     {
       title: "Offline Campaign Guidelines",
       image: "/energi-asset-vector/2-know.png",
-      link: "/knowledge-base/basic-knowledge-renewable-energy",
+      link: "/knowledge-base/offline-campaign-guidelines-sedekah-energi",
     },
     {
       title: "Digital Campaign Guidelines",
       image: "/energi-asset-vector/3-know.png",
-      link: "/knowledge-base/basic-knowledge-renewable-energy",
+      link: "/knowledge-base/digital-campaign-guidelines-sedekah-energi",
     },
     {
       title: "Do`s and Dont`s Campaigns",
       image: "/energi-asset-vector/4-know.png",
-      link: "/knowledge-base/basic-knowledge-renewable-energy",
+      link: "/knowledge-base/dos-and-donts-campaigns-sedekah-energi",
     },
   ];
   return (

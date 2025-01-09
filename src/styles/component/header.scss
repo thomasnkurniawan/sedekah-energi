@@ -1,6 +1,40 @@
 .header-section {
   background-color: white;
   height: 74px;
+  padding-top: 5px;
+
+  .nav-link {
+    cursor: pointer;
+  }
+  .active-link {
+    color: var(--green-secondary);
+  }
+  .transisi {
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .dropdown-menu {
+    margin-top: 0.75rem;
+
+    .dropdown-item {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+      color: #5a627d;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: 600px) {
+        padding: 12px 0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      border: unset;
+      margin-top: 0;
+    }
+  }
 
   .navbar {
     background-color: var(--light-green-background);
@@ -28,9 +62,8 @@
   }
 
   .navbar-collapse {
-
     @media screen and (max-width: 600px) {
-      justify-content: start!important;
+      justify-content: start !important;
 
       ul {
         display: flex;
@@ -42,7 +75,6 @@
           text-align: start;
         }
       }
-      
     }
   }
 }

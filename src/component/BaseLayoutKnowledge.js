@@ -16,9 +16,9 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
 
   const IMAGE_JUMBO = {
     kbOrange: "/energi-asset-vector/1-know.png",
-    kbGreen: "",
-    kbYellow: "",
-    kbDarkGreen: "",
+    kbGreen: "/energi-asset-vector/2-know.png",
+    kbYellow: "/energi-asset-vector/4-know.png",
+    kbDarkGreen: "/energi-asset-vector/3-know.png",
     faq: "/energi-asset-vector/faq.png",
   };
 
@@ -36,10 +36,10 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
       <div className={`text-white rounded ${CLASS_BG[page]}`}>
         <div className="container">
           <div className="row jumbotron">
-            <div className="col-lg-6 col-12">
-              <img src={IMAGE_JUMBO[page]} className="jumbotron-image" />
+            <div className="col-lg-6 col-md-6 col-12 image-wrapper">
+              <img src={IMAGE_JUMBO[page]} className="jumbotron-image img-fluid" />
             </div>
-            <div className="col-lg-6 col-12 text-wrapper">
+            <div className="col-lg-6 col-md-12 col-12 text-wrapper">
               <h1
                 className={clsx({
                   title: true,
