@@ -3,8 +3,19 @@
   height: 74px;
   padding-top: 5px;
 
+  .btn-donate-mobile {
+    padding: 0px 12px;
+    height: 32px;
+  }
+
   .nav-link {
     cursor: pointer;
+
+    svg {
+      &.opened {
+        transform: rotate(-180deg);
+      }
+    }
   }
   .active-link {
     color: var(--green-secondary);
@@ -37,16 +48,17 @@
   }
 
   .navbar {
+    text-wrap: nowrap;
     background-color: var(--light-green-background);
     z-index: 99;
 
     @media screen and (max-width: 600px) {
       text-align: start !important;
-
+      color: #191F38;
       width: 100%;
-      box-shadow: rgba(0, 0, 0, 0.07) 0px 0.60219px 0.60219px -1.25px,
-        rgba(0, 0, 0, 0.063) 0px 2.28853px 2.28853px -2.5px,
-        rgba(0, 0, 0, 0.024) 0px 10px 10px -3.75px;
+      // box-shadow: rgba(0, 0, 0, 0.07) 0px 0.60219px 0.60219px -1.25px,
+      //   rgba(0, 0, 0, 0.063) 0px 2.28853px 2.28853px -2.5px,
+      //   rgba(0, 0, 0, 0.024) 0px 10px 10px -3.75px;
     }
   }
 
@@ -59,6 +71,11 @@
   .logo {
     width: 133px;
     height: 48px;
+
+    @media screen and (max-width: 600px) {
+      width: 100px;
+    height: 38px;
+    }
   }
 
   .navbar-collapse {
@@ -68,11 +85,12 @@
       ul {
         display: flex;
         gap: 12px !important;
-        padding: 1rem;
+        padding: 1rem 0;
 
         li {
           width: 100%;
           text-align: start;
+          font-weight: 600;
         }
       }
     }

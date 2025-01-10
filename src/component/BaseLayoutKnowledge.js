@@ -33,29 +33,35 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
   return (
     <div className="layout-section">
       <Header onClickDonate={handleShow} />
-      <div className={`text-white rounded ${CLASS_BG[page]}`}>
-        <div className="container">
-          <div className="row jumbotron">
-            <div className="col-lg-6 col-md-6 col-12 image-wrapper">
-              <img src={IMAGE_JUMBO[page]} className="jumbotron-image img-fluid" />
+      <div className={`text-white ${CLASS_BG[page]}`}>
+        <div className="container-fluid">
+          <div className="row jumbotron align-items-center">
+            <div className="col-lg-5 col-md-6 col-12 text-center p-0 d-flex align-items-center image-wrapper">
+              <img
+                src={IMAGE_JUMBO[page]}
+                className="img-fluid jumbotron-image"
+              />
             </div>
+            <div className="col-lg-1"></div>
             <div className="col-lg-6 col-md-12 col-12 text-wrapper">
-              <h1
-                className={clsx({
-                  title: true,
-                  "text-white": page !== "faq",
-                })}
-              >
-                {jumbotronContent.title}
-              </h1>
-              <p
-                className={clsx({
-                  subtitle: true,
-                  "text-white": page !== "faq",
-                })}
-              >
-                {jumbotronContent.subtitle}
-              </p>
+              <div className="row align-items-center justify-content-center">
+                <h1
+                  className={clsx({
+                    title: true,
+                    "text-white": page !== "faq",
+                  })}
+                >
+                  {jumbotronContent.title}
+                </h1>
+                <p
+                  className={clsx({
+                    subtitle: true,
+                    "text-white": page !== "faq",
+                  })}
+                >
+                  {jumbotronContent.subtitle}
+                </p>
+              </div>
             </div>
           </div>
         </div>

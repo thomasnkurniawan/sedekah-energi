@@ -9,6 +9,7 @@
 @import "./component/article-section.scss";
 @import "./component/layout.scss";
 @import "./component/knowledge-page.scss";
+@import "./component/about-page.scss";
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import "swiper/css";
@@ -100,6 +101,7 @@ body {
   font-weight: 300;
   line-height: 28px;
   color: white;
+  width: fit-content;
 }
 
 .section {
@@ -550,12 +552,20 @@ body {
   border-radius: 12px !important;
   text-align: start !important;
   margin-bottom: 24px;
-  border: 1px solid #c3dbdd;
+  border: 1px solid #d1d7e2;
+
+  &:not(:first-of-type) {
+    border-top: 1px solid #d1d7e2;
+  }
 
   &.expanded {
     border: 4px solid #c3dbdd !important;
     box-shadow: 0px 2px 4px 0px rgba(40, 41, 61, 0.04),
       0px 8px 16px 0px rgba(96, 97, 112, 0.16) !important;
+
+    .accordion-header {
+      border-bottom: 1px solid #e2e6ed;
+    }
 
     .accordion-button {
       &::after {
@@ -595,7 +605,6 @@ body {
   }
 
   .accordion-header {
-    border-bottom: 1px solid #e2e6ed;
     margin: 0 20px;
   }
 }

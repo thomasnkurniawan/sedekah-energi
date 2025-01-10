@@ -41,6 +41,8 @@
     font-weight: 700;
     line-height: 64px;
     color: var(--title-section);
+    margin-bottom: 32px;
+
   }
 
   .subtitle {
@@ -51,35 +53,25 @@
     color: var(--title-section);
   }
 
-  .jumbotron-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 640px;
-    max-height: 480px;
-  }
-
   .jumbotron {
     align-items: center;
-    height: 480px;
+    // height: 480px;
     margin-top: 75px;
   }
 
   @media screen and (max-width: 600px) {
     padding: 32px 0;
     .jumbotron-image {
-      margin: 75px 0 0 0;
-      position: unset;
-      width: 100%;
+      margin-bottom: 32px;
+
     }
 
     .jumbotron {
-      height: 560px;
+      // height: 560px;
       margin-top: 0;
 
-
       .image-wrapper {
-        max-height: 480px;
+        width: 100%;
       }
     }
 
@@ -87,6 +79,8 @@
       font-size: 28px;
       font-weight: 600;
       line-height: 38px;
+      margin-bottom: 1rem;
+
     }
 
     .subtitle {

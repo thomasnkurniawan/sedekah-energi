@@ -3,10 +3,9 @@ import knowledge from "@/constant/knowledge-base.json";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
+import ScrollSpy from "react-scrollspy-navigation";
 
 const KnowledgeBasePage = ({ knowledges }) => {
-  console.log(knowledges);
-  const [activeIndex, setActiveIndex] = useState(null);
   const [listActive, setListActive] = useState("01");
 
   const [isMobileLocal, setIsMobileLocal] = useState(false);
@@ -14,17 +13,13 @@ const KnowledgeBasePage = ({ knowledges }) => {
     setIsMobileLocal(isMobile);
   }, [isMobile]);
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-  };
-
   const handleClickList = (id) => {
     setListActive(id);
     var element = document.getElementById(`${id}`);
     var headerOffset = isMobileLocal ? 650 : 80;
     var elementPosition = element.getBoundingClientRect().top;
-    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
+    const pageY = window.scrollY || window.pageYOffset;
+    var offsetPosition = elementPosition + pageY - headerOffset;
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth",
@@ -53,20 +48,25 @@ const KnowledgeBasePage = ({ knowledges }) => {
               {!isMobileLocal ? (
                 <div className="card-overview">
                   <p className="title p-0 m-0">Daftar Isi</p>
-                  {knowledges.content.map((item) => {
-                    return (
-                      <p
-                        onClick={() => handleClickList(item.id)}
-                        className={clsx({
-                          "point-text": true,
-                          active: listActive === item.id,
-                        })}
-                      >
-                        {item.section}
-                        <span>{item.id}</span>
-                      </p>
-                    );
-                  })}
+                  <ScrollSpy activeClass="active">
+                    {knowledges.content.map((item) => {
+                      return (
+                        <a
+                          href={`#${item.id}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleClickList(item.id);
+                          }}
+                          className={clsx({
+                            "point-text text-decoration-none": true,
+                          })}
+                        >
+                          {item.section}
+                          <span>{item.id}</span>
+                        </a>
+                      );
+                    })}
+                  </ScrollSpy>
                 </div>
               ) : (
                 <div className="accordion-container">
@@ -94,432 +94,38 @@ const KnowledgeBasePage = ({ knowledges }) => {
                       </svg>
                     </span>
                   </div>
-                  {isListExpanded && (
-                    <div className="accordion-body">
-                      {knowledges.content.map((item) => {
-                        return (
-                          <p
-                            onClick={() => handleClickList(item.id)}
-                            className={clsx({
-                              "point-text": true,
-                              active: listActive === item.id,
-                            })}
-                          >
-                            {item.section}
-                            <span>{item.id}</span>
-                          </p>
-                        );
-                      })}
-                    </div>
-                  )}
+                  <ScrollSpy activeClass="active">
+                    <>
+                    {isListExpanded && (
+                      <div className="accordion-body">
+                        {knowledges.content.map((item) => {
+                          return (
+                            <a
+                              href={`#${item.id}`}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                handleClickList(item.id);
+                              }}
+                              className={clsx({
+                                "point-text text-decoration-none": true
+                              })}
+                            >
+                              {item.section}
+                              <span>{item.id}</span>
+                            </a>
+                          );
+                        })}
+                      </div>
+                    )}
+                    </>
+                  </ScrollSpy>
                 </div>
               )}
             </div>
 
             <div className="col-lg-8 col-12 wrapper-content-section">
               {knowledges.content.map((item, index) => {
-                return (
-                  <div className="content-section" id={item.id}>
-                    <div className="section-wrapper row  align-items-center">
-                      <div className="col-2 col-lg-1 pr-0 pl-3">
-                        <p className="id">{item.id}</p>
-                      </div>
-                      <div className="col-10 col-lg-11">
-                        <p className="section-title">{item.section}</p>
-                      </div>
-                    </div>
-
-                    {item.content.map((content) => {
-                      if (content.type === "free-text") {
-                        return (
-                          <div className="accordion">
-                            <div
-                              className={clsx({
-                                "accordion-item": true,
-                                expanded:
-                                  activeIndex === `${item.id}-${content.title}`,
-                              })}
-                              id={content.title.replace(/\s+/g, "")}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={`accordion-button ${
-                                    activeIndex !== index ? "" : "collapsed"
-                                  }`}
-                                  type="button"
-                                  onClick={() =>
-                                    toggleAccordion(
-                                      `${item.id}-${content.title}`
-                                    )
-                                  }
-                                  aria-expanded={
-                                    activeIndex ===
-                                    `${item.id}-${content.title}`
-                                  }
-                                >
-                                  {content.title}
-                                </button>
-                              </h2>
-                              <div
-                                id={`${content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}-content`}
-                                className={`accordion-collapse collapse ${
-                                  activeIndex === `${item.id}-${content.title}`
-                                    ? "show"
-                                    : ""
-                                }`}
-                                aria-labelledby={content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}
-                              >
-                                {content.body?.map((body) => {
-                                  return (
-                                    <div className="accordion-body">{body}</div>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      }
-
-                      if (content.type === "heading") {
-                        return (
-                          <div className="accordion">
-                            <div
-                              className={clsx({
-                                "accordion-item": true,
-                                expanded:
-                                  activeIndex === `${item.id}-${content.title}`,
-                              })}
-                              id={content.title.replace(/\s+/g, "")}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={`accordion-button ${
-                                    activeIndex !== index ? "" : "collapsed"
-                                  }`}
-                                  type="button"
-                                  onClick={() =>
-                                    toggleAccordion(
-                                      `${item.id}-${content.title}`
-                                    )
-                                  }
-                                  aria-expanded={
-                                    activeIndex ===
-                                    `${item.id}-${content.title}`
-                                  }
-                                >
-                                  {content.title}
-                                </button>
-                              </h2>
-                              <div
-                                id={`${content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}-content`}
-                                className={`accordion-collapse collapse ${
-                                  activeIndex === `${item.id}-${content.title}`
-                                    ? "show"
-                                    : ""
-                                }`}
-                                aria-labelledby={content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}
-                              >
-                                <div className="accordion-body">
-                                  {content.subtitle ? (
-                                    <>
-                                      <p>{content.subtitle}</p>
-                                      <ul>
-                                        {content.body.map((body) => {
-                                          return (
-                                            <>
-                                              <li
-                                                className={` ${
-                                                  body.description && "fw-bold"
-                                                }`}
-                                              >
-                                                {body.heading}
-                                              </li>
-                                              <p>{body.description}</p>
-                                            </>
-                                          );
-                                        })}
-                                      </ul>
-                                    </>
-                                  ) : (
-                                    <ul>
-                                      {content.body.map((body) => {
-                                        return (
-                                          <>
-                                            <li
-                                              className={` ${
-                                                body.description && "fw-bold"
-                                              }`}
-                                            >
-                                              {body.heading}
-                                            </li>
-                                            <p>{body.description}</p>
-                                          </>
-                                        );
-                                      })}
-                                    </ul>
-                                  )}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      }
-
-                      if (content.type === "heading-image") {
-                        return (
-                          <div className="accordion">
-                            <div
-                              className={clsx({
-                                "accordion-item": true,
-                                expanded:
-                                  activeIndex === `${item.id}-${content.title}`,
-                              })}
-                              id={content.title.replace(/\s+/g, "")}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={`accordion-button ${
-                                    activeIndex !== index ? "" : "collapsed"
-                                  }`}
-                                  type="button"
-                                  onClick={() =>
-                                    toggleAccordion(
-                                      `${item.id}-${content.title}`
-                                    )
-                                  }
-                                  aria-expanded={
-                                    activeIndex ===
-                                    `${item.id}-${content.title}`
-                                  }
-                                >
-                                  {content.title}
-                                </button>
-                              </h2>
-                              <div
-                                id={`${content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}-content`}
-                                className={`accordion-collapse collapse ${
-                                  activeIndex === `${item.id}-${content.title}`
-                                    ? "show"
-                                    : ""
-                                }`}
-                                aria-labelledby={content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}
-                              >
-                                <div className="accordion-body">
-                                  {content.body.map((body) => {
-                                    return (
-                                      <div className="row align-items-center">
-                                        <div className="col-12 col-lg-3 pb-3">
-                                          <img
-                                            src={body.image}
-                                            width={"100%"}
-                                          />
-                                        </div>
-                                        <div className="col-12 col-lg-9 pl-3">
-                                          <p className="fw-bold p-0 m-0">
-                                            {body.heading}
-                                          </p>
-                                          <p>{body.description}</p>
-                                        </div>
-                                      </div>
-                                    );
-                                  })}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      }
-
-                      if (content.type === "heading-number") {
-                        return (
-                          <div className="accordion">
-                            <div
-                              className={clsx({
-                                "accordion-item": true,
-                                expanded:
-                                  activeIndex === `${item.id}-${content.title}`,
-                              })}
-                              id={content.title.replace(/\s+/g, "")}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={`accordion-button ${
-                                    activeIndex !== index ? "" : "collapsed"
-                                  }`}
-                                  type="button"
-                                  onClick={() =>
-                                    toggleAccordion(
-                                      `${item.id}-${content.title}`
-                                    )
-                                  }
-                                  aria-expanded={
-                                    activeIndex ===
-                                    `${item.id}-${content.title}`
-                                  }
-                                >
-                                  {content.title}
-                                </button>
-                              </h2>
-                              <div
-                                id={`${content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}-content`}
-                                className={`accordion-collapse collapse ${
-                                  activeIndex === `${item.id}-${content.title}`
-                                    ? "show"
-                                    : ""
-                                }`}
-                                aria-labelledby={content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}
-                              >
-                                <div className="accordion-body">
-                                  <ol>
-                                    {content.body?.map((body) => {
-                                      return (
-                                        <>
-                                          <li className="fw-bold">
-                                            {body.heading ||
-                                              body?.longDescription}
-                                          </li>
-
-                                          {body.description.constructor !==
-                                            Array && (
-                                            <p> {body.description} </p>
-                                          )}
-                                          {body.description.constructor ===
-                                            Array && (
-                                            <ul>
-                                              {body.description?.map(
-                                                (child) => {
-                                                  return (
-                                                    <>
-                                                      <li className="fw-bolder">
-                                                        {child.head}
-                                                      </li>
-                                                      <span>{child.desc}</span>
-                                                    </>
-                                                  );
-                                                }
-                                              )}
-                                            </ul>
-                                          )}
-                                        </>
-                                      );
-                                    })}
-                                  </ol>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      }
-
-                      if (content.type === "heading-number-nested") {
-                        return (
-                          <div className="accordion">
-                            <div
-                              className={clsx({
-                                "accordion-item": true,
-                                expanded:
-                                  activeIndex === `${item.id}-${content.title}`,
-                              })}
-                              id={content.title.replace(/\s+/g, "")}
-                            >
-                              <h2 className="accordion-header">
-                                <button
-                                  className={`accordion-button ${
-                                    activeIndex !== index ? "" : "collapsed"
-                                  }`}
-                                  type="button"
-                                  onClick={() =>
-                                    toggleAccordion(
-                                      `${item.id}-${content.title}`
-                                    )
-                                  }
-                                  aria-expanded={
-                                    activeIndex ===
-                                    `${item.id}-${content.title}`
-                                  }
-                                >
-                                  {content.title}
-                                </button>
-                              </h2>
-                              <div
-                                id={`${content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}-content`}
-                                className={`accordion-collapse collapse ${
-                                  activeIndex === `${item.id}-${content.title}`
-                                    ? "show"
-                                    : ""
-                                }`}
-                                aria-labelledby={content.title.replace(
-                                  /\s+/g,
-                                  ""
-                                )}
-                              >
-                                <div className="accordion-body">
-                                  {content.body?.map((body) => {
-                                    return (
-                                      <>
-                                        <p>{body.longDescription}</p>
-                                        <ol>
-                                          {body.description.map((i) => {
-                                            return (
-                                              <>
-                                                <li className="fw-bold">
-                                                  {i.heads}
-                                                </li>
-                                                <ul>
-                                                  {i.descs.map((z) => {
-                                                    return (
-                                                      <>
-                                                        <li className="fw-bold">
-                                                          {z.head}
-                                                        </li>
-                                                        <p>{z.desc}</p>
-                                                      </>
-                                                    );
-                                                  })}
-                                                </ul>
-                                              </>
-                                            );
-                                          })}
-                                        </ol>
-                                      </>
-                                    );
-                                  })}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      }
-                    })}
-                  </div>
-                );
+                return <AccordionContent item={item} index={index} />;
               })}
             </div>
           </div>
@@ -539,3 +145,348 @@ export function getServerSideProps({ params }) {
     },
   };
 }
+
+const AccordionContent = ({ item, index }) => {
+  const [activeIndex, setActiveIndex] = useState([]);
+  const toggleAccordion = (index) => {
+    if (activeIndex.includes(index)) {
+      setActiveIndex((val) => val.filter((i) => i !== index));
+      return;
+    }
+    setActiveIndex([...activeIndex, index]);
+  };
+  return (
+    <section className="content-section" id={item.id}>
+      <div className="section-wrapper row  align-items-center">
+        <div className="col-2 col-lg-1 pr-0 pl-3">
+          <p className="id">{item.id}</p>
+        </div>
+        <div className="col-10 col-lg-11">
+          <p className="section-title">{item.section}</p>
+        </div>
+      </div>
+
+      {item.content.map((content) => {
+        if (content.type === "free-text") {
+          return (
+            <div className="accordion">
+              <div
+                className={clsx({
+                  "accordion-item": true,
+                  expanded: activeIndex.includes(`${item.id}-${content.title}`),
+                })}
+                id={content.title.replace(/\s+/g, "")}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeIndex !== index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      toggleAccordion(`${item.id}-${content.title}`)
+                    }
+                    aria-expanded={activeIndex.includes(
+                      `${item.id}-${content.title}`
+                    )}
+                  >
+                    {content.title}
+                  </button>
+                </h2>
+                <div
+                  id={`${content.title.replace(/\s+/g, "")}-content`}
+                  className={`accordion-collapse collapse ${
+                    activeIndex.includes(`${item.id}-${content.title}`)
+                      ? "show"
+                      : ""
+                  }`}
+                  aria-labelledby={content.title.replace(/\s+/g, "")}
+                >
+                  {content.body?.map((body) => {
+                    return <div className="accordion-body">{body}</div>;
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        if (content.type === "heading") {
+          return (
+            <div className="accordion">
+              <div
+                className={clsx({
+                  "accordion-item": true,
+                  expanded: activeIndex.includes(`${item.id}-${content.title}`),
+                })}
+                id={content.title.replace(/\s+/g, "")}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeIndex !== index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      toggleAccordion(`${item.id}-${content.title}`)
+                    }
+                    aria-expanded={activeIndex.includes(
+                      `${item.id}-${content.title}`
+                    )}
+                  >
+                    {content.title}
+                  </button>
+                </h2>
+                <div
+                  id={`${content.title.replace(/\s+/g, "")}-content`}
+                  className={`accordion-collapse collapse ${
+                    activeIndex.includes(`${item.id}-${content.title}`)
+                      ? "show"
+                      : ""
+                  }`}
+                  aria-labelledby={content.title.replace(/\s+/g, "")}
+                >
+                  <div className="accordion-body">
+                    {content.subtitle ? (
+                      <>
+                        <p>{content.subtitle}</p>
+                        <ul>
+                          {content.body.map((body) => {
+                            return (
+                              <>
+                                <li
+                                  className={` ${
+                                    body.description && "fw-bold"
+                                  }`}
+                                >
+                                  {body.heading}
+                                </li>
+                                <p>{body.description}</p>
+                              </>
+                            );
+                          })}
+                        </ul>
+                      </>
+                    ) : (
+                      <ul>
+                        {content.body.map((body) => {
+                          return (
+                            <>
+                              <li
+                                className={` ${body.description && "fw-bold"}`}
+                              >
+                                {body.heading}
+                              </li>
+                              <p>{body.description}</p>
+                            </>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        if (content.type === "heading-image") {
+          return (
+            <div className="accordion">
+              <div
+                className={clsx({
+                  "accordion-item": true,
+                  expanded: activeIndex.includes(`${item.id}-${content.title}`),
+                })}
+                id={content.title.replace(/\s+/g, "")}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeIndex !== index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      toggleAccordion(`${item.id}-${content.title}`)
+                    }
+                    aria-expanded={activeIndex.includes(
+                      `${item.id}-${content.title}`
+                    )}
+                  >
+                    {content.title}
+                  </button>
+                </h2>
+                <div
+                  id={`${content.title.replace(/\s+/g, "")}-content`}
+                  className={`accordion-collapse collapse ${
+                    activeIndex.includes(`${item.id}-${content.title}`)
+                      ? "show"
+                      : ""
+                  }`}
+                  aria-labelledby={content.title.replace(/\s+/g, "")}
+                >
+                  <div className="accordion-body">
+                    {content.body.map((body) => {
+                      return (
+                        <div className="row align-items-center">
+                          <div className="col-12 col-lg-3 pb-3">
+                            <img src={body.image} width={"100%"} />
+                          </div>
+                          <div className="col-12 col-lg-9 pl-3">
+                            <p className="fw-bold p-0 m-0">{body.heading}</p>
+                            <p>{body.description}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        if (content.type === "heading-number") {
+          return (
+            <div className="accordion">
+              <div
+                className={clsx({
+                  "accordion-item": true,
+                  expanded: activeIndex.includes(`${item.id}-${content.title}`),
+                })}
+                id={content.title.replace(/\s+/g, "")}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeIndex !== index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      toggleAccordion(`${item.id}-${content.title}`)
+                    }
+                    aria-expanded={activeIndex.includes(
+                      `${item.id}-${content.title}`
+                    )}
+                  >
+                    {content.title}
+                  </button>
+                </h2>
+                <div
+                  id={`${content.title.replace(/\s+/g, "")}-content`}
+                  className={`accordion-collapse collapse ${
+                    activeIndex.includes(`${item.id}-${content.title}`)
+                      ? "show"
+                      : ""
+                  }`}
+                  aria-labelledby={content.title.replace(/\s+/g, "")}
+                >
+                  <div className="accordion-body">
+                    <ol>
+                      {content.body?.map((body) => {
+                        return (
+                          <>
+                            <li className="fw-bold">
+                              {body.heading || body?.longDescription}
+                            </li>
+
+                            {body.description.constructor !== Array && (
+                              <p> {body.description} </p>
+                            )}
+                            {body.description.constructor === Array && (
+                              <ul>
+                                {body.description?.map((child) => {
+                                  return (
+                                    <>
+                                      <li className="fw-bolder">
+                                        {child.head}
+                                      </li>
+                                      <span>{child.desc}</span>
+                                    </>
+                                  );
+                                })}
+                              </ul>
+                            )}
+                          </>
+                        );
+                      })}
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
+        if (content.type === "heading-number-nested") {
+          return (
+            <div className="accordion">
+              <div
+                className={clsx({
+                  "accordion-item": true,
+                  expanded: activeIndex.includes(`${item.id}-${content.title}`),
+                })}
+                id={content.title.replace(/\s+/g, "")}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeIndex !== index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      toggleAccordion(`${item.id}-${content.title}`)
+                    }
+                    aria-expanded={activeIndex.includes(
+                      `${item.id}-${content.title}`
+                    )}
+                  >
+                    {content.title}
+                  </button>
+                </h2>
+                <div
+                  id={`${content.title.replace(/\s+/g, "")}-content`}
+                  className={`accordion-collapse collapse ${
+                    activeIndex.includes(`${item.id}-${content.title}`)
+                      ? "show"
+                      : ""
+                  }`}
+                  aria-labelledby={content.title.replace(/\s+/g, "")}
+                >
+                  <div className="accordion-body">
+                    {content.body?.map((body) => {
+                      return (
+                        <>
+                          <p>{body.longDescription}</p>
+                          <ol>
+                            {body.description.map((i) => {
+                              return (
+                                <>
+                                  <li className="fw-bold">{i.heads}</li>
+                                  <ul>
+                                    {i.descs.map((z) => {
+                                      return (
+                                        <>
+                                          <li className="fw-bold">{z.head}</li>
+                                          <p>{z.desc}</p>
+                                        </>
+                                      );
+                                    })}
+                                  </ul>
+                                </>
+                              );
+                            })}
+                          </ol>
+                        </>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })}
+    </section>
+  );
+};

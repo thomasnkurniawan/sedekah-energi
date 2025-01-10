@@ -70,16 +70,22 @@ export default function Header({ onClickDonate }) {
           id="navbarNav"
         >
           <ul className="navbar-nav ml-auto align-items-center gap-4">
-            {/* <li className="nav-item">
-              <Link href="/about" className="text-decoration-none">
+            <li className="nav-item">
+              <Link
+                href="/about"
+                className={clsx({
+                  "text-decoration-none nav-link": true,
+                  "active-link": currentPath === "/about",
+                })}
+              >
                 Tentang Program
               </Link>
-            </li>*/}
+            </li>
             <li className="nav-item">
               <a
                 className={clsx({
                   "nav-link d-flex gap-2": true,
-                  "active-link": dropdownKnowledge
+                  "active-link": dropdownKnowledge,
                 })}
                 onClick={() => {
                   setDropdownKnowledge(!dropdownKnowledge);
@@ -91,6 +97,7 @@ export default function Header({ onClickDonate }) {
               >
                 Knowledge Hub
                 <svg
+                  className={dropdownKnowledge ? "opened" : ""}
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
                   height="24"
@@ -115,7 +122,7 @@ export default function Header({ onClickDonate }) {
                     <Link
                       className={clsx({
                         "dropdown-item text-decoration-none": true,
-                        "active-link": currentPath === item.link
+                        "active-link": currentPath === item.link,
                       })}
                       href={item.link}
                     >
@@ -130,7 +137,7 @@ export default function Header({ onClickDonate }) {
                 href="https://tally.so/r/m6rB7Y"
                 target="_blank"
                 className={clsx({
-                  "text-decoration-none nav-link": true
+                  "text-decoration-none nav-link": true,
                 })}
               >
                 Quiz
@@ -138,10 +145,13 @@ export default function Header({ onClickDonate }) {
             </li>
 
             <li className="nav-item">
-              <Link href="/faq" className={clsx({
+              <Link
+                href="/faq"
+                className={clsx({
                   "text-decoration-none nav-link": true,
-                  "active-link": currentPath === '/faq'
-                })}>
+                  "active-link": currentPath === "/faq",
+                })}
+              >
                 Pertanyaan Umum
               </Link>
             </li>

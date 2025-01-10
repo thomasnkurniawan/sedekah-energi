@@ -67,11 +67,11 @@ export default function Footer() {
             <p className="footer-subtitle">Copyright © 2024 Sedekah Energi</p>
           </div>
           <div className="col-lg-4 col-12">
-            <div className="d-flex gap-4 py-4 py-sm-0">
+            {/* <div className="d-flex gap-4 py-4 py-sm-0">
               <p className="footer-subtitle">Privacy Policy</p>
 
               <p className="footer-subtitle">Term of use</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
