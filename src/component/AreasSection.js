@@ -21,7 +21,7 @@ export default function AreasSection({ setShowModalVideo }) {
       date: "Maret, 2023",
       videoId: "mxBtzM4CAuU",
       name: "Masjid Al-Ummah Al-Islamiyah Lombok",
-      location: "Kampung Brajan, Kabupaten Bantul, DIY",
+      location: "Desa Sembalun, Lombok Timur, NTB",
     },
   ];
   return (

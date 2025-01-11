@@ -105,7 +105,6 @@ const Faq = ({ faqList }) => {
             </div>
           </div>
         </div>
-        <DonateSection />
       </div>
     </BaseLayoutKnowledge>
   );

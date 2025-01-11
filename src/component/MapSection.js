@@ -175,7 +175,7 @@ export default function MapSection({ onClickDonate }) {
                         className="btn btn-success rounded-5 text-center w-100 position-absolute"
                         onClick={handleGetNow}
                       >
-                        Dapatkan sekarang
+                        Daftarkan sekarang
                       </button>
                     </div>
                   </div>

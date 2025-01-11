@@ -1,4 +1,5 @@
 import BaseLayoutKnowledge from "@/component/BaseLayoutKnowledge";
+import Quiz from "@/component/Quiz";
 import knowledge from "@/constant/knowledge-base.json";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
@@ -131,6 +132,7 @@ const KnowledgeBasePage = ({ knowledges }) => {
           </div>
         </div>
       </div>
+      <Quiz />
     </BaseLayoutKnowledge>
   );
 };
@@ -203,7 +205,7 @@ const AccordionContent = ({ item, index }) => {
                   aria-labelledby={content.title.replace(/\s+/g, "")}
                 >
                   {content.body?.map((body) => {
-                    return <div className="accordion-body">{body}</div>;
+                    return <div className="accordion-body" dangerouslySetInnerHTML={{__html: body}}></div>;
                   })}
                 </div>
               </div>
@@ -418,6 +420,60 @@ const AccordionContent = ({ item, index }) => {
           );
         }
 
+        if (content.type === "heading-number-no-bold") {
+          return (
+            <div className="accordion">
+              <div
+                className={clsx({
+                  "accordion-item": true,
+                  expanded: activeIndex.includes(`${item.id}-${content.title}`),
+                })}
+                id={content.title.replace(/\s+/g, "")}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeIndex !== index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      toggleAccordion(`${item.id}-${content.title}`)
+                    }
+                    aria-expanded={activeIndex.includes(
+                      `${item.id}-${content.title}`
+                    )}
+                  >
+                    {content.title}
+                  </button>
+                </h2>
+                <div
+                  id={`${content.title.replace(/\s+/g, "")}-content`}
+                  className={`accordion-collapse collapse ${
+                    activeIndex.includes(`${item.id}-${content.title}`)
+                      ? "show"
+                      : ""
+                  }`}
+                  aria-labelledby={content.title.replace(/\s+/g, "")}
+                >
+                  <div className="accordion-body">
+                    <ol>
+                      {content.body?.map((body) => {
+                        return (
+                          <>
+                            <li className="mb-3">
+                              {body.heading || body?.longDescription}
+                            </li>
+                          </>
+                        );
+                      })}
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
         if (content.type === "heading-number-nested") {
           return (
             <div className="accordion">
@@ -487,6 +543,7 @@ const AccordionContent = ({ item, index }) => {
           );
         }
       })}
+
     </section>
   );
 };

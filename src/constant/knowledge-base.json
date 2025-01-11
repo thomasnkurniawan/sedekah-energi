@@ -19,21 +19,45 @@
             ]
           },
           {
-            "type": "free-text",
+            "type": "heading-image",
             "title": "Energi Skala Kecil",
             "body": [
-              "Sinar matahari digunakan untuk menjemur pakaian.",
-              "Energi listrik yang bikin lampu nyala.",
-              "Energi listrik yang digunakan untuk mengisi daya ponsel."
+              {
+                "image": "/energi-asset-vector/knowledge/1-1-kecil.png",
+                "heading": "",
+                "description": "Sinar matahari digunakan untuk menjemur pakaian."
+              },
+              {
+                "image": "/energi-asset-vector/knowledge/1-2-kecil.png",
+                "heading": "",
+                "description": "Energi listrik yang bikin lampu nyala."
+              },
+              {
+                "image": "/energi-asset-vector/knowledge/1-3-kecil.png",
+                "heading": "",
+                "description": "Energi listrik yang digunakan untuk mengisi daya ponsel."
+              }
             ]
           },
           {
-            "type": "free-text",
+            "type": "heading-image",
             "title": "Energi Skala Besar",
             "body": [
-              "Energi digunakan untuk menjalankan mesin-mesin pabrik.",
-              "Energi digunakan untuk membangun infrastruktur.",
-              "Energi digunakan untuk mengangkut barang menggunakan kendaraan bermotor yang mengubah energi kimia dari bahan bakar menjadi energi mekanik."
+              {
+                "image": "/energi-asset-vector/knowledge/1-1-besar.png",
+                "heading": "",
+                "description": "Energi digunakan untuk menjalankan mesin-mesin pabrik."
+              },
+              {
+                "image": "/energi-asset-vector/knowledge/1-2-besar.png",
+                "heading": "",
+                "description": "Energi digunakan untuk membangun infrastruktur."
+              },
+              {
+                "image": "/energi-asset-vector/knowledge/1-3-besar.png",
+                "heading": "",
+                "description": "Energi digunakan untuk mengangkut barang menggunakan kendaraan bermotor yang mengubah energi kimia dari bahan bakar menjadi energi mekanik."
+              }
             ]
           }
         ]
@@ -306,7 +330,7 @@
         "section": "Poin Penting",
         "content": [
           {
-            "type": "heading-number",
+            "type": "heading-number-no-bold",
             "title": "Poin-poin Penting Tentang Energi Terbarukan",
             "body": [
               {
@@ -341,9 +365,9 @@
             "title": "Objektif Kampanye",
             "type": "free-text",
             "body": [
-              "Umat untuk Semesta berupaya meningkatkan kesadaran komunitas Muslim terhadap isu perubahan iklim dengan menyajikan informasi terkait krisis iklim dan solusinya secara relevan dalam kerangka nilai-nilai Islam.",
-              "Inisiatif ini juga bertujuan untuk menginspirasi aksi komunitas dengan memfasilitasi diskusi dan kampanye yang mendorong individu serta kelompok Muslim mengambil langkah konkret, seperti mendukung energi terbarukan dan pelestarian lingkungan.",
-              "Umat untuk Semesta ingin memobilisasi suara kolektif komunitas Muslim untuk bersatu dalam menyuarakan solusi dan mendorong kebijakan yang berpihak pada pelestarian lingkungan."
+              "Umat untuk Semesta berupaya <strong>meningkatkan kesadaran komunitas Muslim</strong> terhadap isu perubahan iklim dengan menyajikan informasi terkait krisis iklim dan solusinya secara relevan dalam kerangka nilai-nilai Islam.",
+              "Inisiatif ini juga bertujuan untuk <strong>menginspirasi aksi komunitas</strong> dengan memfasilitasi diskusi dan kampanye yang <strong>mendorong individu serta kelompok Muslim</strong> mengambil langkah konkret, seperti <strong>mendukung energi terbarukan</strong> dan <strong>pelestarian lingkungan.</strong>",
+              "Umat untuk Semesta ingin <strong>memobilisasi suara kolektif</strong> komunitas Muslim untuk bersatu dalam <strong>menyuarakan solusi</strong> dan <strong>mendorong kebijakan</strong> yang berpihak pada pelestarian lingkungan."
             ]
           }
         ]

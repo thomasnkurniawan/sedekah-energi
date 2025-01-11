@@ -43,7 +43,7 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
               />
             </div>
             <div className="col-lg-1"></div>
-            <div className="col-lg-6 col-md-12 col-12 text-wrapper">
+            <div className="col-lg-5 col-md-12 col-12 text-wrapper">
               <div className="row align-items-center justify-content-center">
                 <h1
                   className={clsx({
@@ -67,7 +67,6 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
         </div>
       </div>
       {children}
-      <Quiz />
       <div className="pb-5 donate-container">
         <DonateSection />
       </div>

@@ -551,7 +551,6 @@ body {
 .accordion-item {
   border-radius: 12px !important;
   text-align: start !important;
-  margin-bottom: 24px;
   border: 1px solid #d1d7e2;
 
   &:not(:first-of-type) {
@@ -568,6 +567,7 @@ body {
     }
 
     .accordion-button {
+
       &::after {
         transform: rotate(45deg);
       }
@@ -581,7 +581,7 @@ body {
 
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 28px;
     color: var(--title-section);
 
