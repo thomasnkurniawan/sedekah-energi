@@ -35,17 +35,15 @@ const About = () => {
       <section className="about-page">
         <div className="container-fluid hero-about-section">
           <div className="row align-items-center">
-            <div className="col-lg-5 col-12 p-0 text-center">
+            <div className="col-lg-5 col-md-6 col-12 p-0 text-center">
               <img
                 src="/energi-asset-vector/about-page/hero.svg"
                 className="img-fluid"
               />
             </div>
             <div className="col-lg-1"></div>
-            <div className="col-lg-6 col-12">
-              <div className="container">
+            <div className="col-lg-5 col-md-12 col-12">
                 <div className="row align-items-center justify-content-center">
-                  <div className="col-lg-10 col-xs-12 col-md-10 p-0">
                     <p className="section-title-about">
                       Sedekah Energi, Ibadah untuk Masa Depan Bumi
                     </p>
@@ -53,8 +51,6 @@ const About = () => {
                       Sedekah untuk panel surya masjid, energi terbarukan untuk
                       bumi yang lebih baik.
                     </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -92,7 +88,7 @@ const About = () => {
                         ciptaan-Nya.
                       </p>
                     </div>
-                    <div className="col-12 text-center">
+                    <div className="col-12 text-center image-wrapper">
                       {isMobileLocal ? (
                         <img
                           className="img-fluid"

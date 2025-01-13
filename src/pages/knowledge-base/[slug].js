@@ -513,12 +513,13 @@ const AccordionContent = ({ item, index }) => {
                     {content.body?.map((body) => {
                       return (
                         <>
-                          <div dangerouslySetInnerHTML={{__html: body.longDescription}}></div>
+                          <div dangerouslySetInnerHTML={{__html: body.longDescription}} className="pb-2"></div>
                           <ol>
                             {body.description.map((i) => {
                               return (
                                 <>
-                                  <li className="fw-bold">{i.heads}</li>
+                                  {!i.subtitle && <li className="fw-bold px-3">{i.heads}</li>}
+                                  {i.subtitle && <span className="fw-bold" style={{marginLeft: '-2rem'}}>{i.subtitle}</span>}
                                   <ul>
                                     {i.descs.map((z) => {
                                       return (

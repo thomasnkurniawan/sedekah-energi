@@ -46,7 +46,7 @@
 
   .card-about {
     @media screen and (max-width: 600px) {
-      margin-top: 106px;
+      margin-top: 0;
     }
   }
 
@@ -55,6 +55,14 @@
 
     @media screen and (max-width: 600px) {
       padding: 32px 16px !important;
+    }
+  }
+
+  .image-wrapper {
+    margin-top: 56px;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 24px;
     }
   }
 

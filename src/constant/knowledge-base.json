@@ -444,7 +444,7 @@
                 "heading": null,
                 "description": [
                   {
-                    "heads": "Motivasi",
+                    "subtitle": "Motivasi",
                     "descs": [
                       {
                         "head": "Menyentuh nilai spiritual seperti husnul khatimah, pahala sedekah, atau manfaat wakaf sebagai investasi akhirat."
@@ -851,12 +851,9 @@
             "type": "free-text",
             "title": "Persona Kampanye Sedekah Energi",
             "body": [
-              "Sosok yang merepresentasikan semangat kolaborasi, kepedulian, dan spiritualitas Islami dalam menjaga bumi.",
-              "Memiliki kesadaran tinggi terhadap pentingnya merawat lingkungan sebagai bentuk tanggung jawab agama dan sosial.",
-              "Percaya bahwa setiap tindakan baik, termasuk sedekah untuk mendukung energi terbarukan, merupakan investasi untuk kehidupan akhirat.",
-              "Tertarik pada gerakan yang melibatkan banyak orang untuk tujuan bersama.",
-              "Senang membagikan cerita inspiratif, infografis sederhana, dan kampanye yang menunjukkan dampak nyata.",
-              "Menggunakan gaya visual yang bersih, menenangkan, dan menginspirasi."
+              "<strong>Sosok Yang Merepresentasikan Semangat Kolaborasi, Kepedulian, dan Spiritualitas Islami dalam Menjaga Bumi.</strong><br/> Sosok ini memiliki kesadaran tinggi terhadap pentingnya merawat lingkungan sebagai bentuk tanggung jawab agama dan sosial. Mempercayai bahwa setiap tindakan baik, termasuk sedekah untuk mendukung energi terbarukan, merupakan investasi untuk kehidupan akhirat. Memiliki perhatian besar terhadap isu-isu lingkungan, khususnya terkait solusi energi terbarukan yang berkelanjutan, dan merasa bahwa masjid sebagai pusat komunitas harus menjadi contoh dalam menggunakan teknologi ramah lingkungan seperti solar panel.",
+              "<strong>Memadukan Dakwah, Inspirasi, dan Aksi Sosial. </strong><br/>Senang membagikan cerita inspiratif, infografis sederhana, dan kampanye yang menunjukkan dampak nyata. Sosok pengambil langkah kecil tapi bermakna serta tertarik pada gerakan yang melibatkan banyak orang untuk tujuan bersama. Ia ingin melihat bukti konkret dari kontribusinya, seperti foto atau video progress pemasangan solar panel di masjid, sehingga ia merasa menjadi bagian dari perubahan nyata.",
+              "<strong>Menggunakan Kampanye yang Menyentuh Hati</strong><br/>Dengan gaya visual yang bersih, menenangkan, dan menginspirasi. Warna bumi yang mendominasi selera visualnya karena mencerminkan kesegaran, harmoni, dan keimanan. Dengan pendekatan yang empatik dan Islami, untuk mengajak lebih banyak orang bergabung dalam Sedekah Energi ini, baik melalui sedekah, membagikan informasi, atau sekadar memberikan doa dan dukungan moral."
             ]
           }
         ]

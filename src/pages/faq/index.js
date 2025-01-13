@@ -43,7 +43,7 @@ const Faq = ({ faqList }) => {
                             return (
                               <div
                                 className={clsx({
-                                  "accordion-item": true,
+                                  "accordion-item mb-4": true,
                                   expanded: activeIndex === index,
                                 })}
                                 id={faq.title.replace(/\s+/g, "")}
