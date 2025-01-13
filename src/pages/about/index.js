@@ -64,7 +64,7 @@ const About = () => {
               <div className="card rounded-4 card-about">
                 <div className="card-body">
                   <div className="row justify-content-center mb-4">
-                    <div className="col-12 col-lg-6">
+                    <div className="col-12 col-lg-6 mb-3">
                       <p className="section-badge-title">
                         TENTANG SEDEKAH ENERGI
                       </p>
@@ -74,8 +74,8 @@ const About = () => {
                     </div>
                     <div className="col-12 col-lg-6">
                       <p className="section-description text-start">
-                        Sedekah Energi adalah progra inisiatif dari Mosaic
-                        Indonesia, merupakan cara alternatif buat kamu yang
+                        Sedekah Energi adalah progra inisiatif dari <a href="https://mosaic-indonesia.com/">Mosaic
+                        Indonesia</a>, merupakan cara alternatif buat kamu yang
                         pengen berbuat baik buat lingkungan sambil tetap
                         menjalankan ibadah.
                       </p>
@@ -140,7 +140,7 @@ const About = () => {
             stroke-width="17"
           />
         </svg>
-        <div className="container">
+        <div className="container quotes-wrapper">
           <div className="row">
             <div className="col-lg-8 col-12">
               <p className="text">
@@ -187,10 +187,10 @@ const About = () => {
           src="/energi-asset-vector/about-page/sun-rotate.svg"
           className="sun"
         />
-        {/* <img
-          src="/energi-asset-vector/about-page/m-sun-rotate.svg"
+        <img
+          src="/energi-asset-vector/about-page/sun-croped.svg"
           className="m-sun"
-        /> */}
+        />
       </section>
 
       <section className="about-section-two bg-gradient-custom">
@@ -226,7 +226,7 @@ const About = () => {
                                   thumbnailUrl={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
                                 />
                                 <div className="d-flex gap-3">
-                                  <div className="badge-video">1</div>
+                                  <div className="badge-video">{item.id}</div>
                                   <div className="text-start">
                                     <p className="m-0 text-start title">
                                       {item.name}

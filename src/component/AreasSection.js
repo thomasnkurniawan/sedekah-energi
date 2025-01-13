@@ -68,7 +68,7 @@ export default function AreasSection({ setShowModalVideo }) {
                             thumbnailUrl={`https://img.youtube.com/vi/${item.videoId}/maxresdefault.jpg`}
                           />
                           <div className="d-flex gap-3">
-                            <div className="badge-video">1</div>
+                            <div className="badge-video">{item.id}</div>
                             <div className="text-start">
                               <p className="m-0 text-start title">
                                 {item.name}
