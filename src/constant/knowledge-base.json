@@ -388,11 +388,11 @@
                 "heading": "Segmen Khusus",
                 "description": [
                   {
-                    "head": "Wakaf Hutan",
+                    "head": "<strong>Wakaf Hutan</strong>",
                     "desc": "Fokus pada individu yang peduli dengan keberlanjutan lingkungan dan memiliki kapasitas finansial untuk kontribusi jangka panjang."
                   },
                   {
-                    "head": "Sedekah Energi",
+                    "head": "<strong>Sedekah Energi</strong>",
                     "desc": "Menyasar generasi muda dengan akses ekonomi menengah yang ingin terlibat dalam aksi sederhana namun bermakna."
                   }
                 ]
@@ -405,17 +405,17 @@
             "body": [
               {
                 "heading": null,
-                "longDescription": "Segmentasi demografis adalah Segmentasi demografis adalah metode segmentasi pasar yang membagi audiens berdasarkan karakteristik demografis, seperti usia, jenis kelamin, pendapatan, pendidikan, dan pekerjaan. Ini adalah salah satu pendekatan paling umum dalam pemasaran karena mudah diukur dan relevan untuk berbagai kebutuhan bisnis atau organisasi. Contoh",
+                "longDescription": "<p style='margin-bottom: 0'>Segmentasi demografis adalah Segmentasi demografis adalah metode segmentasi pasar yang membagi audiens berdasarkan karakteristik demografis, seperti usia, jenis kelamin, pendapatan, pendidikan, dan pekerjaan. Ini adalah salah satu pendekatan paling umum dalam pemasaran karena mudah diukur dan relevan untuk berbagai kebutuhan bisnis atau organisasi. <br/><br/>Contoh</p>",
                 "description": [
                   {
                     "heads": "Usia",
                     "descs": [
                       {
-                        "head": "Sedekah Energi",
+                        "head": "<strong>Sedekah Energi</strong>",
                         "desc": "18-35 tahun, generasi muda yang tech-savvy."
                       },
                       {
-                        "head": "Wakaf Hutan",
+                        "head": "<strong>Wakaf Hutan</strong>",
                         "desc": "30+ tahun, individu yang lebih mapan secara ekonomi."
                       }
                     ]
@@ -553,30 +553,54 @@
           },
           {
             "title": "Bentuk Kegiatan yang Bisa Dilakukan",
-            "type": "heading",
+            "type": "multiple-heading",
             "body": [
               {
-                "heading": "Workshop Interaktif",
-                "subtitle": "Cara Membuat Rumah Ibadah Lebih Berkelanjutan",
+                "heading": "1. Workshop Interaktif",
+                "subtitle": "Tema: 'Cara Membuat Rumah Ibadah Lebih Berkelanjutan'",
                 "description": [
-                  "Kegiatan: Simulasi pemasangan mini panel surya. \n\n Penjelasan praktis tentang efisiensi energi di masjid.",
-                  "Output: Peserta memahami langkah praktis untuk mendukung transisi ke energi terbarukan."
+                  {
+                    "heading": "Kegiatan:",
+                    "point": [
+                      "Simulasi pemasangan mini panel surya.",
+                      "Penjelasan praktis tentang efisiensi energi di masjid."
+                    ]
+                  },
+                  {
+                    "heading": "Output: Peserta memahami langkah praktis untuk mendukung transisi ke energi terbarukan."
+                  }
                 ]
               },
               {
-                "heading": "Aksi Komunitas",
-                "subtitle": "Bersama Hijaukan Rumah Ibadah",
+                "heading": "2. Aksi Komunitas",
+                "subtitle": "Tema: 'Bersama Hijaukan Rumah Ibadah'",
                 "description": [
-                  "Kegiatan: Penanaman pohon di sekitar masjid. \n\n Membersihkan area masjid dengan eco-enzyme buatan sendiri.",
-                  "Output: Lingkungan rumah ibadah menjadi lebih hijau dan bersih, serta peserta mendapat pengalaman langsung."
+                  {
+                    "heading": "Kegiatan:",
+                    "point": [
+                      "Penanaman pohon di sekitar masjid.",
+                      "Membersihkan area masjid dengan eco-enzyme buatan sendiri."
+                    ]
+                  },
+                  {
+                    "heading": " Output: Lingkungan rumah ibadah menjadi lebih hijau dan bersih, serta peserta mendapat pengalaman langsung."
+                  }
                 ]
               },
               {
-                "heading": "Kunjungan Lapangan",
-                "subtitle": "Melihat Dampak Wakaf Hutan secara Langsung",
+                "heading": "3. Kunjungan Lapangan",
+                "subtitle": "Tema: 'Melihat Dampak Wakaf Hutan secara Langsung'",
                 "description": [
-                  "Kegiatan: Tur ke lokasi hutan yang dikelola melalui wakaf. \n\n Dokumentasi dan cerita dari masyarakat lokal penerima manfaat.",
-                  "Output: Peserta memahami dampak nyata dan terinspirasi untuk mendukung lebih lanjut."
+                  {
+                    "heading": "Kegiatan:",
+                    "point": [
+                      "Tur ke lokasi hutan yang dikelola melalui wakaf.",
+                      "Dokumentasi dan cerita dari masyarakat lokal penerima manfaat."
+                    ]
+                  },
+                  {
+                    "heading": " Output: Peserta memahami dampak nyata dari kontribusi mereka dan terinspirasi untuk mendukung lebih lanjut."
+                  }
                 ]
               }
             ]

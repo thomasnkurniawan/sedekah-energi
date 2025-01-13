@@ -163,7 +163,7 @@ const AccordionContent = ({ item, index }) => {
         <div className="col-2 col-lg-1 pr-0 pl-3">
           <p className="id">{item.id}</p>
         </div>
-        <div className="col-10 col-lg-11">
+        <div className="col-10 col-lg-11 p-0">
           <p className="section-title">{item.section}</p>
         </div>
       </div>
@@ -401,7 +401,7 @@ const AccordionContent = ({ item, index }) => {
                                   return (
                                     <>
                                       <li className="fw-bolder">
-                                        {child.head}
+                                        <div dangerouslySetInnerHTML={{__html: child.head}}></div>
                                       </li>
                                       <span>{child.desc}</span>
                                     </>
@@ -513,7 +513,7 @@ const AccordionContent = ({ item, index }) => {
                     {content.body?.map((body) => {
                       return (
                         <>
-                          <p>{body.longDescription}</p>
+                          <div dangerouslySetInnerHTML={{__html: body.longDescription}}></div>
                           <ol>
                             {body.description.map((i) => {
                               return (
@@ -523,8 +523,8 @@ const AccordionContent = ({ item, index }) => {
                                     {i.descs.map((z) => {
                                       return (
                                         <>
-                                          <li className="fw-bold">{z.head}</li>
-                                          <p>{z.desc}</p>
+                                          <li><div dangerouslySetInnerHTML={{__html: z.head}}></div></li>
+                                          <p className="m-0">{z.desc}</p>
                                         </>
                                       );
                                     })}
@@ -542,6 +542,73 @@ const AccordionContent = ({ item, index }) => {
             </div>
           );
         }
+
+        if (content.type === "multiple-heading") {
+          return (
+            <div className="accordion">
+              <div
+                className={clsx({
+                  "accordion-item": true,
+                  expanded: activeIndex.includes(`${item.id}-${content.title}`),
+                })}
+                id={content.title.replace(/\s+/g, "")}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className={`accordion-button ${
+                      activeIndex !== index ? "" : "collapsed"
+                    }`}
+                    type="button"
+                    onClick={() =>
+                      toggleAccordion(`${item.id}-${content.title}`)
+                    }
+                    aria-expanded={activeIndex.includes(
+                      `${item.id}-${content.title}`
+                    )}
+                  >
+                    {content.title}
+                  </button>
+                </h2>
+                <div
+                  id={`${content.title.replace(/\s+/g, "")}-content`}
+                  className={`accordion-collapse collapse ${
+                    activeIndex.includes(`${item.id}-${content.title}`)
+                      ? "show"
+                      : ""
+                  }`}
+                  aria-labelledby={content.title.replace(/\s+/g, "")}
+                >
+                  <div className="accordion-body">
+                    {content.body.map((item) => {
+                      return (
+                        <div>
+                          <p className="m-0 fw-bold">{item.heading}</p>
+                          <p className="m-0 fw-bold">{item.subtitle}</p>
+                          {item.description.map((desc) => {
+
+                            return (
+                              <ul>
+                                <li>{desc.heading}</li>
+                                {desc.point && (
+                                  <ul>
+                                    {desc.point.map((q) => {
+                                      return <li>{q}</li>
+                                    })}
+                                  </ul>
+                                )}
+                              </ul>
+                            )
+                          })}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+
       })}
 
     </section>
