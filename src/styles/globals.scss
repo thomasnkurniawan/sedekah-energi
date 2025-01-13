@@ -503,30 +503,38 @@ body {
   }
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  min-width: 560px;
-
-  .card-testimoni {
-    background-color: white;
-    border: 1px solid #e2e6ed;
-
-    .card-body {
-      background-color: white;
-    }
+.impact-section {
+  .swiper {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
   }
 
-  &.swiper-slide-active {
+  .swiper-slide {
+    min-width: 560px;
+
+    @media screen and (max-width: 600px) {
+      min-width: unset;
+      width: max-content;
+    }
+
     .card-testimoni {
-      background-color: #e6f0f1;
-      border: unset;
+      background-color: white;
+      border: 1px solid #e2e6ed;
 
       .card-body {
+        background-color: white;
+      }
+    }
+
+    &.swiper-slide-active {
+      .card-testimoni {
         background-color: #e6f0f1;
+        border: unset;
+
+        .card-body {
+          background-color: #e6f0f1;
+        }
       }
     }
   }
@@ -567,7 +575,6 @@ body {
     }
 
     .accordion-button {
-
       &::after {
         transform: rotate(45deg);
       }

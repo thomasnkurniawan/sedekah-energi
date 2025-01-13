@@ -5,6 +5,11 @@ import Video from "@/component/Video";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
+
+import "swiper/css";
+
 const About = () => {
   const [showModalVideo, setShowModalVideo] = useState(null);
   const [isMobileLocal, setIsMobileLocal] = useState(false);
@@ -31,7 +36,10 @@ const About = () => {
   ];
 
   return (
-    <BaseLayout showModalVideo={showModalVideo} setShowModalVideo={setShowModalVideo}>
+    <BaseLayout
+      showModalVideo={showModalVideo}
+      setShowModalVideo={setShowModalVideo}
+    >
       <section className="about-page">
         <div className="container-fluid hero-about-section">
           <div className="row align-items-center">
@@ -43,14 +51,14 @@ const About = () => {
             </div>
             <div className="col-lg-1"></div>
             <div className="col-lg-5 col-md-12 col-12">
-                <div className="row align-items-center justify-content-center">
-                    <p className="section-title-about">
-                      Sedekah Energi, Ibadah untuk Masa Depan Bumi
-                    </p>
-                    <p className="section-subtitle-about">
-                      Sedekah untuk panel surya masjid, energi terbarukan untuk
-                      bumi yang lebih baik.
-                    </p>
+              <div className="row align-items-center justify-content-center">
+                <p className="section-title-about">
+                  Sedekah Energi, Ibadah untuk Masa Depan Bumi
+                </p>
+                <p className="section-subtitle-about">
+                  Sedekah untuk panel surya masjid, energi terbarukan untuk bumi
+                  yang lebih baik.
+                </p>
               </div>
             </div>
           </div>
@@ -74,10 +82,13 @@ const About = () => {
                     </div>
                     <div className="col-12 col-lg-6">
                       <p className="section-description text-start">
-                        Sedekah Energi adalah progra inisiatif dari <a href="https://mosaic-indonesia.com/">Mosaic
-                        Indonesia</a>, merupakan cara alternatif buat kamu yang
-                        pengen berbuat baik buat lingkungan sambil tetap
-                        menjalankan ibadah.
+                        Sedekah Energi adalah progra inisiatif dari{" "}
+                        <a href="https://mosaic-indonesia.com/">
+                          Mosaic Indonesia
+                        </a>
+                        , merupakan cara alternatif buat kamu yang pengen
+                        berbuat baik buat lingkungan sambil tetap menjalankan
+                        ibadah.
                       </p>
                       <p className="section-description text-start">
                         Program ini ngajak umat Muslim untuk ikut serta
@@ -145,12 +156,12 @@ const About = () => {
             <div className="col-lg-8 col-12">
               <p className="text">
                 Lewat Sedekah Energi, kita semua bisa jadi bagian dari solusi
-                perubahan iklim. 
-                <br /><br />
-                Dengan kontribusi bareng-bareng, kita bisa
-                bantu masjid-masjid di berbagai daerah untuk beralih ke energi
-                terbarukan, mulai dari pemasangan panel surya yang jadi langkah
-                nyata.
+                perubahan iklim.
+                <br />
+                <br />
+                Dengan kontribusi bareng-bareng, kita bisa bantu masjid-masjid
+                di berbagai daerah untuk beralih ke energi terbarukan, mulai
+                dari pemasangan panel surya yang jadi langkah nyata.
               </p>
             </div>
           </div>
@@ -200,16 +211,22 @@ const About = () => {
               <div className="card rounded-4 card-about mt-4 mt-sm-0">
                 <div className="card-body">
                   <div className="row justify-content-center mb-4">
-                    <div className="col-12 col-lg-6">
-                      <p className="section-badge-title">
-                        Jangkauan
-                      </p>
+                    <div className="col-12 col-lg-6 mb-3">
+                      <p className="section-badge-title">Jangkauan</p>
                       <span className="section-title">
-                      Area Jangkauan <br />Sedekah Energi
+                        Area Jangkauan <br />
+                        Sedekah Energi
                       </span>
                     </div>
                     <div className="col-12 col-lg-6">
-                      <p className="section-description text-start">Alhamdulillah, Sedekah Energi sudah dilaksanakan di Sembalun, Nusa Tenggara Barat, dan Bantul, Yogyakarta, sebagai contoh nyata betapa besar potensi umat Islam Indonesia dalam memberi dampak positif. Yuk, bareng-bareng kita jaga bumi dan terus berkarya untuk masa depan yang lebih hijau!</p>
+                      <p className="section-description text-start">
+                        Alhamdulillah, Sedekah Energi sudah dilaksanakan di
+                        Sembalun, Nusa Tenggara Barat, dan Bantul, Yogyakarta,
+                        sebagai contoh nyata betapa besar potensi umat Islam
+                        Indonesia dalam memberi dampak positif. Yuk,
+                        bareng-bareng kita jaga bumi dan terus berkarya untuk
+                        masa depan yang lebih hijau!
+                      </p>
                     </div>
                     <div className="col-12 col-lg-12">
                       <div className="row justify-content-center">
@@ -248,6 +265,31 @@ const About = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="documentation-section">
+        <div className="shadow"></div>
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          centeredSlides={true}
+          loop={true}
+          autoplay={{
+            delay: 500
+          }}
+          modules={[Autoplay]}
+          className="mySwiper"
+        >
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
+            return (
+              <SwiperSlide>
+                <img src={`/energi-asset-vector/about-page/${item}.png`} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <div className="shadow-right"></div>
+
       </section>
 
       <section className="testimoni-section">

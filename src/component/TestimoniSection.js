@@ -61,9 +61,27 @@ export default function TestimoniSection() {
             <div className="slider-container">
               <Swiper
                 className="my-swiper"
-                slidesPerView={isMobileLocal ? 1 : 2}
-                spaceBetween={isMobileLocal ? 10 : 30}
+                slidesPerView={1}
+                spaceBetween={30}
                 loop={true}
+                breakpoints={{
+                  // when window width is >= 320px
+                  320: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                    centeredSlides: false,
+                  },
+                  // when window width is >= 480px
+                  480: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                  // when window width is >= 640px
+                  640: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                  },
+                }}
               >
                 {dataTestimoni.map((item) => {
                   return (
@@ -71,23 +89,25 @@ export default function TestimoniSection() {
                       <div className="card card-testimoni">
                         <div className="card-body">
                           <div className="row">
-                            <div className="col-12 col-lg-4">
+                            <div className="col-12 col-lg-4 person-wrapper">
                               <img className="person" src={item.picture} />
                             </div>
-                            <div className="col-11 col-lg-7 text-start">
+                            <div className="col-10 col-lg-7 text-start">
                               <p className="name">{item.name}</p>
                               <p className="m-0 occupation">
                                 {item.occupation}
                               </p>
                               <p className="location">{item.location}</p>
-                              <p className="p-0 description">
-                                {item.description}
-                              </p>
+                              {!isMobileLocal && (
+                                <p className="p-0 description">
+                                  {item.description}
+                                </p>
+                              )}
                             </div>
                             {isMobileLocal && (
-                              <div className="col-1">
+                              <div className="col-2">
                                 <svg
-                                className="pr-4"
+                                  className="pr-4"
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="20"
                                   height="17"
@@ -99,6 +119,13 @@ export default function TestimoniSection() {
                                     fill="#024B50"
                                   />
                                 </svg>
+                              </div>
+                            )}
+                            {isMobileLocal && (
+                              <div className="col-12">
+                                <p className="p-0 description">
+                                  {item.description}
+                                </p>
                               </div>
                             )}
                             {!isMobileLocal && (
