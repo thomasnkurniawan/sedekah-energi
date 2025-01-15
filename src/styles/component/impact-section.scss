@@ -105,29 +105,27 @@
     }
 
     .person {
-      width: 100%;
-      height: 100%;
+      width: 200px;
+      height: 250px;
       object-fit: cover;
       border-radius: 1rem;
-      aspect-ratio: 1/1;
+      aspect-ratio: 4/5;
     }
 
     @media screen and (max-width: 600px) {
       width: 296px;
-      height: 100%;
-
+      height: 588px;
+      min-height: 588px;
+      
       .person {
         width: 100%;
         height: 100%;
-  
-        object-fit: unset;
-        aspect-ratio: 4/5;
+        aspect-ratio: 1/1;
 
       }
 
       .person-wrapper {
         margin-bottom: 1rem;
-
       }
     }
 

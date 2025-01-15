@@ -38,8 +38,8 @@ export default function KnowledgeSection() {
                     </div>
                     <div className="col-12 mb-4">
                       <span className="section-title">
-                        Temukan Fakta dan Solusi Energi Terbarukan di Knowledge
-                        Hub
+                        Temukan Fakta dan Solusi Energi Terbarukan
+                        <br /> di Knowledge Hub
                       </span>
                     </div>
                   </div>
@@ -47,11 +47,14 @@ export default function KnowledgeSection() {
                     {dataKnowledge.map((item) => {
                       return (
                         <div className="col-lg-6 col-12 pb-3">
-                          <div className="d-flex card-knowledge">
-                            <img src={item.image} />
-                            <div className="p-3 d-flex flex-column justify-content-between w-100 text-start">
-                              <p className="title">{item.title}</p>
-                              <Link href={item.link} className="text-decoration-none">
+                          <Link
+                            href={item.link}
+                            className="text-decoration-none"
+                          >
+                            <div className="d-flex card-knowledge">
+                              <img src={item.image} />
+                              <div className="p-3 d-flex flex-column justify-content-between w-100 text-start">
+                                <p className="title">{item.title}</p>
                                 <p className="d-flex justify-content-between align-items-end m-0 see-more">
                                   Selengkapnya
                                   <svg
@@ -67,9 +70,9 @@ export default function KnowledgeSection() {
                                     />
                                   </svg>
                                 </p>
-                              </Link>
+                              </div>
                             </div>
-                          </div>
+                          </Link>
                         </div>
                       );
                     })}

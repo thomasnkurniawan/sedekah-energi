@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from 'swiper/modules';
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
@@ -51,9 +51,28 @@ const About = () => {
             </div>
             <div className="col-lg-1"></div>
             <div className="col-lg-5 col-md-12 col-12">
-              <div className="row align-items-center justify-content-center">
+              <div className="row align-items-center justify-content-center position-relative title-wrapper">
                 <p className="section-title-about">
-                  Sedekah Energi, Ibadah untuk Masa Depan Bumi
+                  Sedekah Energi, Ibadah untuk{" "}
+                  <span className="position-relative" style={{padding: '0 10px'}}>
+                    Masa Depan
+                    <svg
+                      className="circle"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="301"
+                      height="70"
+                      viewBox="0 0 301 70"
+                      fill="none"
+                    >
+                      <path
+                        d="M149.09 1.99998C97.9265 2.88199 0.763163 26.3298 2.98009 45.3788C5.75126 69.1901 82.0716 70.954 190.008 62.1349C297.945 53.3158 319.37 26.6938 281.219 14.3469C250.699 4.46936 165.529 10.2313 126.758 14.3469"
+                        stroke="#FCC431"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>{" "}
+                  Bumi
                 </p>
                 <p className="section-subtitle-about">
                   Sedekah untuk panel surya masjid, energi terbarukan untuk bumi
@@ -71,46 +90,48 @@ const About = () => {
             <div className="col-lg-12 col-12 p-0">
               <div className="card rounded-4 card-about">
                 <div className="card-body">
-                  <div className="row justify-content-center mb-4">
-                    <div className="col-12 col-lg-6 mb-3">
-                      <p className="section-badge-title">
-                        TENTANG SEDEKAH ENERGI
-                      </p>
-                      <span className="section-title">
-                        Memakmurkan Masjid dengan Nyala Lampu Energi Bersih
-                      </span>
-                    </div>
-                    <div className="col-12 col-lg-6">
-                      <p className="section-description text-start">
-                        Sedekah Energi adalah progra inisiatif dari{" "}
-                        <a href="https://mosaic-indonesia.com/">
-                          Mosaic Indonesia
-                        </a>
-                        , merupakan cara alternatif buat kamu yang pengen
-                        berbuat baik buat lingkungan sambil tetap menjalankan
-                        ibadah.
-                      </p>
-                      <p className="section-description text-start">
-                        Program ini ngajak umat Muslim untuk ikut serta
-                        mendukung penyediaan energi terbarukan di masjid. Jadi,
-                        sedekah yang kamu berikan nggak cuma bermanfaat buat
-                        masyarakat sekitar, tapi juga buat bumi, sesuai dengan
-                        perintah Allah SWT yang mengajak kita untuk menjaga
-                        ciptaan-Nya.
-                      </p>
-                    </div>
-                    <div className="col-12 text-center image-wrapper">
-                      {isMobileLocal ? (
-                        <img
-                          className="img-fluid"
-                          src="/energi-asset-vector/about-page/m-about.png"
-                        />
-                      ) : (
-                        <img
-                          className="img-fluid"
-                          src="/energi-asset-vector/about-page/desk-about.png"
-                        />
-                      )}
+                  <div class="container">
+                    <div className="row justify-content-center mb-4">
+                      <div className="col-12 col-lg-6 mb-3">
+                        <p className="section-badge-title">
+                          TENTANG SEDEKAH ENERGI
+                        </p>
+                        <span className="section-title">
+                          Memakmurkan Masjid dengan Nyala Lampu Energi Bersih
+                        </span>
+                      </div>
+                      <div className="col-12 col-lg-6">
+                        <p className="section-description text-start">
+                          Sedekah Energi adalah progra inisiatif dari{" "}
+                          <a href="https://mosaic-indonesia.com/">
+                            Mosaic Indonesia
+                          </a>
+                          , merupakan cara alternatif buat kamu yang pengen
+                          berbuat baik buat lingkungan sambil tetap menjalankan
+                          ibadah.
+                        </p>
+                        <p className="section-description text-start">
+                          Program ini ngajak umat Muslim untuk ikut serta
+                          mendukung penyediaan energi terbarukan di masjid.
+                          Jadi, sedekah yang kamu berikan nggak cuma bermanfaat
+                          buat masyarakat sekitar, tapi juga buat bumi, sesuai
+                          dengan perintah Allah SWT yang mengajak kita untuk
+                          menjaga ciptaan-Nya.
+                        </p>
+                      </div>
+                      <div className="col-12 text-center image-wrapper">
+                        {isMobileLocal ? (
+                          <img
+                            className="img-fluid"
+                            src="/energi-asset-vector/about-page/m-about.png"
+                          />
+                        ) : (
+                          <img
+                            className="img-fluid"
+                            src="/energi-asset-vector/about-page/desk-about.png"
+                          />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -275,7 +296,7 @@ const About = () => {
           centeredSlides={true}
           loop={true}
           autoplay={{
-            delay: 500
+            delay: 500,
           }}
           modules={[Autoplay]}
           className="mySwiper"
@@ -289,7 +310,6 @@ const About = () => {
           })}
         </Swiper>
         <div className="shadow-right"></div>
-
       </section>
 
       <section className="testimoni-section">

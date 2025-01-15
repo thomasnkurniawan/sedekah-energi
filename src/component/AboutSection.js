@@ -25,11 +25,10 @@ export default function AboutSection({ ref }) {
     <section className="bg-dark-green about-section" ref={ref}>
       <div className="container text-center">
         <div className="row justify-content-center">
+          <div className="col-lg-12 col-12">
+            <img src="/energi-asset-vector/masjid.svg" className="img-fluid" />
+          </div>
           <div className="col-lg-12 col-12 position-relative">
-            <img
-              src="/energi-asset-vector/masjid.svg"
-              className="asset-mesjid"
-            />
             <div className="card text-center rounded-4 card-about">
               <div className="card-body">
                 <div className="row justify-content-center align-items-center g-1 mb-4">
@@ -69,7 +68,10 @@ export default function AboutSection({ ref }) {
                 </div>
                 <div className="row justify-content-center">
                   <div className="col-12 col-lg-3">
-                    <Link href="/about" className="btn btn-outline-secondary rounded-5 d-flex justify-content-center gap-3">
+                    <Link
+                      href="/about"
+                      className="btn btn-outline-secondary rounded-5 d-flex justify-content-center gap-3"
+                    >
                       Pelajari selengkapnya
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -15,7 +15,7 @@ export default function HeroSection({ onClickDonate, executeScroll }) {
         )}
         <div className="row justify-content-center pt-5 p-sm-5">
           <div className="col-lg-8 col-12">
-            <h1 className="fw-bold hero-title mb-3">
+            <h1 className="fw-bold hero-title mb-3 position-relative">
               Berbuat Baik untuk Bumi dan Sesama Melalui Sedekah Energi
               <svg
                 className="vector-line"

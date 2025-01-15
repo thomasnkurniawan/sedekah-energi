@@ -7,6 +7,15 @@
       img {
         margin-bottom: 32px;
       }
+
+      .circle {
+        width: 180px;
+        top: -16px;
+      }
+    }
+
+    .title-wrapper {
+      z-index: 99;
     }
 
     .section-title-about {
@@ -14,6 +23,13 @@
       font-weight: 600;
       line-height: 64px;
       margin-bottom: 32px;
+
+      .circle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
 
       @media screen and (max-width: 820px) {
         font-size: 28px;
