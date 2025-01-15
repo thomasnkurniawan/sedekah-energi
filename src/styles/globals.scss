@@ -530,6 +530,10 @@ body {
       .card-body {
         background-color: white;
       }
+
+      &:hover {
+        border: 1.2px solid var(--dark-green-background);
+      }
     }
 
     &.swiper-slide-active {

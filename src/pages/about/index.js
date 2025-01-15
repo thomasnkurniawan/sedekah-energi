@@ -289,15 +289,19 @@ const About = () => {
       </section>
 
       <section className="documentation-section">
-        <div className="shadow"></div>
+        <div className="shadow-left"></div>
         <Swiper
           slidesPerView={4}
           spaceBetween={30}
           centeredSlides={true}
           loop={true}
           autoplay={{
-            delay: 500,
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true, 
           }}
+          speed={1000}
+          allowTouchMove={false} 
           modules={[Autoplay]}
           className="mySwiper"
         >
