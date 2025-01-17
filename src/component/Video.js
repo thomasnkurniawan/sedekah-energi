@@ -10,7 +10,7 @@ export default function Video({ videoId, thumbnailUrl, setShowModalVideo }) {
   return (
     <div className="video-container">
       <div className="thumbnail" onClick={handlePlay}>
-        <img
+        <img alt="sedekah-energi-asset"
           src={
             thumbnailUrl ||
             `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
@@ -19,7 +19,7 @@ export default function Video({ videoId, thumbnailUrl, setShowModalVideo }) {
           className="thumbnail-image"
         />
         <div className="play-icon">
-          <img
+          <img alt="sedekah-energi-asset"
             src="/energi-asset-vector/play-icon.svg" // Tambahkan play icon SVG ke public folder
             alt="Play Icon"
           />

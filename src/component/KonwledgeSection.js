@@ -52,7 +52,7 @@ export default function KnowledgeSection() {
                             className="text-decoration-none"
                           >
                             <div className="d-flex card-knowledge">
-                              <img src={item.image} />
+                              <img alt="sedekah-energi-asset" src={item.image} />
                               <div className="p-3 d-flex flex-column justify-content-between w-100 text-start">
                                 <p className="title">{item.title}</p>
                                 <p className="d-flex justify-content-between align-items-end m-0 see-more">

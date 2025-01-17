@@ -44,7 +44,7 @@ export default function Header({ onClickDonate }) {
     <div className="header-section fixed-top">
       <nav className="container navbar navbar-expand-lg bg-white justify-content-between align-items-center px-2">
         <Link href="/" className="text-decoration-none">
-          <img src="/energi-logo.png" className="logo" />
+          <img src="/energi-logo.png" className="logo" alt="logo-sedekah-energi"/>
         </Link>
         {isMobileLocal && (
           <div>
@@ -154,7 +154,6 @@ export default function Header({ onClickDonate }) {
                 onMouseLeave={() => {
                   setDropdownKnowledge(false);
                 }}
-                aria-labelledby="navbarDropdownMenuLink"
               >
                 {dataKnowledge.map((item) => {
                   return (

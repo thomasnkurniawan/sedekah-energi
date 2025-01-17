@@ -45,7 +45,7 @@ const ModalOptionDonate = ({
                 handleClickOption("http://kitabisa.com/listrikuntukjabar")
               }
             >
-              <img src="/energi-asset-vector/icon-donate.png" />
+              <img alt="sedekah-energi-asset" src="/energi-asset-vector/icon-donate.png" />
               <span>Sedekah Energi untuk Jawa Barat (Default)</span>
               <div className="arrow-icon-wrapper">
                 <svg
@@ -70,7 +70,7 @@ const ModalOptionDonate = ({
                 )
               }
             >
-              <img src="/energi-asset-vector/icon-donate.png" />
+              <img alt="sedekah-energi-asset" src="/energi-asset-vector/icon-donate.png" />
               <span>Sedekah Energi untuk Sumatera Barat</span>
               <div className="arrow-icon-wrapper">
                 <svg

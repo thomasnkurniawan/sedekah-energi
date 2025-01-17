@@ -10,6 +10,7 @@ export default function Footer() {
         <div className="row position-relative">
           <div className="col-lg-3 col-12 py-4 py-sm-0">
             <img
+              alt="uus-image-logo"
               src="/energi-asset-vector/sedekah-energi-logo.png"
               className="image-logo"
             />
@@ -50,25 +51,31 @@ export default function Footer() {
                 href="https://www.facebook.com/umatdansemesta/"
                 target="_blank"
               >
-                <img src="/energi-asset-vector/fb-white.svg" />
+                <img src="/energi-asset-vector/fb-white.svg" alt="fb-logo" />
               </a>
               <a
                 href="https://www.tiktok.com/@umatuntuksemesta"
                 target="_blank"
               >
-                <img src="/energi-asset-vector/tt-white.svg" />
+                <img
+                  src="/energi-asset-vector/tt-white.svg"
+                  alt="tiktok-logo"
+                />
               </a>
               <a
                 href="https://www.instagram.com/umatuntuksemesta/"
                 target="_blank"
               >
-                <img src="/energi-asset-vector/ig-white.svg" />
+                <img
+                  src="/energi-asset-vector/ig-white.svg"
+                  alt="instagram-logo"
+                />
               </a>
               <a
                 href="https://x.com/umatutksemesta/status/1867902591935430736"
                 target="_blank"
               >
-                <img src="/energi-asset-vector/x-white.svg" />
+                <img src="/energi-asset-vector/x-white.svg" alt="x-logo" />
               </a>
               <a
                 href="https://www.youtube.com/@UmatUntukSemesta"

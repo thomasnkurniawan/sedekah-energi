@@ -2,6 +2,7 @@ import BaseLayoutKnowledge from "@/component/BaseLayoutKnowledge";
 import DonateSection from "@/component/Cta-donate";
 import faq from "@/constant/faq.json";
 import clsx from "clsx";
+import Head from "next/head";
 import { useState } from "react";
 
 const Faq = ({ faqList }) => {
@@ -18,84 +19,99 @@ const Faq = ({ faqList }) => {
   };
 
   return (
-    <BaseLayoutKnowledge page={"faq"} jumbotronContent={jumbotronContent}>
-      <div className="faq-page">
-        <div className="faq-section">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-lg-12">
-                <div className="card faq-card">
-                  <div className="card-body p-0">
-                    <div className="row justify-content-center align-items-center g-1 mb-3">
-                      <div className="col-12">
-                        <span className="section-badge-title">FAQ</span>
+    <>
+      <Head>
+        <title>Sedekah Energi - {jumbotronContent.title}</title>
+        <meta name="description" content={jumbotronContent.subtitle} />
+        <meta
+          property="og:title"
+          content={`Sedekah Energi - ${jumbotronContent.title}`}
+        />
+        <meta property="og:description" content={jumbotronContent.subtitle} />
+        <link
+          rel="canonical"
+          href={`https://sedekahenergi.mosaic-indonesia.com/faq`}
+        />
+      </Head>
+      <BaseLayoutKnowledge page={"faq"} jumbotronContent={jumbotronContent}>
+        <div className="faq-page">
+          <div className="faq-section">
+            <div className="container">
+              <div className="row">
+                <div className="col-12 col-lg-12">
+                  <div className="card faq-card">
+                    <div className="card-body p-0">
+                      <div className="row justify-content-center align-items-center g-1 mb-3">
+                        <div className="col-12">
+                          <span className="section-badge-title">FAQ</span>
+                        </div>
+                        <div className="col-12 mb-3">
+                          <span className="section-title">
+                            Pertanyaan Umum Teknikal: Solar Panel Installation
+                          </span>
+                        </div>
                       </div>
-                      <div className="col-12 mb-3">
-                        <span className="section-title">
-                          Pertanyaan Umum Teknikal: Solar Panel Installation
-                        </span>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 col-12">
-                        <div className="accordion">
-                          {faqList.content.map((faq, index) => {
-                            return (
-                              <div
-                                className={clsx({
-                                  "accordion-item mb-4": true,
-                                  expanded: activeIndex === index,
-                                })}
-                                id={faq.title.replace(/\s+/g, "")}
-                              >
-                                <h2 className="accordion-header">
-                                  <button
-                                    className={`accordion-button ${
-                                      activeIndex !== index ? "" : "collapsed"
-                                    }`}
-                                    type="button"
-                                    onClick={() => toggleAccordion(index)}
-                                    aria-expanded={activeIndex === index}
-                                  >
-                                    {faq.title}
-                                  </button>
-                                </h2>
+                      <div className="row">
+                        <div className="col-lg-12 col-12">
+                          <div className="accordion">
+                            {faqList.content.map((faq, index) => {
+                              return (
                                 <div
-                                  id={`${faq.title.replace(
-                                    /\s+/g,
-                                    ""
-                                  )}-content`}
-                                  className={`accordion-collapse collapse ${
-                                    activeIndex === index ? "show" : ""
-                                  }`}
-                                  aria-labelledby={faq.title.replace(
-                                    /\s+/g,
-                                    ""
-                                  )}
+                                  className={clsx({
+                                    "accordion-item mb-4": true,
+                                    expanded: activeIndex === index,
+                                  })}
+                                  id={faq.title.replace(/\s+/g, "")}
                                 >
-                                  {faq.body.length > 1 ? (
-                                    <div className="accordion-body">
-                                      <ul>
+                                  <h2 className="accordion-header">
+                                    <button
+                                      className={`accordion-button ${
+                                        activeIndex !== index ? "" : "collapsed"
+                                      }`}
+                                      type="button"
+                                      onClick={() => toggleAccordion(index)}
+                                      aria-expanded={activeIndex === index}
+                                    >
+                                      {faq.title}
+                                    </button>
+                                  </h2>
+                                  <div
+                                    id={`${faq.title.replace(
+                                      /\s+/g,
+                                      ""
+                                    )}-content`}
+                                    className={`accordion-collapse collapse ${
+                                      activeIndex === index ? "show" : ""
+                                    }`}
+                                    aria-labelledby={faq.title.replace(
+                                      /\s+/g,
+                                      ""
+                                    )}
+                                  >
+                                    {faq.body.length > 1 ? (
+                                      <div className="accordion-body">
+                                        <ul>
+                                          {faq.body.map((body) => {
+                                            return <li>{body}</li>;
+                                          })}
+                                        </ul>
+                                      </div>
+                                    ) : (
+                                      <>
                                         {faq.body.map((body) => {
-                                          return <li>{body}</li>;
+                                          return (
+                                            <div className="accordion-body">
+                                              {body}
+                                            </div>
+                                          );
                                         })}
-                                      </ul>
-                                    </div>
-                                  ) : (
-                                    <>
-                                      {faq.body.map((body) => {
-                                        return (
-                                          <div className="accordion-body">
-                                            {body}
-                                          </div>
-                                        );
-                                      })}
-                                    </>
-                                  )}
+                                      </>
+                                    )}
+                                  </div>
                                 </div>
-                              </div>
-                            );
-                          })}
+                              );
+                            })}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -105,8 +121,8 @@ const Faq = ({ faqList }) => {
             </div>
           </div>
         </div>
-      </div>
-    </BaseLayoutKnowledge>
+      </BaseLayoutKnowledge>
+    </>
   );
 };
 

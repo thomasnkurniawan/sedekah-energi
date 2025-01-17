@@ -83,13 +83,13 @@ export default function DonationInfo({
             {dataKitaBisa && (
               <div className="col-lg-10 col-12 text-start">
                 {!isCtaSection && (
-                  <h5 className="donation-description">
+                  <h3 className="donation-description">
                     Jadilah bagian dari{" "}
                     <strong style={{ fontWeight: 800 }}>
                       {dataKitaBisa[tabActive]?.donation_count}
                     </strong>{" "}
                     pendukung program perubahan lainya
-                  </h5>
+                  </h3>
                 )}
                 <div className="progress mt-3" style={{ height: "25px" }}>
                   <div

@@ -26,7 +26,7 @@ export default function AboutSection({ ref }) {
       <div className="container text-center">
         <div className="row justify-content-center">
           <div className="col-lg-12 col-12">
-            <img src="/energi-asset-vector/masjid.svg" className="img-fluid" />
+            <img src="/energi-asset-vector/masjid.svg" className="img-fluid" alt="asset-vector" />
           </div>
           <div className="col-lg-12 col-12 position-relative">
             <div className="card text-center rounded-4 card-about">
@@ -36,14 +36,14 @@ export default function AboutSection({ ref }) {
                     <span className="section-badge-title">Tentang Program</span>
                   </div>
                   <div className="col-12 mb-4">
-                    <span className="section-title">
+                    <h2 className="section-title">
                       Apa itu Sedekah Energi?
-                    </span>
+                    </h2>
                   </div>
                   <div className="col-12 mb-2">
-                    <span className="section-subtitle">
+                    <h3 className="section-subtitle">
                       Energi Bersih untuk Masjid, Manfaat untuk Bumi dan Sesama
-                    </span>
+                    </h3>
                   </div>
                   <div className="col-12">
                     <span className="section-description">
@@ -59,7 +59,7 @@ export default function AboutSection({ ref }) {
                   {dataAbout.map((item) => {
                     return (
                       <div className="card-mini d-flex flex-column gap-3 align-items-center">
-                        <img src={item.image} loading="lazy" />
+                        <img src={item.image} loading="lazy" alt="asset-vector" />
                         <p>{item.title}</p>
                         <span>{item.description}</span>
                       </div>

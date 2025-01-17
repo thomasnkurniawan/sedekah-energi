@@ -10,7 +10,7 @@ import Quiz from "@/component/Quiz";
 import SocialSection from "@/component/SocialSection";
 import { useRef, useState } from "react";
 
-export default function Home() {
+export default function Home({data}) {
   const myRef = useRef(null);
 
   const [showModalVideo, setShowModalVideo] = useState(null);
@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <BaseLayout showModalVideo={showModalVideo} setShowModalVideo={setShowModalVideo}>
       <HeroSection
+        data={data.hero}
         onClickDonate={(link) => handleClickOption(link)}
         executeScroll={executeScroll}
       />
@@ -38,3 +39,22 @@ export default function Home() {
     </BaseLayout>
   );
 }
+
+
+export function getServerSideProps() {
+  const data = {
+    hero: {
+      title: "Berbuat Baik untuk Bumi dan Sesama Melalui Sedekah Energi",
+      subtitle:
+        "<h3>Kontribusi untuk penyediaan energi terbarukan di masjid, solusi nyata <br /> menjaga ciptaan-Nya.</h3>",
+    },
+  };
+
+  return {
+    props: {
+      data: { ...data },
+    },
+  };
+}
+
+

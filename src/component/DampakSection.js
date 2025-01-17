@@ -37,7 +37,7 @@ export default function DampakSection() {
                   {dataAbout.map((item) => {
                     return (
                       <div className="col-4 card-mini d-flex flex-column gap-3 align-items-center">
-                        <img src={item.image} loading="lazy" />
+                        <img src={item.image} loading="lazy" alt="about-image-vector" />
                         <span>{item.description}</span>
                       </div>
                     );

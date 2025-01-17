@@ -64,7 +64,7 @@ export default function ArticleSection() {
                         <div className="d-flex flex-column card-mini video-areas">
                           <a href={item.link} className="text-decoration-none">
                             <div className="article-logo">
-                              <img src={item.logo} />
+                              <img src={item.logo} alt="logo-news"/>
                             </div>
                             <div className="text-start">
                               <p className="mb-4 text-start art-title">

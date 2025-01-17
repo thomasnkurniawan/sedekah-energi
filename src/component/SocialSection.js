@@ -47,7 +47,7 @@ export default function SocialSection() {
               <div className="card-body">
                 <div className="row justify-content-center">
                   <div className="col-lg-6 col-12 text-center">
-                    <img
+                    <img alt="sedekah-energi-asset"
                       src="/energi-asset-vector/logo-umat.png"
                       width={!isMobileLocal ? "300px" : "200px"}
                     />
@@ -66,7 +66,7 @@ export default function SocialSection() {
                             href="https://www.facebook.com/umatdansemesta/"
                             target="_blank"
                           >
-                            <img
+                            <img alt="sedekah-energi-asset"
                               src="/energi-asset-vector/fb.svg"
                               className="cursor-pointer"
                             />
@@ -75,7 +75,7 @@ export default function SocialSection() {
                             href="https://www.tiktok.com/@umatuntuksemesta"
                             target="_blank"
                           >
-                            <img
+                            <img alt="sedekah-energi-asset"
                               src="/energi-asset-vector/tiktok.svg"
                               className="cursor-pointer"
                             />
@@ -84,7 +84,7 @@ export default function SocialSection() {
                             href="https://www.instagram.com/umatuntuksemesta/"
                             target="_blank"
                           >
-                            <img
+                            <img alt="sedekah-energi-asset"
                               src="/energi-asset-vector/ig-new.svg"
                               className="cursor-pointer"
                             />
@@ -93,7 +93,7 @@ export default function SocialSection() {
                             href="https://x.com/umatutksemesta/status/1867902591935430736"
                             target="_blank"
                           >
-                            <img
+                            <img alt="sedekah-energi-asset"
                               src="/energi-asset-vector/x.svg"
                               className="cursor-pointer"
                             />
@@ -102,7 +102,7 @@ export default function SocialSection() {
                             href="https://www.youtube.com/@UmatUntukSemesta"
                             target="_blank"
                           >
-                            <img
+                            <img alt="sedekah-energi-asset"
                               src="/energi-asset-vector/yt.svg"
                               className="cursor-pointer"
                             />

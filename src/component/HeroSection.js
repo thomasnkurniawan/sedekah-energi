@@ -2,7 +2,7 @@ import { isMobile } from "react-device-detect";
 import DonationInfo from "./DonationInfo";
 import { useEffect, useState } from "react";
 
-export default function HeroSection({ onClickDonate, executeScroll }) {
+const HeroSection = ({ data: heroContent, onClickDonate, executeScroll }) => {
   const [isMobileLocal, setIsMobileLocal] = useState(false);
   useEffect(() => {
     setIsMobileLocal(isMobile);
@@ -11,12 +11,12 @@ export default function HeroSection({ onClickDonate, executeScroll }) {
     <section className="hero-section text-center pt-5 p-sm-0">
       <div className="container position-relative">
         {!isMobileLocal && (
-          <img src="/energi-asset-vector/sun.svg" className="asset-sun" />
+          <img alt="sedekah-energi-asset" src="/energi-asset-vector/sun.svg" className="asset-sun" />
         )}
         <div className="row justify-content-center pt-5 p-sm-5">
           <div className="col-lg-8 col-12">
-            <h1 className="fw-bold hero-title mb-3 position-relative">
-              Berbuat Baik untuk Bumi dan Sesama Melalui Sedekah Energi
+            <h2 className="fw-bold hero-title mb-3">
+              {heroContent?.title}
               <svg
                 className="vector-line"
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,20 +32,17 @@ export default function HeroSection({ onClickDonate, executeScroll }) {
                   stroke-linecap="round"
                 />
               </svg>
-            </h1>
-            <p className="pt-3 hero-description">
-              Kontribusi untuk penyediaan energi terbarukan di masjid, solusi
-              nyata <br />
-              menjaga ciptaan-Nya.
-            </p>
+            </h2>
+            <div className="pt-3 hero-description" dangerouslySetInnerHTML={{__html: heroContent?.subtitle}}></div>
           </div>
         </div>
         <div className="row justify-content-center">
           {!isMobileLocal && (
             <div className="col-lg-2">
-              <img
+              <img alt="sedekah-energi-asset"
                 src="/energi-asset-vector/solar-left.svg"
                 className="asset-left"
+                loading="lazy"
               />
             </div>
           )}
@@ -62,7 +59,7 @@ export default function HeroSection({ onClickDonate, executeScroll }) {
           </div>
           {!isMobileLocal && (
             <div className="col-lg-2">
-              <img
+              <img alt="sedekah-energi-asset"
                 src="/energi-asset-vector/solar-right.svg"
                 className="asset-right"
               />
@@ -70,7 +67,7 @@ export default function HeroSection({ onClickDonate, executeScroll }) {
           )}
           {isMobileLocal && (
             <div className="col-12">
-              <img
+              <img alt="sedekah-energi-asset"
                 src="/energi-asset-vector/msite-hero.svg"
                 className="asset-msite"
               />
@@ -107,3 +104,5 @@ export default function HeroSection({ onClickDonate, executeScroll }) {
     </section>
   );
 }
+
+export default HeroSection;

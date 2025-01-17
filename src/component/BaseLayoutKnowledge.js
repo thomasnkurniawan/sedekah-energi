@@ -40,6 +40,9 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
               <img
                 src={IMAGE_JUMBO[page]}
                 className="img-fluid jumbotron-image"
+                alt="jumbotron-image"
+                width={"100%"}
+                height={"100%"}
               />
             </div>
             <div className="col-lg-1"></div>

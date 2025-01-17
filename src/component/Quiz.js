@@ -15,7 +15,7 @@ export default function Quiz() {
             <div className="row p-0 align-items-center position-relative">
               {!isMobileLocal && (
                 <div className="col-lg-4 col-12 ml-4">
-                  <img src="/energi-asset-vector/card-quiz.svg" />
+                  <img alt="sedekah-energi-asset" src="/energi-asset-vector/card-quiz.svg" />
                 </div>
               )}
               <div className="col-lg-4 col-12">
@@ -32,7 +32,7 @@ export default function Quiz() {
                   Ikuti Quiz
                 </a>
                 {!isMobileLocal && (
-                  <img
+                  <img alt="sedekah-energi-asset"
                     src="/energi-asset-vector/quiz-right.svg"
                     className="asset-quiz-right"
                   />
@@ -40,7 +40,7 @@ export default function Quiz() {
               </div>
               {isMobileLocal && (
                 <div className="col-12">
-                  <img
+                  <img alt="sedekah-energi-asset"
                     src="/energi-asset-vector/quiz-msite.svg"
                     width={"100%"}
                     style={{marginBottom: '-16px'}}

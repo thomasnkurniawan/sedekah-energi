@@ -100,7 +100,7 @@ export default function TestimoniSection() {
                         <div className="card-body">
                           <div className="row">
                             <div className="col-12 col-lg-5 person-wrapper">
-                              <img className="person" src={item.picture} />
+                              <img alt="sedekah-energi-asset" className="person" src={item.picture} />
                             </div>
                             <div className="col-12 col-lg-7 text-start">
                               <div className="row">

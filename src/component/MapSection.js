@@ -54,7 +54,7 @@ export default function MapSection({ onClickDonate }) {
                 </div>
                 <div className="row justify-content-center mb-2 position-relative map-wrapper">
                   <div className="col-12 col-lg-12">
-                    <img src="/energi-asset-vector/map.png" className="maps-image" />
+                    <img alt="sedekah-energi-asset" src="/energi-asset-vector/map.png" className="maps-image" />
                     <span
                       data-tooltip-id="clickable"
                       onMouseEnter={() => setIsOpenSumbar(true)}
@@ -158,7 +158,7 @@ export default function MapSection({ onClickDonate }) {
                   </svg>
                   <div className="row align-items-center">
                     <div className="col-lg-2 col-12 lamp-container">
-                      <img
+                      <img alt="sedekah-energi-asset"
                         src="/energi-asset-vector/think-lamp.svg"
                         className="lamp"
                       />

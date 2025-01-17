@@ -32,17 +32,20 @@
   }
 
   .hero-description {
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 32px;
-    margin-bottom: 40px;
+    h3 {
 
-    @media screen and (max-width: 600px) {
-      font-size: 18px;
+      font-size: 22px;
       font-style: normal;
       font-weight: 300;
-      line-height: 28px; 
+      line-height: 32px;
+      margin-bottom: 40px;
+      
+      @media screen and (max-width: 600px) {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px; 
+      }
     }
   }
 

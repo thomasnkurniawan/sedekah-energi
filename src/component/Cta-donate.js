@@ -24,11 +24,11 @@ export default function DonateSection({ onClickDonate }) {
           <div className="card-body parrent">
             <div className="row align-items-center justify-content-between position-relative  text-center">
               <div className="col-lg-5 col-12 me-2">
-                <p className="title">Siap untuk mendukung perubahan?</p>
-                <img width="100%" src="/energi-asset-vector/line.svg" />
-                <p className="subtitle">
+                <h2 className="title">Siap untuk mendukung perubahan?</h2>
+                <img width="100%" src="/energi-asset-vector/line.svg" alt="asset-vector" />
+                <h3 className="subtitle">
                   Jadilah bagian dari <span className="fw-bold">{dataKitaBisa && dataKitaBisa[tabActive]?.donation_count}</span> pendukung program perubahan lainnya
-                </p>
+                </h3>
               </div>
               <div className="col-lg-6 col-12">
                 <DonationInfo onClickDonate={onClickDonate} isCtaSection={true} setTabActiveParent={setTabActive} />
