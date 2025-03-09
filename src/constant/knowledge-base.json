@@ -994,5 +994,45 @@
         ]
       }
     ]
+  },
+  {
+    "page": "kbDarkGreen",
+    "title": "Video Animasi Nabi",
+    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "slug": "video-animasi-nabi",
+    "imgHeader": "https://placehold.co/514x411",
+    "content": []
+  },
+  {
+    "page": "kbYellow",
+    "title": "Content Planning Template",
+    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "slug": "content-planning-template",
+    "imgHeader": "https://placehold.co/514x411",
+    "content": []
+  },
+  {
+    "page": "kbYellow",
+    "title": "Digital Actor Mapping Template",
+    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "slug": "digital-actor-mapping-template",
+    "imgHeader": "https://placehold.co/514x411",
+    "content": []
+  },
+  {
+    "page": "kbYellow",
+    "title": "Graphic Design Template",
+    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "slug": "graphic-design-template",
+    "imgHeader": "https://placehold.co/514x411",
+    "content": []
+  },
+  {
+    "page": "kbYellow",
+    "title": "Vendor List Renewable Energy Template",
+    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "slug": "vendor-list-renewable-energy-template",
+    "imgHeader": "https://placehold.co/514x411",
+    "content": []
   }
 ]

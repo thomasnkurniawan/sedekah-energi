@@ -8,7 +8,7 @@ import { isMobile } from "react-device-detect";
 import ScrollSpy from "react-scrollspy-navigation";
 
 const KnowledgeBasePage = ({ knowledges }) => {
-  const [listActive, setListActive] = useState("01");
+  const [_, setListActive] = useState("01");
 
   const [isMobileLocal, setIsMobileLocal] = useState(false);
   useEffect(() => {
@@ -59,6 +59,7 @@ const KnowledgeBasePage = ({ knowledges }) => {
         jumbotronContent={{
           title: knowledges.title,
           subtitle: knowledges.subtitle,
+          imgHeader: knowledges?.imgHeader || null,
         }}
       >
         <div className="knowledge-base-page">
@@ -69,7 +70,7 @@ const KnowledgeBasePage = ({ knowledges }) => {
                   <div className="card-overview">
                     <p className="title p-0 m-0">Daftar Isi</p>
                     <ScrollSpy activeClass="active">
-                      {knowledges.content.map((item) => {
+                      {knowledges.content?.map((item) => {
                         return (
                           <a
                             href={`#${item.id}`}
@@ -144,7 +145,7 @@ const KnowledgeBasePage = ({ knowledges }) => {
               </div>
 
               <div className="col-lg-8 col-12 wrapper-content-section">
-                {knowledges.content.map((item, index) => {
+                {knowledges.content?.map((item, index) => {
                   return <AccordionContent item={item} index={index} />;
                 })}
               </div>

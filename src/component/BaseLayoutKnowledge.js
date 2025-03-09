@@ -4,7 +4,6 @@ import Header from "./Header";
 import ModalOptionDonate from "./ModalOptionDonate";
 import clsx from "clsx";
 import DonateSection from "./Cta-donate";
-import Quiz from "./Quiz";
 
 const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
   const [showModal, setShowModal] = useState(false);
@@ -38,7 +37,7 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
           <div className="row jumbotron align-items-center">
             <div className="col-lg-5 col-md-6 col-12 text-center p-0 d-flex align-items-center image-wrapper">
               <img
-                src={IMAGE_JUMBO[page]}
+                src={jumbotronContent.imgHeader || IMAGE_JUMBO[page]}
                 className="img-fluid jumbotron-image"
                 alt="jumbotron-image"
                 width={"100%"}
