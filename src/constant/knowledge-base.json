@@ -1000,39 +1000,128 @@
     "title": "Video Animasi Nabi",
     "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
     "slug": "video-animasi-nabi",
-    "imgHeader": "https://placehold.co/514x411",
-    "content": []
+    "imgHeader": "/energi-asset-vector/knowledge/animasi.png",
+    "content": [
+      {
+        "id": "01",
+        "section": "Video Animasi Nabi",
+        "content": [
+          {
+            "type": "video",
+            "title": "Sedekah Dengan Sayur Sop? Emang Bisa?",
+            "videoId": "YHJPGAWxeAA",
+            "body": [
+              "Abu Dzar al-Ghifari aja diajarin Rasulullah buat sedekah walau cuma dengan kuah sop. Karena sedekah itu bukan soal jumlah, tapi keikhlasan! Nah, kamu juga bisa ikut sedekah yang bermanfaat buat banyak orang—bukan dengan sop, tapi dengan Sedekah Energi! 🌞⚡ Yuk, bantu masjid-masjid pakai panel surya biar lebih ramah lingkungan dan hemat listrik! Kunjungi link ini dan mulai bersedekah sekarang yuk!👉 https://sedekahenergi.mosaic-indonesia.com/"
+            ]
+          },
+          {
+            "type": "video",
+            "title": "Subhanallah, Sahabat Rasulullah Saw. yang Satu Ini Rela Begadang Demi Rakyatnya!",
+            "videoId": "VwBJctkbO4c",
+            "body": [
+              "MasyaAllah, begitu luar biasa komitmen Umar bin Khattab! 🌙✨ Siang harinya untuk rakyat, malam harinya untuk ibadah. Bahkan, di masa sulit, beliau rela berpuasa demi hajat rakyatnya.",
+              "Pemimpin seperti ini yang kita butuhkan! Yuk, #PilahPilih pemimpin yang amanah dan peduli! ❤️",
+              "#UmarBinKhattab #UmatUntukSemesta #pilahpilih "
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "page": "kbYellow",
     "title": "Content Planning Template",
-    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "subtitle": "Biar konten nggak sekadar lewat, yuk rencanakan dengan baik! Karena setiap kata bisa jadi ladang amal. ",
     "slug": "content-planning-template",
-    "imgHeader": "https://placehold.co/514x411",
-    "content": []
+    "imgHeader": "/energi-asset-vector/knowledge/content-planner.png",
+    "content": [
+      {
+        "id": "01",
+        "section": "Content Planning Template",
+        "content": [
+          {
+            "type": "big-image",
+            "title": "Template",
+            "asset": "/energi-asset-vector/knowledge/materi-1.JPG",
+            "link": "https://docs.google.com/presentation/d/1WYLJucAt6R8eAlZ6pPPPjNB87cyA1NI7/edit?usp=share_link&ouid=117833617091752617313&rtpof=true&sd=true",
+            "body": [
+              "Biar lebih rapi dan nggak bingung mau posting apa, coba pakai template ini! InsyaAllah bisa bantu kamu bikin konten yang lebih terstruktur. Semoga bermanfaat ya!"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "page": "kbYellow",
     "title": "Digital Actor Mapping Template",
-    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "subtitle": "Mau dakwah dan advokasi lebih strategis?  Mapping dulu siapa yang bisa diajak kolaborasi! Karena kalau mau pesannya sampai ke lebih banyak orang, penting banget buat tahu siapa saja yang bisa diajak kerja sama.",
     "slug": "digital-actor-mapping-template",
-    "imgHeader": "https://placehold.co/514x411",
-    "content": []
+    "imgHeader": "/energi-asset-vector/knowledge/digital-actor.png",
+    "content": [
+      {
+        "id": "01",
+        "section": "Content Planning Template",
+        "content": [
+          {
+            "type": "big-image",
+            "title": "Template",
+            "asset": "/energi-asset-vector/knowledge/materi-2.JPG",
+            "link": "https://docs.google.com/document/d/1h1eQ4fvJWfJfsEIhVVFNdQu5si6qcnLcCa59otzfJok/edit?usp=share_link",
+            "body": [
+              "Template ini bisa jadi panduan buat kamu memetakan aktor-aktor digital yang relevan. Semoga membantu ya!"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "page": "kbYellow",
     "title": "Graphic Design Template",
-    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "subtitle": "Desain yang menarik bisa bikin pesan kebaikan lebih mudah diterima.",
     "slug": "graphic-design-template",
-    "imgHeader": "https://placehold.co/514x411",
-    "content": []
+    "imgHeader": "/energi-asset-vector/knowledge/header-graphics.png",
+    "content": [
+      {
+        "id": "01",
+        "section": "Graphic Design Template",
+        "content": [
+          {
+            "type": "big-image",
+            "title": "Template",
+            "asset": "/energi-asset-vector/knowledge/materi-3.JPG",
+            "link": "https://drive.google.com/drive/folders/13a917SD1JDv18jPfmDQSWDI1hieJM1Da?usp=share_link",
+            "body": [
+              "Kalau butuh inspirasi, kamu bisa download template ini ya! Semoga bisa membantu dakwah visualmu."
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "page": "kbYellow",
     "title": "Vendor List Renewable Energy Template",
-    "subtitle": "Lorem ipsum dolor sit amet consectetur. In at dui sapien senectus vitae viverra morbi.",
+    "subtitle": "Vendor List Renewable Energy Template",
     "slug": "vendor-list-renewable-energy-template",
-    "imgHeader": "https://placehold.co/514x411",
-    "content": []
+    "imgHeader": "/energi-asset-vector/knowledge/vendor-re.png",
+    "content": [
+      {
+        "id": "01",
+        "section": "Vendor List Renewable Energy Template",
+        "content": [
+          {
+            "type": "big-image",
+            "title": "Template",
+            "asset": "/energi-asset-vector/knowledge/materi-4.JPG",
+            "link": "https://drive.google.com/file/d/1t7h1B845U7hCSd89Erd1r32M2t_1h6Bl/view?usp=share_link",
+            "body": [
+              "List vendor ini bisa jadi referensi buat kamu yang ingin mulai pakai energi terbarukan. Yuk, jaga bumi dengan langkah kecil yang berdampak besar!"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
