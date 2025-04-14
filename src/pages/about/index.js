@@ -152,29 +152,17 @@ const About = ({ data }) => {
                 <div className="card rounded-4 card-about">
                   <div className="card-body">
                     <div class="container">
-                      <div className="row justify-content-center mb-4">
-                        <div className="col-12 col-lg-6 mb-3">
-                          <h2 className="section-badge-title">
-                            TENTANG SEDEKAH ENERGI
-                          </h2>
-                          <h3 className="section-title">{data.about.title}</h3>
-                        </div>
-                        <div
-                          className="col-12 col-lg-6 text-start section-description"
-                          dangerouslySetInnerHTML={{
-                            __html: data.about.content,
-                          }}
-                        ></div>
-                        <div className="col-12 text-center image-wrapper">
+                      <div className="row justify-content-center">
+                        <div className="col-12 text-center p-0">
                           {isMobileLocal ? (
                             <img alt="sedekah-energi-asset"
                               className="img-fluid"
-                              src="/energi-asset-vector/about-page/m-about.png"
+                              src="/energi-asset-vector/about-page/kolase-msite.png"
                             />
                           ) : (
                             <img alt="sedekah-energi-asset"
                               className="img-fluid"
-                              src="/energi-asset-vector/about-page/desk-about.png"
+                              src="/energi-asset-vector/about-page/kolase.png"
                             />
                           )}
                         </div>
