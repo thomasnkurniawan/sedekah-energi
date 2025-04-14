@@ -145,6 +145,36 @@ const About = ({ data }) => {
           </div>
         </section>
 
+        <section className="about-section-benefit">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-lg-12 col-12 p-0">
+                <div className="card rounded-4 card-about">
+                  <div className="card-body">
+                    <div class="container">
+                      <div className="row justify-content-center">
+                        <div className="col-12 text-center p-0">
+                          {isMobileLocal ? (
+                            <img alt="sedekah-energi-asset"
+                              className="img-fluid"
+                              src="/energi-asset-vector/about-page/kolase-msite.png"
+                            />
+                          ) : (
+                            <img alt="sedekah-energi-asset"
+                              className="img-fluid"
+                              src="/energi-asset-vector/about-page/kolase.png"
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <DonateSection />
 
         <section className="about-section-four bg-dark-green">

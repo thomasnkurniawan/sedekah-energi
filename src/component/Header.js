@@ -38,6 +38,26 @@ export default function Header({ onClickDonate }) {
       title: "Do`s and Dont`s Campaigns",
       link: "/knowledge-base/dos-and-donts-campaigns-sedekah-energi",
     },
+    {
+      title: "Video Animasi Nabi",
+      link: "/knowledge-base/video-animasi-nabi",
+    },
+    {
+      title: "Content Planning Template",
+      link: "/knowledge-base/content-planning-template",
+    },
+    {
+      title: "Digital Actor Mapping Template",
+      link: "/knowledge-base/digital-actor-mapping-template",
+    },
+    {
+      title: "Graphic Design Template",
+      link: "/knowledge-base/graphic-design-template",
+    },
+    {
+      title: "Vendor List Renewable Energy Template",
+      link: "/knowledge-base/vendor-list-renewable-energy-template",
+    },
   ];
 
   return (
