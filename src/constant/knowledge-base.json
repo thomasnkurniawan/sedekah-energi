@@ -1133,11 +1133,11 @@
     "content": [
       {
         "id": "01",
-        "section": "Penjelasan",
+        "section": "Pengantar",
         "content": [
           {
             "type": "free-text",
-            "title": "Penjelasan Fikih Transisi",
+            "title": "Pengantar Fikih Transisi",
             "body": [
               "Transisi energi merupakan isu mendesak yang tak hanya menyangkut aspek teknis atau ekonomi, tapi juga menyentuh dimensi etika, keadilan sosial, dan tanggung jawab ekologis. Islam, sebagai agama yang kaya akan nilai keadilan dan keberlanjutan, menawarkan kerangka konseptual dan praktis untuk menjawab tantangan ini.",
               "Fikih Transisi Energi Berkeadilan adalah hasil ijtihad untuk menghadirkan pandangan Islam yang relevan terhadap krisis energi dan iklim. Buku ini menggambarkan bahwa pengelolaan energi adalah bagian dari amanah manusia sebagai khalifah di bumi, dan transisi energi harus dilakukan dengan menjunjung tinggi keadilan bagi manusia dan alam.",
@@ -1148,11 +1148,11 @@
       },
       {
         "id": "02",
-        "section": "Dokumentasi Fikih Energi",
+        "section": "Dokumentasi Kegiatan",
         "content": [
           {
             "type": "big-image",
-            "title": "Dokumentasi Fikih Energi",
+            "title": "Dokumentasi Kegiatan",
             "asset": "/fikih/web.png",
             "link": null,
             "body": []
@@ -1161,11 +1161,11 @@
       },
       {
         "id": "02",
-        "section": "Download",
+        "section": "Unduh Buku Fikih",
         "content": [
           {
             "type": "big-image",
-            "title": "Executive Summary & eBook Fikih Transisi",
+            "title": "Unduh Buku Fikih",
             "asset": null,
             "link": [
               {
@@ -1177,7 +1177,7 @@
                 "name": "Download eBook"
               }
             ],
-            "body": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!"]
+            "body": ["Unduh Buku Fikih Transisi Energi Berkeadilan secara gratis disini."]
           }
         ]
       }
