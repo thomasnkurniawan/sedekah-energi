@@ -58,6 +58,10 @@ export default function Header({ onClickDonate }) {
       title: "Vendor List Renewable Energy Template",
       link: "/knowledge-base/vendor-list-renewable-energy-template",
     },
+     {
+      title: "Fikih Transisi Energi Berkeadilan",
+      link: "/knowledge-base/fiikih-transisi",
+    },
   ];
 
   return (

@@ -27,7 +27,7 @@ export default function DonateSection({ onClickDonate }) {
                 <h2 className="title">Siap untuk mendukung perubahan?</h2>
                 <img width="100%" src="/energi-asset-vector/line.svg" alt="asset-vector" />
                 <h3 className="subtitle">
-                  Jadilah bagian dari <span className="fw-bold">{dataKitaBisa && dataKitaBisa[tabActive]?.donation_count}</span> pendukung program perubahan lainnya
+                  Jadilah bagian dari <span className="fw-bold">{dataKitaBisa && dataKitaBisa[tabActive]?.donation_count || 'sekian'}</span> pendukung program perubahan lainnya
                 </h3>
               </div>
               <div className="col-lg-6 col-12">
