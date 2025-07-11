@@ -1123,5 +1123,64 @@
         ]
       }
     ]
+  },
+  {
+    "page": "kbDarkGreen",
+    "title": "Fikih Transisi Energi Berkeadilan",
+    "subtitle": "Menjawab Tantangan Energi dan Iklim Lewat Nilai-Nilai Islam",
+    "slug": "fiikih-transisi",
+    "imgHeader": null,
+    "content": [
+      {
+        "id": "01",
+        "section": "Penjelasan",
+        "content": [
+          {
+            "type": "free-text",
+            "title": "Penjelasan Fikih Transisi",
+            "body": [
+              "Transisi energi merupakan isu mendesak yang tak hanya menyangkut aspek teknis atau ekonomi, tapi juga menyentuh dimensi etika, keadilan sosial, dan tanggung jawab ekologis. Islam, sebagai agama yang kaya akan nilai keadilan dan keberlanjutan, menawarkan kerangka konseptual dan praktis untuk menjawab tantangan ini.",
+              "Fikih Transisi Energi Berkeadilan adalah hasil ijtihad untuk menghadirkan pandangan Islam yang relevan terhadap krisis energi dan iklim. Buku ini menggambarkan bahwa pengelolaan energi adalah bagian dari amanah manusia sebagai khalifah di bumi, dan transisi energi harus dilakukan dengan menjunjung tinggi keadilan bagi manusia dan alam.",
+              "Soal-soal ini disusun sebagai bagian dari upaya memperluas pemahaman, memicu diskusi, dan mendorong keterlibatan aktif masyarakat dalam mewujudkan sistem energi yang lebih adil dan berkelanjutan."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "section": "Dokumentasi Fikih Energi",
+        "content": [
+          {
+            "type": "big-image",
+            "title": "Dokumentasi Fikih Energi",
+            "asset": "/fikih/web.png",
+            "link": null,
+            "body": []
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "section": "Download",
+        "content": [
+          {
+            "type": "big-image",
+            "title": "Executive Summary & eBook Fikih Transisi",
+            "asset": null,
+            "link": [
+              {
+                "href": "/fikih/executive-summary.docx",
+                "name": "Download Executive Summary"
+              },
+              {
+                "href": "/fikih/book.pdf",
+                "name": "Download eBook"
+              }
+            ],
+            "body": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!"]
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,26 +1,27 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 
+const tabDonation = [
+  {
+    id: 0,
+    name: "Jawa Barat",
+    link: "http://kitabisa.com/listrikuntukjabar",
+  },
+  {
+    id: 1,
+    name: "Sumatera Barat",
+    link: "https://kitabisa.com/campaign/listrikuntuksumbar",
+  },
+];
+
 export default function DonationInfo({
   onClickDonate,
   isCtaSection,
   setTabActiveParent,
 }) {
   const [dataKitaBisa, setDataKitabisa] = useState(null);
-
   const [tabActive, setTabActive] = useState(0);
-  const tabDonation = [
-    {
-      id: 0,
-      name: "Jawa Barat",
-      link: "http://kitabisa.com/listrikuntukjabar",
-    },
-    {
-      id: 1,
-      name: "Sumatera Barat",
-      link: "https://kitabisa.com/campaign/listrikuntuksumbar",
-    },
-  ];
+  const [isFallback, setIsFallback] = useState(false); // ⬅️ untuk deteksi default state
 
   const handleClickTab = (id) => {
     setTabActive(id);
@@ -30,33 +31,45 @@ export default function DonationInfo({
   };
 
   const fetchProgress = async () => {
-    const response = await fetch("/api/kitabisa");
+    try {
+      const response = await fetch("/api/kitabisa");
+      if (!response.ok) {
+        setIsFallback(true);
+        return;
+      }
 
-    const { data } = await response.json();
-
-    setDataKitabisa(data);
+      const { data } = await response.json();
+      if (Array.isArray(data) && data.length) {
+        setDataKitabisa(data);
+      } else {
+        setIsFallback(true);
+      }
+    } catch (error) {
+      console.error("Gagal ambil data API:", error);
+      setIsFallback(true);
+    }
   };
 
   useEffect(() => {
     fetchProgress();
   }, []);
 
-  const formatCurrency = (value) => {
-    return new Intl.NumberFormat("id-ID", {
+  const formatCurrency = (value) =>
+    new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(value);
-  };
 
-  function formatPercentage(value) {
-    return new Intl.NumberFormat("en-US", {
+  const formatPercentage = (value) =>
+    new Intl.NumberFormat("en-US", {
       style: "percent",
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(value);
-  }
+
+  const currentData = dataKitaBisa?.[tabActive];
 
   return (
     <section className="donation-info rounded-4">
@@ -65,55 +78,54 @@ export default function DonationInfo({
           <div className="row justify-content-center align-items-center">
             <div className="col-lg-12">
               <div className="tab-custom">
-                {tabDonation.map((item) => {
-                  return (
-                    <div
-                      className={clsx({
-                        "tab-custom-item": true,
-                        active: tabActive === item.id,
-                      })}
-                      onClick={() => handleClickTab(item.id)}
-                    >
-                      <span className="text-nowrap">{item.name}</span>
-                    </div>
-                  );
-                })}
+                {tabDonation.map((item) => (
+                  <div
+                    key={item.id}
+                    className={clsx("tab-custom-item", {
+                      active: tabActive === item.id,
+                    })}
+                    onClick={() => handleClickTab(item.id)}
+                  >
+                    <span className="text-nowrap">{item.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            {dataKitaBisa && (
-              <div className="col-lg-10 col-12 text-start">
-                {!isCtaSection && (
+
+            <div className="col-lg-10 col-12 text-start">
+              {isFallback ? (
+                <h3 className="donation-nominal">Donasi Sekarang</h3>
+              ) : currentData && !isCtaSection ? (
+                <>
                   <h3 className="donation-description">
                     Jadilah bagian dari{" "}
                     <strong style={{ fontWeight: 800 }}>
-                      {dataKitaBisa[tabActive]?.donation_count}
+                      {currentData.donation_count}
                     </strong>{" "}
                     pendukung program perubahan lainya
                   </h3>
-                )}
-                <div className="progress mt-3" style={{ height: "25px" }}>
-                  <div
-                    className="progress-bar bg-success"
-                    style={{
-                      width: formatPercentage(
-                        dataKitaBisa[tabActive]?.donation_percentage
-                      ),
-                    }}
-                  ></div>
-                </div>
-                <div className="donation-nominal d-flex justify-content-between">
-                  <span>
-                    {formatCurrency(
-                      dataKitaBisa[tabActive]?.donation_received
-                    ) || `Rp-`}
-                  </span>
-                  <span>
-                    {formatCurrency(dataKitaBisa[tabActive]?.donation_target) ||
-                      `Rp-`}
-                  </span>
-                </div>
-              </div>
-            )}
+                  <div className="progress mt-3" style={{ height: "25px" }}>
+                    <div
+                      className="progress-bar bg-success"
+                      style={{
+                        width: formatPercentage(
+                          currentData.donation_percentage || 0
+                        ),
+                      }}
+                    ></div>
+                  </div>
+                  <div className="donation-nominal d-flex justify-content-between">
+                    <span>
+                      {formatCurrency(currentData.donation_received)}
+                    </span>
+                    <span>
+                      {formatCurrency(currentData.donation_target)}
+                    </span>
+                  </div>
+                </>
+              ) : null}
+            </div>
+
             <div className="col-12 col-lg-2 p-sm-0 pt-4">
               <button
                 onClick={() => onClickDonate(tabDonation[tabActive].link)}
