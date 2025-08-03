@@ -23,12 +23,11 @@
   }
 
   .search-container {
-    height: 106px;
+    height: 130px;
 
     .search-area {
       padding: 24px;
       border-radius: 24px;
-      top: -50%;
 
       .input-group {
         width: 100%;
@@ -76,8 +75,6 @@
     }
 
     .filter-area {
-      margin-top: 60px;
-
       .btn-filter {
         border: 1px solid #e2e6ed;
         border-radius: 8px;
@@ -88,6 +85,118 @@
         font-weight: 400;
         color: #191f38;
       }
+
+      .dropdown {
+        .dropdown-menu {
+          width: 100%;
+          border: 1px solid #e2e6ed;
+          border-radius: 8px;
+          padding: 0;
+          margin-top: 10px !important;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+          .dropdown-item {
+            padding: 8px 16px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #191f38;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #f2f4f8;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .knowledge-card {
+    .card-wrapper {
+      gap: 24px;
+    }
+    .card-article {
+      flex: 1 1 calc(33.333% - 1em);
+
+      @media (max-width: 768px) {
+        flex: 1 1 100%; /* Full width on mobile */
+      }
+      .card {
+        border-radius: 16px !important;
+      }
+      img {
+        height: 283px;
+        border-radius: 16px 16px 0 0;
+      }
+
+      .date {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 300;
+        margin-bottom: 8px;
+      }
+
+      .card-title {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        max-width: 371px;
+      }
+
+      .bg-category {
+        border-radius: 100px;
+        padding: 4px 8px;
+        background-color: #e6f0f1;
+        color: #036a71;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+
+      .link-text {
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #036a71;
+        text-decoration: none;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .empty-state {
+    h3 {
+      font-size: 22px;
+      line-height: 32px;
+      color: #191f38;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      color: #5a627d;
+    }
+  }
+
+  .search-count {
+    p {
+      color: #788099;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    span {
+      color: #024b50;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+
+    .line-section {
+      border: 1.2px solid #788099;
     }
   }
 }

@@ -1,16 +1,26 @@
 "use client";
 
+import { getKBCategories } from "@/services/knowledgeBase";
 import { useBootstrap } from "@/utils/useBootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SearchComponent = ({ handleSearch }) => {
-    useBootstrap();
+  useBootstrap();
   const [search, setSearch] = useState("");
+  const [sort, setSort] = useState(null);
+  const [category, setCategory] = useState(null);
+  const [categories, setCategories] = useState([]);
 
   // Callback pencarian
   const doSearch = (query) => {
     handleSearch(query);
   };
+
+  const sortList = [
+    { name: "Terbaru", value: "latest" },
+    { name: "Terlama", value: "oldest" },
+    { name: "A - Z", value: "az" },
+  ];
 
   //   // Debounce supaya nggak spam
   //   const debouncedSearch = useCallback(
@@ -29,13 +39,29 @@ const SearchComponent = ({ handleSearch }) => {
   //     }
   //   }, [search, debouncedSearch]);
 
-  const handleClear = () => setSearch("");
+  const handleClear = () => {
+    setSearch("");
+    doSearch("");
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+  const getCategories = async () => {
+    const res = await getKBCategories();
+    console.log(res);
+    setCategories(res);
+  };
 
   return (
-    <div className="search-container container mx-auto px-4 position-relative">
-      <div className="row align-items-center">
+    <div className="search-container container mx-auto position-relative w-100">
+      <div
+        className="row align-items-center position-absolute w-100"
+        style={{ top: "-50%" }}
+      >
         <div className="col-lg-12 col-12">
-          <div className="card search-area position-absolute w-100">
+          <div className="card search-area">
             <div class="input-group">
               <span class="input-group-text" id="basic-addon1">
                 <svg
@@ -88,8 +114,8 @@ const SearchComponent = ({ handleSearch }) => {
           </div>
         </div>
 
-        <div className="col-lg-12 col-12 filter-area">
-          <div className="d-flex flex-wrap gap-2 mt-3 align-items-center">
+        <div className="col-lg-12 col-12 filter-area my-4">
+          <div className="d-flex flex-wrap gap-2 align-items-center">
             <div className="dropdown">
               <button
                 className="btn btn-filter dropdown-toggle d-flex gap-3 align-items-center justify-content-between"
@@ -110,21 +136,24 @@ const SearchComponent = ({ handleSearch }) => {
                     fill="#191F38"
                   />
                 </svg>
-                Semua Kategori
+                {category ? category.Category : "Semua Kategori"}
               </button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButtonCategory"
               >
-                <li>
-                  <button className="dropdown-item">Kategori A</button>
-                </li>
-                <li>
-                  <button className="dropdown-item">Kategori B</button>
-                </li>
-                <li>
-                  <button className="dropdown-item">Kategori C</button>
-                </li>
+                {categories?.map((item, index) => {
+                  return (
+                    <li key={`${item.Slug}-${index}`}>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => setCategory(item)}
+                      >
+                        {item.Category}
+                      </button>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className="dropdown">
@@ -147,18 +176,21 @@ const SearchComponent = ({ handleSearch }) => {
                     fill="#1F2644"
                   />
                 </svg>
-                Terbaru
+                {sort ? sort?.name : "Terbaru"}
               </button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButtonSort"
               >
-                <li>
-                  <button className="dropdown-item">Terlama</button>
-                </li>
-                <li>
-                  <button className="dropdown-item">Paling Populer</button>
-                </li>
+                {sortList.map((item, index) => {
+                  return (
+                    <li key={`${item.name}-${index}`}>
+                      <button className="dropdown-item" onClick={() => setSort(item)}>
+                        {item.name}
+                      </button>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

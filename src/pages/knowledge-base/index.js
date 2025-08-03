@@ -1,3 +1,5 @@
+import CardKnowledgeComponent from "@/component/CardKnowledge";
+import EmptyStateComponent from "@/component/EmptyState";
 import Footer from "@/component/Footer";
 import Header from "@/component/Header";
 import ModalOptionDonate from "@/component/ModalOptionDonate";
@@ -6,10 +8,12 @@ import { useState } from "react";
 
 const KnowledgeHub = () => {
   const [showModal, setShowModal] = useState(false);
+  const [query, setQuery] = useState("");
   const handleShow = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
 
   const handleSearch = (query) => {
+    setQuery(query);
     console.log("Searching for:", query);
   };
 
@@ -34,6 +38,54 @@ const KnowledgeHub = () => {
 
         {/* Search */}
         <SearchComponent handleSearch={handleSearch} />
+
+        {/* Search Count */}
+        {query !== "" && (
+          <div className="container search-count my-3">
+            <div className="row">
+              <div className="col-lg-12 col-12">
+                <hr className="line-section" />
+                <p className="m-0">Manampilkan XXXX hasil pencarian untuk</p>
+                <span>"{query}"</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Card */}
+        <div className="container mb-4 knowledge-card">
+          <div className="d-flex justify-space-between card-wrapper flex-wrap">
+            <CardKnowledgeComponent
+              title="Sedekah Energi, Ibadah untuk Masa Depan"
+              category={["Energi", "Sub"]}
+              date="Juni, 2023"
+              onClickSeeMore={() => console.log("See More")}
+              image="/energi-asset-vector/about-page/m-about.png"
+            />
+            <CardKnowledgeComponent
+              title="Sedekah Energi, Ibadah untuk Masa Depan"
+              category={["Energi", "Sub"]}
+              date="Juni, 2023"
+              onClickSeeMore={() => console.log("See More")}
+              image="/energi-asset-vector/about-page/m-about.png"
+            />
+            <CardKnowledgeComponent
+              title="Sedekah Energi, Ibadah untuk Masa Depan"
+              category={["Energi", "Sub"]}
+              date="Juni, 2023"
+              onClickSeeMore={() => console.log("See More")}
+              image="/energi-asset-vector/about-page/m-about.png"
+            />
+          </div>
+
+          <div className="d-flex justify-content-center align-items-center my-4">
+            <button className="btn btn-outline-secondary rounded-5">
+              Muat Lebih Banyak
+            </button>
+          </div>
+        </div>
+
+        <EmptyStateComponent />
       </div>
       <Footer />
       <ModalOptionDonate handleClose={handleClose} showModal={showModal} />
