@@ -1,5 +1,4 @@
 import BaseLayoutKnowledge from "@/component/BaseLayoutKnowledge";
-import DonateSection from "@/component/Cta-donate";
 import faq from "@/constant/faq.json";
 import clsx from "clsx";
 import Head from "next/head";

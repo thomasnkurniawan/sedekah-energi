@@ -19,6 +19,10 @@ const About = ({ data }) => {
     setIsMobileLocal(isMobile);
   }, [isMobile]);
 
+  const handleClickOption = (link) => {
+    window.open(link, "_blank");
+  };
+
   const dataVideo = [
     {
       id: 1,
@@ -175,7 +179,7 @@ const About = ({ data }) => {
           </div>
         </section>
 
-        <DonateSection />
+        <DonateSection onClickDonate={(link) => handleClickOption(link)} />
 
         <section className="about-section-four bg-dark-green">
           <svg

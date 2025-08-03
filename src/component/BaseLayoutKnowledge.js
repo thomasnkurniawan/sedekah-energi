@@ -29,6 +29,10 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
     kbYellow: "bg-jumbotron-yellow",
   };
 
+  const handleClickOption = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div className="layout-section">
       <Header onClickDonate={handleShow} />
@@ -70,7 +74,8 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
       </div>
       {children}
       <div className="pb-5 donate-container">
-        <DonateSection />
+              <DonateSection onClickDonate={(link) => handleClickOption(link)} />
+        
       </div>
 
       <Footer />
