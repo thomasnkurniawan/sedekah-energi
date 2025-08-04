@@ -4,11 +4,11 @@ import { getKBCategories } from "@/services/knowledgeBase";
 import { useBootstrap } from "@/utils/useBootstrap";
 import { useEffect, useState } from "react";
 
-const SearchComponent = ({ handleSearch }) => {
+const SearchComponent = ({ handleSearch, setSort, setCategory }) => {
   useBootstrap();
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState(null);
-  const [category, setCategory] = useState(null);
+  const [selectedSort, setSelectedSort] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
 
   // Callback pencarian
@@ -38,6 +38,16 @@ const SearchComponent = ({ handleSearch }) => {
   //       debouncedSearch.cancel();
   //     }
   //   }, [search, debouncedSearch]);
+
+  const onClickSort = (sort) => {
+    setSort(sort?.value);
+    setSelectedSort(sort);
+  };
+
+  const onClickCategory = (category) => {
+    setCategory(category ? category.Slug : null);
+    setSelectedCategory(category);
+  };
 
   const handleClear = () => {
     setSearch("");
@@ -136,18 +146,28 @@ const SearchComponent = ({ handleSearch }) => {
                     fill="#191F38"
                   />
                 </svg>
-                {category ? category.Category : "Semua Kategori"}
+                {selectedCategory
+                  ? selectedCategory.Category
+                  : "Semua Kategori"}
               </button>
               <ul
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButtonCategory"
               >
+                <li>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => onClickCategory(null)}
+                  >
+                    Semua Kategori
+                  </button>
+                </li>
                 {categories?.map((item, index) => {
                   return (
                     <li key={`${item.Slug}-${index}`}>
                       <button
                         className="dropdown-item"
-                        onClick={() => setCategory(item)}
+                        onClick={() => onClickCategory(item)}
                       >
                         {item.Category}
                       </button>
@@ -176,7 +196,7 @@ const SearchComponent = ({ handleSearch }) => {
                     fill="#1F2644"
                   />
                 </svg>
-                {sort ? sort?.name : "Terbaru"}
+                {selectedSort ? selectedSort?.name : "Terbaru"}
               </button>
               <ul
                 className="dropdown-menu"
@@ -185,7 +205,10 @@ const SearchComponent = ({ handleSearch }) => {
                 {sortList.map((item, index) => {
                   return (
                     <li key={`${item.name}-${index}`}>
-                      <button className="dropdown-item" onClick={() => setSort(item)}>
+                      <button
+                        className="dropdown-item"
+                        onClick={() => onClickSort(item)}
+                      >
                         {item.name}
                       </button>
                     </li>

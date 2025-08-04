@@ -1,16 +1,33 @@
 const CardKnowledgeComponent = ({ title, category, date, link, image }) => {
+  const formattedDate = (date) => {
+    const dateObject = new Date(date);
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return dateObject.toLocaleDateString("id-ID", options);
+  };
+
+  const formatBaseUrlImage = (image) => {
+    if (image.startsWith("http")) {
+      return image;
+    }
+    return `${process.env.NEXT_PUBLIC_BASE_URL}${image}`;
+  };
+
   return (
     <div className="w-100 card-article">
       <div class="card">
-        <img src={image} class="card-img-top" alt={title} />
+        <img
+          src={image ? formatBaseUrlImage(image) : "/energi-logo.png"}
+          class="card-img-top"
+          alt={title}
+        />
         <div class="card-body">
-          <small class="text-muted date">{date}</small>
+          <small class="text-muted date">{formattedDate(date)}</small>
           <h5 class="card-title text-truncate">{title}</h5>
           <div className="d-flex gap-2">
             {category?.map((item, index) => {
               return (
                 <span class="bg-category" key={index}>
-                  {item}
+                  {item.name}
                 </span>
               );
             })}

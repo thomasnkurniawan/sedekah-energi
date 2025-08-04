@@ -1,21 +1,65 @@
+import { useEffect, useState } from "react";
 import CardKnowledgeComponent from "@/component/CardKnowledge";
 import EmptyStateComponent from "@/component/EmptyState";
 import Footer from "@/component/Footer";
 import Header from "@/component/Header";
 import ModalOptionDonate from "@/component/ModalOptionDonate";
 import SearchComponent from "@/component/SearchComponent";
-import { useState } from "react";
+import { getKnowledgeBases } from "@/services/knowledgeBase";
 
 const KnowledgeHub = () => {
   const [showModal, setShowModal] = useState(false);
+  const [articles, setArticles] = useState([]);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+
   const [query, setQuery] = useState("");
+  const [sort, setSort] = useState(null);
+  const [category, setCategory] = useState(null);
+
+  const loadArticles = async ({ reset = false, nextPage = 1 } = {}) => {
+    const pageSize = 3;
+
+    const response = await getKnowledgeBases({
+      page: nextPage,
+      pageSize,
+      sort,
+      search: query,
+      category,
+    });
+
+    if (response) {
+      const newArticles = response.data || [];
+      const total = response.meta?.pagination?.total || 0;
+
+      setArticles((prev) => (reset ? newArticles : [...prev, ...newArticles]));
+
+      const totalFetched = reset
+        ? newArticles.length
+        : articles.length + newArticles.length;
+      setHasMore(totalFetched < total);
+      setPage(nextPage);
+    }
+  };
+
+  useEffect(() => {
+    // Trigger fetch saat filter berubah
+    loadArticles({ reset: true, nextPage: 1 });
+    setPage(1);
+  }, [query, sort, category]);
+
+  const handleSearch = (newQuery) => {
+    setQuery(newQuery);
+  };
+
+  const handleLoadMore = () => {
+    const nextPage = page + 1;
+    setPage(nextPage);
+    loadArticles({ nextPage });
+  };
+
   const handleShow = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
-
-  const handleSearch = (query) => {
-    setQuery(query);
-    console.log("Searching for:", query);
-  };
 
   return (
     <>
@@ -25,7 +69,7 @@ const KnowledgeHub = () => {
         <div className="banner-section">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-8 col-12 p-0">
+              <div className="col-lg-8 col-12">
                 <h1>Knowledge Hub</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Cras ultrices ut urna
@@ -37,7 +81,11 @@ const KnowledgeHub = () => {
         </div>
 
         {/* Search */}
-        <SearchComponent handleSearch={handleSearch} />
+        <SearchComponent
+          handleSearch={handleSearch}
+          setSort={setSort}
+          setCategory={setCategory}
+        />
 
         {/* Search Count */}
         {query !== "" && (
@@ -45,47 +93,47 @@ const KnowledgeHub = () => {
             <div className="row">
               <div className="col-lg-12 col-12">
                 <hr className="line-section" />
-                <p className="m-0">Manampilkan XXXX hasil pencarian untuk</p>
+                <p className="m-0">
+                  Menampilkan {articles.length} hasil pencarian untuk
+                </p>
                 <span>"{query}"</span>
               </div>
             </div>
           </div>
         )}
 
-        {/* Card */}
+        {/* Cards */}
         <div className="container mb-4 knowledge-card">
-          <div className="d-flex justify-space-between card-wrapper flex-wrap">
-            <CardKnowledgeComponent
-              title="Sedekah Energi, Ibadah untuk Masa Depan"
-              category={["Energi", "Sub"]}
-              date="Juni, 2023"
-              onClickSeeMore={() => console.log("See More")}
-              image="/energi-asset-vector/about-page/m-about.png"
-            />
-            <CardKnowledgeComponent
-              title="Sedekah Energi, Ibadah untuk Masa Depan"
-              category={["Energi", "Sub"]}
-              date="Juni, 2023"
-              onClickSeeMore={() => console.log("See More")}
-              image="/energi-asset-vector/about-page/m-about.png"
-            />
-            <CardKnowledgeComponent
-              title="Sedekah Energi, Ibadah untuk Masa Depan"
-              category={["Energi", "Sub"]}
-              date="Juni, 2023"
-              onClickSeeMore={() => console.log("See More")}
-              image="/energi-asset-vector/about-page/m-about.png"
-            />
+          <div className="row">
+            {articles.length > 0 ? (
+              articles.map((item) => (
+                <div className="col-12 col-md-6 col-lg-4 mb-4" key={item.id}>
+                  <CardKnowledgeComponent
+                    title={item.title}
+                    category={item.category}
+                    date={item.publishedAt}
+                    image={item.headingImageUrl}
+                    onClickSeeMore={() => console.log("See More")}
+                  />
+                </div>
+              ))
+            ) : (
+              <EmptyStateComponent />
+            )}
           </div>
 
-          <div className="d-flex justify-content-center align-items-center my-4">
-            <button className="btn btn-outline-secondary rounded-5">
-              Muat Lebih Banyak
-            </button>
-          </div>
+          {/* Load More */}
+          {hasMore && (
+            <div className="d-flex justify-content-center align-items-center my-4">
+              <button
+                className="btn btn-outline-secondary rounded-5"
+                onClick={handleLoadMore}
+              >
+                Muat Lebih Banyak
+              </button>
+            </div>
+          )}
         </div>
-
-        <EmptyStateComponent />
       </div>
       <Footer />
       <ModalOptionDonate handleClose={handleClose} showModal={showModal} />
