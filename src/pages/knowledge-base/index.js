@@ -94,7 +94,6 @@ const KnowledgeHub = () => {
           <div className="container search-count my-3">
             <div className="row">
               <div className="col-lg-12 col-12">
-                <hr className="line-section" />
                 <p className="m-0">
                   Menampilkan {articles.length} hasil pencarian untuk
                 </p>
