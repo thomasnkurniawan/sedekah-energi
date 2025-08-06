@@ -119,6 +119,7 @@
     }
     .card-article {
       flex: 1 1 calc(33.333% - 1em);
+      cursor: pointer;
 
       @media (max-width: 768px) {
         flex: 1 1 100%; /* Full width on mobile */
@@ -129,6 +130,7 @@
       img {
         height: 283px;
         border-radius: 16px 16px 0 0;
+        aspect-ratio: 4/3;
       }
 
       .date {

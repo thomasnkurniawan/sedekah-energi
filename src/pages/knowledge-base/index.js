@@ -6,6 +6,7 @@ import Header from "@/component/Header";
 import ModalOptionDonate from "@/component/ModalOptionDonate";
 import SearchComponent from "@/component/SearchComponent";
 import { getKnowledgeBases } from "@/services/knowledgeBase";
+import { useRouter } from "next/router";
 
 const KnowledgeHub = () => {
   const [showModal, setShowModal] = useState(false);
@@ -16,6 +17,7 @@ const KnowledgeHub = () => {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState(null);
   const [category, setCategory] = useState(null);
+  const router = useRouter();
 
   const loadArticles = async ({ reset = false, nextPage = 1 } = {}) => {
     const pageSize = 3;
@@ -113,7 +115,7 @@ const KnowledgeHub = () => {
                     category={item.category}
                     date={item.publishedAt}
                     image={item.headingImageUrl}
-                    onClickSeeMore={() => console.log("See More")}
+                    onClickSeeMore={() =>  router.push(`/knowledge-base/${item.slug}`)}
                   />
                 </div>
               ))

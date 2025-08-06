@@ -5,7 +5,12 @@ import ModalOptionDonate from "./ModalOptionDonate";
 import clsx from "clsx";
 import DonateSection from "./Cta-donate";
 
-const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
+const BaseLayoutKnowledge = ({
+  children,
+  page,
+  jumbotronContent,
+  headingColor,
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleShow = () => setShowModal(true);
@@ -21,14 +26,6 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
     faq: "/energi-asset-vector/faq.png",
   };
 
-  const CLASS_BG = {
-    faq: "bg-jumbotron-faq",
-    kbOrange: "bg-jumbotron-orange",
-    kbGreen: "bg-jumbotron-green",
-    kbDarkGreen: "bg-jumbotron-dark-green",
-    kbYellow: "bg-jumbotron-yellow",
-  };
-
   const handleClickOption = (link) => {
     window.open(link, "_blank");
   };
@@ -36,7 +33,10 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
   return (
     <div className="layout-section">
       <Header onClickDonate={handleShow} />
-      <div className={`text-white ${CLASS_BG[page]}`}>
+      <div
+        className={`text-white ${!headingColor ? CLASS_BG[page] : ""}`}
+        style={{ backgroundColor: headingColor }}
+      >
         <div className="container-fluid">
           <div className="row jumbotron align-items-center">
             <div className="col-lg-5 col-md-6 col-12 text-center p-0 d-flex align-items-center image-wrapper">
@@ -74,8 +74,7 @@ const BaseLayoutKnowledge = ({ children, page, jumbotronContent }) => {
       </div>
       {children}
       <div className="pb-5 donate-container">
-              <DonateSection onClickDonate={(link) => handleClickOption(link)} />
-        
+        <DonateSection onClickDonate={(link) => handleClickOption(link)} />
       </div>
 
       <Footer />

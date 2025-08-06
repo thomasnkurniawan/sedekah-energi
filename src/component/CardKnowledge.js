@@ -1,4 +1,4 @@
-const CardKnowledgeComponent = ({ title, category, date, link, image }) => {
+const CardKnowledgeComponent = ({ title, category, date, link, image, onClickSeeMore }) => {
   const formattedDate = (date) => {
     const dateObject = new Date(date);
     const options = { year: "numeric", month: "long", day: "numeric" };
@@ -13,11 +13,11 @@ const CardKnowledgeComponent = ({ title, category, date, link, image }) => {
   };
 
   return (
-    <div className="w-100 card-article">
+    <div className="w-100 card-article" onClick={onClickSeeMore}>
       <div class="card">
         <img
           src={image ? formatBaseUrlImage(image) : "/energi-logo.png"}
-          class="card-img-top"
+          class="card-img-top card-image"
           alt={title}
         />
         <div class="card-body">
