@@ -74,8 +74,8 @@ const KnowledgeHub = () => {
       <div className="knowledge-hub-page pb-5">
         {/* Banner */}
         <div className="banner-section position-relative">
-          <img src="/lamp-d.svg" className="d-none d-lg-block position-absolute lamp-d" />
-          <img src="/lamp-m.svg" className="d-block d-lg-none position-absolute lamp-m" />
+          <img src="/lamp-d.svg" className="d-none d-lg-block d-md-block position-absolute lamp-d" />
+          <img src="/lamp-m.svg" className="d-block d-lg-none d-md-none position-absolute lamp-m w-100" />
 
           <div className="container wrapper">
             <div className="row align-items-center">
