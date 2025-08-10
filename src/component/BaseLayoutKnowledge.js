@@ -11,6 +11,7 @@ const BaseLayoutKnowledge = ({
   jumbotronContent,
   headingColor,
 }) => {
+  console.log(page);
   const [showModal, setShowModal] = useState(false);
 
   const handleShow = () => setShowModal(true);
@@ -24,6 +25,14 @@ const BaseLayoutKnowledge = ({
     kbYellow: "/energi-asset-vector/4-know.png",
     kbDarkGreen: "/energi-asset-vector/3-know.png",
     faq: "/energi-asset-vector/faq.png",
+  };
+
+  const CLASS_BG = {
+    kbOrange: "bg-jumbotron-orange",
+    kbGreen: "bg-jumbotron-green",
+    kbYellow: "bg-jumbotron-yellow",
+    kbDarkGreen: "bg-jumbotron-dark-green",
+    faq: "bg-jumbotron-faq",
   };
 
   const handleClickOption = (link) => {

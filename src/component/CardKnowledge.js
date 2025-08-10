@@ -1,4 +1,11 @@
-const CardKnowledgeComponent = ({ title, category, date, link, image, onClickSeeMore }) => {
+const CardKnowledgeComponent = ({
+  title,
+  category,
+  date,
+  link,
+  image,
+  onClickSeeMore,
+}) => {
   const formattedDate = (date) => {
     const dateObject = new Date(date);
     const options = { year: "numeric", month: "long", day: "numeric" };

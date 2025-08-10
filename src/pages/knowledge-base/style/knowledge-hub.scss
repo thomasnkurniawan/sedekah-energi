@@ -7,6 +7,21 @@
     padding: 100px 0;
     min-height: 400px;
 
+    .wrapper {
+      @media screen and (max-width: 768px) {
+        margin-top: 6em;
+      }
+    }
+
+    .lamp-d {
+      right: 0;
+      top: 0;
+    }
+
+    .lamp-m {
+      top: 0;
+    }
+
     h1 {
       font-size: 48px;
       line-height: 64px;
@@ -170,7 +185,7 @@
       img {
         height: 283px;
         border-radius: 16px 16px 0 0;
-        aspect-ratio: 4/3;
+        aspect-ratio: 3/4;
       }
 
       .date {

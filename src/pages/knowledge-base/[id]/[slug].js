@@ -1,30 +1,38 @@
 import BaseLayoutKnowledge from "@/component/BaseLayoutKnowledge";
 import Quiz from "@/component/Quiz";
-import { getKnowledgeBaseBySlug } from "@/services/knowledgeBase";
+import { getKnowledgeBaseById } from "@/services/knowledgeBase";
 import clsx from "clsx";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 import ScrollSpy from "react-scrollspy-navigation";
 
 export async function getServerSideProps({ params }) {
-  console.log(params);
-  const knowledgesSLug = await getKnowledgeBaseBySlug(params.slug);
+  console.log("======>", params);
+  const knowledgesSLug = await getKnowledgeBaseById(params.id);
+  console.log(knowledgesSLug);
 
   return {
     props: {
-      knowledges: { ...knowledgesSLug.data },
+      knowledges: knowledgesSLug,
     },
   };
 }
 
 const KnowledgeBasePage = ({ knowledges }) => {
   console.log(knowledges);
+  const router = useRouter();
+
   const [_, setListActive] = useState("1");
 
   const [isMobileLocal, setIsMobileLocal] = useState(false);
   useEffect(() => {
     setIsMobileLocal(isMobile);
+
+    if (!knowledges) {
+      router.push("/404");
+    }
   }, [isMobile]);
 
   const handleClickList = (id) => {
@@ -64,7 +72,11 @@ const KnowledgeBasePage = ({ knowledges }) => {
       </Head>
       <BaseLayoutKnowledge
         page={knowledges?.page || "kbGreen"}
-        headingColor={knowledges?.headingColor}
+        headingColor={
+          knowledges?.headingColor?.isCustom
+            ? knowledges?.headingColor?.custom
+            : knowledges?.headingColor?.value
+        }
         jumbotronContent={{
           title: knowledges?.title || "Knowledge Hub",
           subtitle: knowledges?.subtitle || "",

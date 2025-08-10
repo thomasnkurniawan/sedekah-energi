@@ -39,6 +39,13 @@ const SearchComponent = ({ handleSearch, setSort, setCategory }) => {
   //     }
   //   }, [search, debouncedSearch]);
 
+  // key enter to handleSearch
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      doSearch(search);
+    }
+  };
+
   const onClickSort = (sort) => {
     setSort(sort?.value);
     setSelectedSort(sort);
@@ -91,6 +98,7 @@ const SearchComponent = ({ handleSearch, setSort, setCategory }) => {
                 class="form-control"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
               {search && (
                 <span

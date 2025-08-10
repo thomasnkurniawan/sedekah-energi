@@ -1,19 +1,9 @@
 import axiosInstance from "@/utils/axiosInstance";
 
-export async function getSlugsKnowledgeBase() {
+export async function getKnowledgeBaseById(id) {
   try {
-    const res = await axiosInstance.get(`/knowledge-bases/slugs`);
-    return res.data;
-  } catch (err) {
-    console.error("Error fetching slug:", err);
-    return null;
-  }
-}
-
-export async function getKnowledgeBaseBySlug(slug) {
-  try {
-    const res = await axiosInstance.get(`/knowledge-bases/${slug}`);
-    return res.data;
+    const res = await axiosInstance.get(`/knowledge-bases/${id}`);
+    return res.data ? res.data.data : null;
   } catch (err) {
     console.error("Error fetching knowledge base:", err);
     return null;

@@ -17,6 +17,8 @@ const KnowledgeHub = () => {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState(null);
   const [category, setCategory] = useState(null);
+  // state loading
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const loadArticles = async ({ reset = false, nextPage = 1 } = {}) => {
@@ -41,11 +43,14 @@ const KnowledgeHub = () => {
         : articles.length + newArticles.length;
       setHasMore(totalFetched < total);
       setPage(nextPage);
+      setLoading(false);
     }
   };
 
   useEffect(() => {
     // Trigger fetch saat filter berubah
+    setLoading(true);
+
     loadArticles({ reset: true, nextPage: 1 });
     setPage(1);
   }, [query, sort, category]);
@@ -68,8 +73,11 @@ const KnowledgeHub = () => {
       <Header onClickDonate={handleShow} />
       <div className="knowledge-hub-page pb-5">
         {/* Banner */}
-        <div className="banner-section">
-          <div className="container">
+        <div className="banner-section position-relative">
+          <img src="/lamp-d.svg" className="d-none d-lg-block position-absolute lamp-d" />
+          <img src="/lamp-m.svg" className="d-block d-lg-none position-absolute lamp-m" />
+
+          <div className="container wrapper">
             <div className="row align-items-center">
               <div className="col-lg-8 col-12">
                 <h1>Knowledge Hub</h1>
@@ -114,12 +122,14 @@ const KnowledgeHub = () => {
                     category={item.category}
                     date={item.publishedAt}
                     image={item.headingImageUrl}
-                    onClickSeeMore={() =>  router.push(`/knowledge-base/${item.slug}`)}
+                    onClickSeeMore={() =>
+                      router.push(`/knowledge-base/${item.id}/${item.slug}`)
+                    }
                   />
                 </div>
               ))
             ) : (
-              <EmptyStateComponent />
+              <EmptyStateComponent loading={loading} />
             )}
           </div>
 
