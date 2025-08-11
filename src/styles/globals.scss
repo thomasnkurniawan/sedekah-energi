@@ -615,6 +615,11 @@ body {
     font-size: 18px;
     font-weight: 300;
     line-height: 28px;
+
+      img {
+          width: 100%;
+          max-width: 100%;
+        }
   }
 
   .accordion-button {

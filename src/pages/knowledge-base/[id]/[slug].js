@@ -249,6 +249,19 @@ const AccordionContent = ({ item, index, title }) => {
                   className="accordion-body"
                   dangerouslySetInnerHTML={{ __html: content.content }}
                 ></div>
+                {content?.downloadButtons &&
+                  content?.downloadButtons?.map((value) => {
+                    return (
+                      <a
+                        href={value?.link}
+                        className="btn btn-success rounded-5 my-3 btn-download d-flex justify-content-center align-items-center w-50"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {value?.text}
+                      </a>
+                    );
+                  })}
               </div>
             </div>
           </div>
