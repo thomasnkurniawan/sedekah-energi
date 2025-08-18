@@ -22,7 +22,7 @@ const KnowledgeHub = () => {
   const router = useRouter();
 
   const loadArticles = async ({ reset = false, nextPage = 1 } = {}) => {
-    const pageSize = 3;
+    const pageSize = 6;
 
     const response = await getKnowledgeBases({
       page: nextPage,
